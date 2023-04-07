@@ -1,0 +1,2647 @@
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+	<base href="/"/>
+    
+	
+    
+	<base href="/"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2NP03VW57J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2NP03VW57J'); 
+</script>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="icon" type="image/png" href="/favicon.png"/>
+
+<!-- JQ, FAS -->
+<script type="text/javascript" src="includes/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<script type="text/javascript" src="includes/jcookie.js"></script>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<!-- Swiper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.js" integrity="sha512-qqdD5ZLIGB5PCqCk1OD8nFBr/ngB5w+Uw35RE/Ivt5DK35xl1PFVkuOgAbqFpvtoxX6MpRGLmIqixzdhFOJhnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.css" integrity="sha512-lfjMBfE41+3a9XCiuXCjaE4CkvpPOQ5P2qZSZclW9iHsMSvn50dh6ZuB5O8g7uDlCIKFKPqYo8JIka9Rh8HXow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<script src="includes/svg.min.js"></script>
+<script src="includes/ijsm.js?d=10"></script>
+
+<link href="template/theme.css?d=76" rel="stylesheet">
+
+
+<meta name="author" content="Gil Zussman" />
+
+<script>
+	$(document).ready(function() {
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		  return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+	});
+</script>	<meta name="description" content="Free online speedcubing algorithm and reconstruction database, covers every algorithm for 2x2 - 6x6, SQ1 and Megaminx" />
+	<meta name="keywords" content="Edge Permutation (EP), SQ1, alg, algorithm, algsheet, cubing, speedcubing, fingertricks, rubiks, speedcube, algdb, video" />
+	    
+	<script type="text/javascript" src="category.js?d=12"></script>
+	
+	
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="SpeedCubeDB">
+    <meta property="og:url" content="https://www.speedcubedb.com/a/SQ1/SQ1EP/">
+    <meta property="og:title" content="SQ1EP (SQ1) Speed Cube Database">
+	<meta property="og:description" content="Algorithms and fingertricks execution videos for SQ1EP, SQ1">
+    
+    <link href="category.css?d=6" rel="stylesheet">
+	<title>Edge Permutation (EP) Algorithms - Speed Cube Database</title>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9351693020129127"  crossorigin="anonymous"></script>
+  </head>
+  <body>
+		<header>
+		<nav id="navbar-main" class="navbar navbar-expand-lg fixed-top navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="/"><img src="assets/logo.png" style="width: 40px; height: 40px;" /><div>SpeedCubeDB</div></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+	
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a href="/t" style="background-color: inherit;" class="nav-link active" >Practice</a>
+        </li>		
+        <li class="nav-item">
+          <a href="/r/index" style="background-color: inherit;" class="nav-link active">Reconstructions</a>
+        </li>		
+		<li style="background-color: inherit;" class="nav-item">			<a id="googlelogin" href='https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=56005720278-hgk8iclpv6jogpih0d5slqjtgmoldquo.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.speedcubedb.com%2Fsso.php&state&scope=email%20profile&approval_prompt=auto'><img src="assets/btn_google_signin_dark_normal_web.png" alt="Sign in via Google" /></a>
+			</li>
+						
+        <li>
+			<form id="searchform" method="GET" action="r/index" autocomplete="false" class="d-flex" style="flex-direction: initial; width: 100%;">
+	
+					<input type="text" name="search" placeholder="Search over 7000 reconstructions, updated daily!"  style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;" />
+					<button type="submit" class="btn btn-primary" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+		
+			</form>
+		</li>
+      </ul>
+	  <button id="darkmodebtn" class="nav-item float-right me-3 btn btn-dark border-light"><i class="fa fa-moon" aria-hidden="true"></i></button>
+	  <a class="nav-item float-right btn btn-primary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YXDSNHGD65YHU&currency_code=USD&source=url"><i class="fa fa-heart me-2"></i>Support</a>
+    
+    </div>
+  </div>
+  
+  <script>
+  
+  function setDarkmode()
+  {
+    if (getCookie("darkmode") == "true")
+	{
+		$("body").addClass("darkmode");
+		$("table.table").addClass("table-dark");
+		$(".carousel").removeClass("carousel-dark");
+	}
+	else
+	{
+		$("body").removeClass("darkmode");
+		$("table.table").removeClass("table-dark");
+		$(".carousel").addClass("carousel-dark");
+	}
+  }
+  
+  $(document).ready(function() {
+		// handle darkmode
+		setDarkmode();
+
+		$("#darkmodebtn").click(function(){	
+			let darkmodeOn = $("body").hasClass("darkmode");
+			setCookie("darkmode",darkmodeOn == false ? "true" : "false",500000,'/',  'speedcubedb.com');
+
+			setDarkmode();
+		});
+  });
+  </script>
+</nav>
+		</header>
+		<div style="margin-top: 50px;"></div>
+		
+		
+		
+		
+		
+		<!-- Breadcrumbs -->
+		<div class="container-fluid mt-2">
+			<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<li class="breadcrumb-item active"><a href="a/SQ1">SQ1</a></li>
+					<li class="breadcrumb-item active" aria-current="page"><a href="a/SQ1/SQ1EP">Edge Permutation (EP)</a></li>
+				</ol>
+			</nav>
+		</div>
+		<!-- /Breadcrumbs -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-md-4">
+					<div class="card-set-header py-2">
+						<div class="sqcubeset-image" data-width="40" data-height="40" data-display="2" data-tr="OGBGRRRBGBOO" data-br="rrgggooobbbr" data-t="CECECECE" data-b="ecececec"><div class="tree-progress">0/41</div></div>								
+						<h1 class="category-name mb-0 ms-2">Edge Permutation (EP)</h1>
+						<div class="mx-3 align-self-center">
+							<span class="d-none d-sm-inline-block badge bg-secondary">SQ1</span>
+						</div>
+						
+						<div class="headline-feature-menu">
+														<a class="btn btn-outline-light" target="_blank" href="p/SQ1/SQ1EP">
+								<i style="color: red;" class="fas fa-file-pdf"></i>
+							</a>
+						</div>
+					</div>
+					<div class="category-description">
+						
+						
+						<h2 class="subcaption">Description</h2>
+						<div>
+													</div>
+						
+						<div class="subcaption mt-2">Number of Cases:</div>
+						<div>41</div>
+						
+											</div>
+										
+										
+					
+										<div>
+					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9351693020129127"
+							 crossorigin="anonymous"></script>
+						<!-- Category Page -->
+						<ins class="adsbygoogle"
+							 style="display:block"
+							 data-ad-client="ca-pub-9351693020129127"
+							 data-ad-slot="9591548824"
+							 data-ad-format="auto"
+							 data-full-width-responsive="true"></ins>
+						<script>
+							 (adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</div>
+				</div>
+				<div class="col col-md-8">
+					<div class="card-set-header py-2 justify-content-between">
+						<h4 class="category-name mb-0 ms-2">Subsets</h4>
+						<div class="float: right;">
+							<label for="formFileMultiple">Cross Color:</label>
+							<select id="crossorientation">
+								<option value="z2" selected>White</option>
+								<option value="" >Yellow</option>
+								<option value="x'" >Green</option>
+								<option value="x" >Blue</option>
+								<option value="z" >Red</option>
+								<option value="z'" >Orange</option>
+							</select>
+						</div>
+					</div>
+					<div class="subset-select">
+													<div class="category-summary" data-filter="">
+								
+								<div class="sqcube set-image " data-width="40" data-height="40" data-display="2" data-tr="OGBGRRRBGBOO" data-br="rrgggooobbbr" data-t="CECECECE" data-b="ecececec"><div class="tree-progress">0/41</div></div>									 
+								
+									<div></div>
+								</div>
+												</div>
+					
+					
+					
+					<!-- Algorithms -->
+					<div class="">
+												
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGBGRRRBGBOO" data-br="rrgggooobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Opp & Solved</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Opp & Solved,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Opp & Solved,0"><li class='list-group-item'>													
+													<span>/ 3,3 / -1,0 / 2,-4 / 4,-2 / 0,-2 / -4,2 / 1,-5 / 3,0 / 3,3 / 3,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=%2F+3%2C3+%2F+%252D1%2C0+%2F+2%2C%252D4+%2F+4%2C%252D2+%2F+0%2C%252D2+%2F+%252D4%2C2+%2F+1%2C%252D5+%2F+3%2C0+%2F+3%2C3+%2F+3%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10779' data-altid='11177'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10779' data-altid='11177'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10779' data-altid='11177'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10779' data-altid='11177'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGRGRBRBOBOG" data-br="rrgggooobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>O+ & Solved</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="O+ & Solved,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="O+ & Solved,0"><li class='list-group-item'>													
+													<span>0,-1 / -2,-2 / 2,0 / -3,-3 / 0,1 / -2,-2 / 0,-2 / 2,2 / 0,-1 / 3,3 / 3,3</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=0%2C%252D1+%2F+%252D2%2C%252D2+%2F+2%2C0+%2F+%252D3%2C%252D3+%2F+0%2C1+%2F+%252D2%2C%252D2+%2F+0%2C%252D2+%2F+2%2C2+%2F+0%2C%252D1+%2F+3%2C3+%2F+3%2C3" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10780' data-altid='11178'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10780' data-altid='11178'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10780' data-altid='11178'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10780' data-altid='11178'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGOGRGRBRBOB" data-br="rrgggooobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>O- & Solved</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="O- & Solved,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="O- & Solved,0"><li class='list-group-item'>													
+													<span>/ -3,-3 / 0,1 / -2,-2 / 0,2 / 2,2 / 0,-1 / 3,3 / -2,0 / 2,2 / -3,-2</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=%2F+%252D3%2C%252D3+%2F+0%2C1+%2F+%252D2%2C%252D2+%2F+0%2C2+%2F+2%2C2+%2F+0%2C%252D1+%2F+3%2C3+%2F+%252D2%2C0+%2F+2%2C2+%2F+%252D3%2C%252D2" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10781' data-altid='11179'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10781' data-altid='11179'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10781' data-altid='11179'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10781' data-altid='11179'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGOGRBRBGBOR" data-br="bbrrrgggooob" data-t="CECECECE" data-b="ecececec"></div><h3>W & Solved</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="W & Solved,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="W & Solved,0"><li class='list-group-item'>													
+													<span>0,-1 / 1,-2 / -4,0 / 0,3 / 1,0 / 3,-2 / -4,0 / -4,0 / -2,2 / -1,0 / 0,-3 / -3,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=0%2C%252D1+%2F+1%2C%252D2+%2F+%252D4%2C0+%2F+0%2C3+%2F+1%2C0+%2F+3%2C%252D2+%2F+%252D4%2C0+%2F+%252D4%2C0+%2F+%252D2%2C2+%2F+%252D1%2C0+%2F+0%2C%252D3+%2F+%252D3%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10782' data-altid='11180'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10782' data-altid='11180'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10782' data-altid='11180'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10782' data-altid='11180'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="RBBBOROGGGRO" data-br="orgggorobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Opp & Opp</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Opp & Opp,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Opp & Opp,0"><li class='list-group-item'>													
+													<span>1,0 / 5,-1 / -5,1 / -1,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=1%2C0+%2F+5%2C%252D1+%2F+%252D5%2C1+%2F+%252D1%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10783' data-altid='11181'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10783' data-altid='11181'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10783' data-altid='11181'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10783' data-altid='11181'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGGGRORBBBOR" data-br="rrgogogobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Opp & Adj</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Opp & Adj,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Opp & Adj,0"><li class='list-group-item'>													
+													<span>0,-1 / 0,-3 / 0,3 / 1,-2 / -1,-1 / 0,3 / 0,-3 / 0,3 / 0,1</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=0%2C%252D1+%2F+0%2C%252D3+%2F+0%2C3+%2F+1%2C%252D2+%2F+%252D1%2C%252D1+%2F+0%2C3+%2F+0%2C%252D3+%2F+0%2C3+%2F+0%2C1" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10784' data-altid='11182'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10784' data-altid='11182'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10784' data-altid='11182'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10784' data-altid='11182'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGBGRRRBGBOO" data-br="grgrgobobobr" data-t="CECECECE" data-b="ecececec"></div><h3>Opp & Z</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Opp & Z,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Opp & Z,0"><li class='list-group-item'>													
+													<span> / -3,-3 / 0,-1 / -4,2 / 4,-2 / -4,0 / -2,-2 / -3,0 / -3,-3 / -3,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+%252D3%2C%252D3+%2F+0%2C%252D1+%2F+%252D4%2C2+%2F+4%2C%252D2+%2F+%252D4%2C0+%2F+%252D2%2C%252D2+%2F+%252D3%2C0+%2F+%252D3%2C%252D3+%2F+%252D3%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10785' data-altid='11183'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10785' data-altid='11183'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10785' data-altid='11183'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10785' data-altid='11183'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGBGRRRBGBOO" data-br="orgbgorobgbr" data-t="CECECECE" data-b="ecececec"></div><h3>Opp & H</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Opp & H,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Opp & H,0"><li class='list-group-item'>													
+													<span> / -3,-3 / 0,-1 / -4,2 / 4,-2 / 0,-2 / -3,-3 / 0,3 / -3,-3 / 0,-3</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+%252D3%2C%252D3+%2F+0%2C%252D1+%2F+%252D4%2C2+%2F+4%2C%252D2+%2F+0%2C%252D2+%2F+%252D3%2C%252D3+%2F+0%2C3+%2F+%252D3%2C%252D3+%2F+0%2C%252D3" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10786' data-altid='11184'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10786' data-altid='11184'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10786' data-altid='11184'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10786' data-altid='11184'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGGGRORBBBOR" data-br="rrgbgogobobr" data-t="CECECECE" data-b="ecececec"></div><h3>Opp & Ub</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Opp & Ub,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Opp & Ub,0"><li class='list-group-item'>													
+													<span> / 0,-3 / 0,3 / 0,-3 / -3,0 / 0,-1 / -2,0 / 0,-4 / 4,0 / 0,-2 / -5,0 / -3,-3 / 3,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+0%2C%252D3+%2F+0%2C3+%2F+0%2C%252D3+%2F+%252D3%2C0+%2F+0%2C%252D1+%2F+%252D2%2C0+%2F+0%2C%252D4+%2F+4%2C0+%2F+0%2C%252D2+%2F+%252D5%2C0+%2F+%252D3%2C%252D3+%2F+3%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10787' data-altid='11185'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10787' data-altid='11185'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10787' data-altid='11185'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10787' data-altid='11185'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGRGRGRBBBOO" data-br="rrgggooobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Adj & Solved</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Adj & Solved,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Adj & Solved,0"><li class='list-group-item'>													
+													<span>/ -3,0 / 0,3 / 0,-3 / 0,3 / 2,0 / 0,2 / -2,0 / 4,0 / 0,-2 / 0,2 / -1,4 / 0,-3 / 0,3</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=%2F+%252D3%2C0+%2F+0%2C3+%2F+0%2C%252D3+%2F+0%2C3+%2F+2%2C0+%2F+0%2C2+%2F+%252D2%2C0+%2F+4%2C0+%2F+0%2C%252D2+%2F+0%2C2+%2F+%252D1%2C4+%2F+0%2C%252D3+%2F+0%2C3" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10788' data-altid='11186'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10788' data-altid='11186'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10788' data-altid='11186'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10788' data-altid='11186'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGGGRBRBRBOO" data-br="brgggooobrbr" data-t="CECECECE" data-b="ecececec"></div><h3>Adj & Adj</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Adj & Adj,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Adj & Adj,0"><li class='list-group-item'>													
+													<span>-2,0 / 0,3 / -1,-1 / 1,-2 / 2,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=%252D2%2C0+%2F+0%2C3+%2F+%252D1%2C%252D1+%2F+1%2C%252D2+%2F+2%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10789' data-altid='11187'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10789' data-altid='11187'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10789' data-altid='11187'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10789' data-altid='11187'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGRGRGRBBBOO" data-br="orgggorobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Adj & Opp</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Adj & Opp,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Adj & Opp,0"><li class='list-group-item'>													
+													<span>1,0 / -1,0 / -3,0 / 0,-1 / 6,0 / 1,0 / 3,0 / 0,1 / 5,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=1%2C0+%2F+%252D1%2C0+%2F+%252D3%2C0+%2F+0%2C%252D1+%2F+6%2C0+%2F+1%2C0+%2F+3%2C0+%2F+0%2C1+%2F+5%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10790' data-altid='11188'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10790' data-altid='11188'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10790' data-altid='11188'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10790' data-altid='11188'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGRGRGRBBBOO" data-br="grgrgobobobr" data-t="CECECECE" data-b="ecececec"></div><h3>Adj & Z</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Adj & Z,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Adj & Z,0"><li class='list-group-item'>													
+													<span> / 0,3 / -3,-3 / 0,-3 / 0,-1 / -4,2 / 4,-2 / -3,1 / -3,0 / 3,3 / 0,3</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+0%2C3+%2F+%252D3%2C%252D3+%2F+0%2C%252D3+%2F+0%2C%252D1+%2F+%252D4%2C2+%2F+4%2C%252D2+%2F+%252D3%2C1+%2F+%252D3%2C0+%2F+3%2C3+%2F+0%2C3" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10791' data-altid='11189'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10791' data-altid='11189'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10791' data-altid='11189'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10791' data-altid='11189'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGRGRGRBBBOO" data-br="orgbgorobgbr" data-t="CECECECE" data-b="ecececec"></div><h3>Adj & H</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Adj & H,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Adj & H,0"><li class='list-group-item'>													
+													<span> / 0,3 / -3,-3 / 0,-3 / 0,-1 / -4,2 / 4,-2 / -4,0 / -2,1 / 3,3 / 0,3</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+0%2C3+%2F+%252D3%2C%252D3+%2F+0%2C%252D3+%2F+0%2C%252D1+%2F+%252D4%2C2+%2F+4%2C%252D2+%2F+%252D4%2C0+%2F+%252D2%2C1+%2F+3%2C3+%2F+0%2C3" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10792' data-altid='11190'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10792' data-altid='11190'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10792' data-altid='11190'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10792' data-altid='11190'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGGGRRRBOBOB" data-br="rrgogobobgbr" data-t="CECECECE" data-b="ecececec"></div><h3>Adj & Ua</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Adj & Ua,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Adj & Ua,0"><li class='list-group-item'>													
+													<span> / 3,3 / 5,0 / -2,0 / -4,0 / -4,0 / 0,-4 / 0,-2 / 0,1 / 3,3 / -3,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+3%2C3+%2F+5%2C0+%2F+%252D2%2C0+%2F+%252D4%2C0+%2F+%252D4%2C0+%2F+0%2C%252D4+%2F+0%2C%252D2+%2F+0%2C1+%2F+3%2C3+%2F+%252D3%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10793' data-altid='11191'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10793' data-altid='11191'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10793' data-altid='11191'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10793' data-altid='11191'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGOGRRRBBBOG" data-br="rrgbgogobobr" data-t="CECECECE" data-b="ecececec"></div><h3>Adj & Ub</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Adj & Ub,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Adj & Ub,0"><li class='list-group-item'>													
+													<span> / -3,-3 / 0,-1 / 0,2 / 0,4 / 4,0 / 4,0 / 2,0 / -5,0 / -3,-3 / 3,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+%252D3%2C%252D3+%2F+0%2C%252D1+%2F+0%2C2+%2F+0%2C4+%2F+4%2C0+%2F+4%2C0+%2F+2%2C0+%2F+%252D5%2C0+%2F+%252D3%2C%252D3+%2F+3%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10794' data-altid='11192'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10794' data-altid='11192'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10794' data-altid='11192'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10794' data-altid='11192'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGBGRGRBRBOO" data-br="rrgggooobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Ua & Solved</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Ua & Solved,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Ua & Solved,0"><li class='list-group-item'>													
+													<span>1,0 / -3,0 / -1,0 / 0,3 / 1,0 / 3,0 / -1,0 / 0,-3 /</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=1%2C0+%2F+%252D3%2C0+%2F+%252D1%2C0+%2F+0%2C3+%2F+1%2C0+%2F+3%2C0+%2F+%252D1%2C0+%2F+0%2C%252D3+%2F" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10795' data-altid='11193'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10795' data-altid='11193'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10795' data-altid='11193'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10795' data-altid='11193'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="BOGOGBGRRRBO" data-br="orgrgogobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Ua & Ua</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Ua & Ua,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Ua & Ua,0"><li class='list-group-item'>													
+													<span>-2,-0 / 5,-1 / -2,1 / -1,-1 / 3,0 / -2,1 / -1,-1 / -2,1 / -1,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=%252D2%2C%252D0+%2F+5%2C%252D1+%2F+%252D2%2C1+%2F+%252D1%2C%252D1+%2F+3%2C0+%2F+%252D2%2C1+%2F+%252D1%2C%252D1+%2F+%252D2%2C1+%2F+%252D1%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10796' data-altid='11194'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10796' data-altid='11194'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10796' data-altid='11194'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10796' data-altid='11194'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="RBBBOROGOGRG" data-br="orgrgogobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Ua & Ub</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Ua & Ub,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Ua & Ub,0"><li class='list-group-item'>													
+													<span>1,0 / 3,0 / -1,-1 / 3,0 / -5,1 / -1,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=1%2C0+%2F+3%2C0+%2F+%252D1%2C%252D1+%2F+3%2C0+%2F+%252D5%2C1+%2F+%252D1%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10797' data-altid='11195'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10797' data-altid='11195'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10797' data-altid='11195'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10797' data-altid='11195'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGOGRRRBGBOB" data-br="rrgggobobobr" data-t="CECECECE" data-b="ecececec"></div><h3>Ua & Adj</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Ua & Adj,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Ua & Adj,0"><li class='list-group-item'>													
+													<span> / -3,-3 / 0,-5 / 0,2 / 0,4 / 0,4 / 4,0 / 2,0 / -1,0 / -3,-3 / 0,3</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+%252D3%2C%252D3+%2F+0%2C%252D5+%2F+0%2C2+%2F+0%2C4+%2F+0%2C4+%2F+4%2C0+%2F+2%2C0+%2F+%252D1%2C0+%2F+%252D3%2C%252D3+%2F+0%2C3" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10798' data-altid='11196'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10798' data-altid='11196'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10798' data-altid='11196'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10798' data-altid='11196'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGBGRRRBGBOO" data-br="rrgogobobgbr" data-t="CECECECE" data-b="ecececec"></div><h3>Ua & Opp</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Ua & Opp,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Ua & Opp,0"><li class='list-group-item'>													
+													<span> / 3,3 / 5,0 / 0,2 / -4,0 / 0,4 / 2,0 / 0,1 / 3,0 / 0,3 / 0,-3 / 0,3 / -3,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+3%2C3+%2F+5%2C0+%2F+0%2C2+%2F+%252D4%2C0+%2F+0%2C4+%2F+2%2C0+%2F+0%2C1+%2F+3%2C0+%2F+0%2C3+%2F+0%2C%252D3+%2F+0%2C3+%2F+%252D3%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10799' data-altid='11197'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10799' data-altid='11197'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10799' data-altid='11197'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10799' data-altid='11197'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGOGRRRBGBOB" data-br="rrgbgooobgbr" data-t="CECECECE" data-b="ecececec"></div><h3>Ub & Opp</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Ub & Opp,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Ub & Opp,0"><li class='list-group-item'>													
+													<span> / 3,0 / -3,0 / 3,0 / 0,3 / 1,0 / 0,2 / 4,0 / 0,-4 / 2,0 / 0,5 / 3,3 / 0,-3</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+3%2C0+%2F+%252D3%2C0+%2F+3%2C0+%2F+0%2C3+%2F+1%2C0+%2F+0%2C2+%2F+4%2C0+%2F+0%2C%252D4+%2F+2%2C0+%2F+0%2C5+%2F+3%2C3+%2F+0%2C%252D3" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10800' data-altid='11199'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10800' data-altid='11199'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10800' data-altid='11199'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10800' data-altid='11199'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<span> / -3,-3 / 0,-5 / -2,0 / 0,4 / -4,0 / 0,-2 / -1,0 / 0,-3 / -3,0 / 3,0 / -3,0 / 0,3</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+%252D3%2C%252D3+%2F+0%2C%252D5+%2F+%252D2%2C0+%2F+0%2C4+%2F+%252D4%2C0+%2F+0%2C%252D2+%2F+%252D1%2C0+%2F+0%2C%252D3+%2F+%252D3%2C0+%2F+3%2C0+%2F+%252D3%2C0+%2F+0%2C3" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10800' data-altid='11198'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10800' data-altid='11198'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10800' data-altid='11198'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10800' data-altid='11198'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGRGRBRBGBOO" data-br="rrgggooobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Ub & Solved</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Ub & Solved,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Ub & Solved,0"><li class='list-group-item'>													
+													<span>/ 0,3 / 1,0 / -3,0 / -1,0 / 0,-3 / 1,0 / 3,0 / -1,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=%2F+0%2C3+%2F+1%2C0+%2F+%252D3%2C0+%2F+%252D1%2C0+%2F+0%2C%252D3+%2F+1%2C0+%2F+3%2C0+%2F+%252D1%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10801' data-altid='11200'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10801' data-altid='11200'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10801' data-altid='11200'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10801' data-altid='11200'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="RBOBOROGGGRB" data-br="grgogorobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Ub & Ua</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Ub & Ua,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Ub & Ua,0"><li class='list-group-item'>													
+													<span>1,0 / 5,-1 / -2,1 / -1,-1 / -2,1 / -1,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=1%2C0+%2F+5%2C%252D1+%2F+%252D2%2C1+%2F+%252D1%2C%252D1+%2F+%252D2%2C1+%2F+%252D1%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10802' data-altid='11201'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10802' data-altid='11201'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10802' data-altid='11201'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10802' data-altid='11201'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="BOBOGOGRRRBG" data-br="grgogorobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Ub & Ub</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Ub & Ub,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Ub & Ub,0"><li class='list-group-item'>													
+													<span>-2,0 / 3,0 / -1,-1 / 3,0 / -2,1 / -1,-1 / 3,0 / -5,1 / -1,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=%252D2%2C0+%2F+3%2C0+%2F+%252D1%2C%252D1+%2F+3%2C0+%2F+%252D2%2C1+%2F+%252D1%2C%252D1+%2F+3%2C0+%2F+%252D5%2C1+%2F+%252D1%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10803' data-altid='11202'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10803' data-altid='11202'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10803' data-altid='11202'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10803' data-altid='11202'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGBGRRRBOBOG" data-br="rrgogogobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Ub & Adj</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Ub & Adj,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Ub & Adj,0"><li class='list-group-item'>													
+													<span> / 3,3 / 1,0 / -2,0 / -4,0 / 0,-4 / 0,-4 / 0,-2 / 0,5 / 3,3 / 0,-3</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+3%2C3+%2F+1%2C0+%2F+%252D2%2C0+%2F+%252D4%2C0+%2F+0%2C%252D4+%2F+0%2C%252D4+%2F+0%2C%252D2+%2F+0%2C5+%2F+3%2C3+%2F+0%2C%252D3" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10804' data-altid='11203'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10804' data-altid='11203'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10804' data-altid='11203'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10804' data-altid='11203'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGBGRRRBOBOG" data-br="orgggorobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Ub & Opp</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Ub & Opp,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Ub & Opp,0"><li class='list-group-item'>													
+													<span> / 3,0 / -3,0 / 3,0 / 0,3 / 1,0 / 0,2 / 4,0 / 0,-4 / 2,0 / 0,5 / 3,3 / 0,-3</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+3%2C0+%2F+%252D3%2C0+%2F+3%2C0+%2F+0%2C3+%2F+1%2C0+%2F+0%2C2+%2F+4%2C0+%2F+0%2C%252D4+%2F+2%2C0+%2F+0%2C5+%2F+3%2C3+%2F+0%2C%252D3" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10805' data-altid='11205'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10805' data-altid='11205'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10805' data-altid='11205'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10805' data-altid='11205'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<span> / -3,-3 / 0,-5 / -2,0 / 0,4 / -4,0 / 0,-2 / -1,0 / 0,-3 / -3,0 / 3,0 / -3,0 / 0,3</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+%252D3%2C%252D3+%2F+0%2C%252D5+%2F+%252D2%2C0+%2F+0%2C4+%2F+%252D4%2C0+%2F+0%2C%252D2+%2F+%252D1%2C0+%2F+0%2C%252D3+%2F+%252D3%2C0+%2F+3%2C0+%2F+%252D3%2C0+%2F+0%2C3" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10805' data-altid='11204'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10805' data-altid='11204'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10805' data-altid='11204'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10805' data-altid='11204'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGBGRORBGBOR" data-br="orgbgorobgbr" data-t="CECECECE" data-b="ecececec"></div><h3>H & H</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="H & H,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="H & H,0"><li class='list-group-item'>													
+													<span>/ 3,-3 / -3,3 / 1,-1 / 3,-3 / -3,3 / -1,1</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=%2F+3%2C%252D3+%2F+%252D3%2C3+%2F+1%2C%252D1+%2F+3%2C%252D3+%2F+%252D3%2C3+%2F+%252D1%2C1" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10806' data-altid='11206'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10806' data-altid='11206'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10806' data-altid='11206'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10806' data-altid='11206'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGBGRORBGBOR" data-br="rrgggooobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>H & Solved</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="H & Solved,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="H & Solved,0"><li class='list-group-item'>													
+													<span>/ 3,-3 / 3,-3 / 0,1 / -3,3 / -3,3 / -1,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=%2F+3%2C%252D3+%2F+3%2C%252D3+%2F+0%2C1+%2F+%252D3%2C3+%2F+%252D3%2C3+%2F+%252D1%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10807' data-altid='11207'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10807' data-altid='11207'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10807' data-altid='11207'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10807' data-altid='11207'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGBGRORBGBOR" data-br="grgrgooobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>H & Adj</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="H & Adj,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="H & Adj,0"><li class='list-group-item'>													
+													<span> / -3,0 / 3,3 / 3,0 / 1,0 / -2,4 / 2,-4 / 0,4 / -1,2 / -3,-3 / -3,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+%252D3%2C0+%2F+3%2C3+%2F+3%2C0+%2F+1%2C0+%2F+%252D2%2C4+%2F+2%2C%252D4+%2F+0%2C4+%2F+%252D1%2C2+%2F+%252D3%2C%252D3+%2F+%252D3%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10808' data-altid='11208'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10808' data-altid='11208'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10808' data-altid='11208'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10808' data-altid='11208'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGBGRORBGBOR" data-br="rrgbgooobgbr" data-t="CECECECE" data-b="ecececec"></div><h3>H & Opp</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="H & Opp,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="H & Opp,0"><li class='list-group-item'>													
+													<span> / -3,-3 / 3,0 / -3,-3 / -2,0 / -2,4 / 2,-4 / -1,0 / -3,-3 / -3,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+%252D3%2C%252D3+%2F+3%2C0+%2F+%252D3%2C%252D3+%2F+%252D2%2C0+%2F+%252D2%2C4+%2F+2%2C%252D4+%2F+%252D1%2C0+%2F+%252D3%2C%252D3+%2F+%252D3%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10809' data-altid='11209'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10809' data-altid='11209'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10809' data-altid='11209'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10809' data-altid='11209'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="BOBOGRGRGRBO" data-br="brgogogobrbr" data-t="CECECECE" data-b="ecececec"></div><h3>Z & Z</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Z & Z,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Z & Z,0"><li class='list-group-item'>													
+													<span>-2,0 / 0,3 / -1,-1 / 4,-2 / -1,-1 / -2,1 / -1,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=%252D2%2C0+%2F+0%2C3+%2F+%252D1%2C%252D1+%2F+4%2C%252D2+%2F+%252D1%2C%252D1+%2F+%252D2%2C1+%2F+%252D1%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10810' data-altid='11210'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10810' data-altid='11210'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10810' data-altid='11210'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10810' data-altid='11210'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGRGRGRBOBOB" data-br="grgrgooobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Z & Adj</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Z & Adj,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Z & Adj,0"><li class='list-group-item'>													
+													<span> / -3,0 / 3,3 / 3,0 / 1,0 / -2,4 / 2,-4 / -1,3 / 0,3 / -3,-3 / -3,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+%252D3%2C0+%2F+3%2C3+%2F+3%2C0+%2F+1%2C0+%2F+%252D2%2C4+%2F+2%2C%252D4+%2F+%252D1%2C3+%2F+0%2C3+%2F+%252D3%2C%252D3+%2F+%252D3%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10811' data-altid='11211'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10811' data-altid='11211'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10811' data-altid='11211'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10811' data-altid='11211'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGOGRBRBRBOG" data-br="rrgggooobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Z & Solved</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Z & Solved,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Z & Solved,0"><li class='list-group-item'>													
+													<span>1,0 / -1,-1 / -3,0 / 1,1 / 3,0 / -1,-1 / 0,1</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=1%2C0+%2F+%252D1%2C%252D1+%2F+%252D3%2C0+%2F+1%2C1+%2F+3%2C0+%2F+%252D1%2C%252D1+%2F+0%2C1" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10812' data-altid='11212'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10812' data-altid='11212'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10812' data-altid='11212'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10812' data-altid='11212'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGRGRGRBOBOB" data-br="rrgbgooobgbr" data-t="CECECECE" data-b="ecececec"></div><h3>Z & Opp</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Z & Opp,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Z & Opp,0"><li class='list-group-item'>													
+													<span> / -3,-3 / 0,-3 / -2,-2 / 2,0 / -2,4 / -4,2 / -1,0 / -3,-3 / -3,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=+%2F+%252D3%2C%252D3+%2F+0%2C%252D3+%2F+%252D2%2C%252D2+%2F+2%2C0+%2F+%252D2%2C4+%2F+%252D4%2C2+%2F+%252D1%2C0+%2F+%252D3%2C%252D3+%2F+%252D3%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10813' data-altid='11213'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10813' data-altid='11213'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10813' data-altid='11213'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10813' data-altid='11213'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGGGRRRBBBOO" data-br="grgrgooobbbr" data-t="CECECECE" data-b="ecececec"></div><h3>Solved & Adj</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Solved & Adj,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Solved & Adj,0"><li class='list-group-item'>													
+													<span>/ 0,3 / -3,0 / 3,0 / -3,0 / 0,-2 / -2,0 / 0,2 / 0,-4 / 2,0 / -2,0 / -4,1 / 3,0 / -3,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=%2F+0%2C3+%2F+%252D3%2C0+%2F+3%2C0+%2F+%252D3%2C0+%2F+0%2C%252D2+%2F+%252D2%2C0+%2F+0%2C2+%2F+0%2C%252D4+%2F+2%2C0+%2F+%252D2%2C0+%2F+%252D4%2C1+%2F+3%2C0+%2F+%252D3%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10814' data-altid='11214'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10814' data-altid='11214'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10814' data-altid='11214'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10814' data-altid='11214'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGGGRRRBBBOO" data-br="rrgbgooobgbr" data-t="CECECECE" data-b="ecececec"></div><h3>Solved & Opp</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Solved & Opp,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Solved & Opp,0"><li class='list-group-item'>													
+													<span>/ -3,-3 / 0,-1 / 2,2 / 0,2 / -2,-2 / 2,0 / 1,1 / -3,0 / 3,3 / 0,-1 / -2,-2 / 2,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=%2F+%252D3%2C%252D3+%2F+0%2C%252D1+%2F+2%2C2+%2F+0%2C2+%2F+%252D2%2C%252D2+%2F+2%2C0+%2F+1%2C1+%2F+%252D3%2C0+%2F+3%2C3+%2F+0%2C%252D1+%2F+%252D2%2C%252D2+%2F+2%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10815' data-altid='11215'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10815' data-altid='11215'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10815' data-altid='11215'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10815' data-altid='11215'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGGGRRRBBBOO" data-br="rrgogobobgbr" data-t="CECECECE" data-b="ecececec"></div><h3>Solved & Ua</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Solved & Ua,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Solved & Ua,0"><li class='list-group-item'>													
+													<span>0,-1 / 3,0 / 0,1 / 0,-3 / 0,-1 / -3,0 / 0,1 / 0,3 /</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=0%2C%252D1+%2F+3%2C0+%2F+0%2C1+%2F+0%2C%252D3+%2F+0%2C%252D1+%2F+%252D3%2C0+%2F+0%2C1+%2F+0%2C3+%2F" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10816' data-altid='11216'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10816' data-altid='11216'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10816' data-altid='11216'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10816' data-altid='11216'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGGGRRRBBBOO" data-br="rrgbgogobobr" data-t="CECECECE" data-b="ecececec"></div><h3>Solved & Ub</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Solved & Ub,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Solved & Ub,0"><li class='list-group-item'>													
+													<span>/ 0,-3 / 0,-1 / 3,0 / 0,1 / 0,3 / 0,-1 / -3,0 / 0,1</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=%2F+0%2C%252D3+%2F+0%2C%252D1+%2F+3%2C0+%2F+0%2C1+%2F+0%2C3+%2F+0%2C%252D1+%2F+%252D3%2C0+%2F+0%2C1" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10817' data-altid='11217'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10817' data-altid='11217'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10817' data-altid='11217'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10817' data-altid='11217'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGGGRRRBBBOO" data-br="brgogogobrbr" data-t="CECECECE" data-b="ecececec"></div><h3>Solved & Z</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Solved & Z,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Solved & Z,0"><li class='list-group-item'>													
+													<span>0,-1 / 1,1 / 0,3 / -1,-1 / 0,-3 / 1,1 / -1,0</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=0%2C%252D1+%2F+1%2C1+%2F+0%2C3+%2F+%252D1%2C%252D1+%2F+0%2C%252D3+%2F+1%2C1+%2F+%252D1%2C0" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10818' data-altid='11218'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10818' data-altid='11218'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10818' data-altid='11218'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10818' data-altid='11218'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<div class="sqcube" data-width="75" data-height="75" data-display="2" data-tr="OGGGRRRBBBOO" data-br="orgbgorobgbr" data-t="CECECECE" data-b="ecececec"></div><h3>Solved & H</h3>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Solved & H,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Solved & H,0"><li class='list-group-item'>													
+													<span>/ 3,-3 / 3,-3 / -1,0 / -3,3 / -3,3 / 0,1</span>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="https://cubedb.net/?puzzle=SQ1&type=alg&alg=%2F+3%2C%252D3+%2F+3%2C%252D3+%2F+%252D1%2C0+%2F+%252D3%2C3+%2F+%252D3%2C3+%2F+0%2C1" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10819' data-altid='11219'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10819' data-altid='11219'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10819' data-altid='11219'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10819' data-altid='11219'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+												
+					</div>
+					<!-- /Algorithms -->
+				</div>
+			</div>
+		</div>
+
+
+		
+
+		
+		
+<div style="margin-top: 70px;"></div>
+<footer class="bg-dark text-center text-lg-start fixed-bottom text-white">
+
+
+  <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2)">
+    Created By Gil Zussman - <a href="mailto:gil@speedcubedb.com">gil@speedcubedb.com</a> | <a href="privacypolicy.php">Privacy Policy</a> | <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=YXDSNHGD65YHU&amp;currency_code=USD&amp;source=url">Donate</a>
+    
+  </div>
+</footer>		<style>
+	#login-lightbox
+	{
+		z-index: 1000;
+		width: 100%; 
+		height: 100%; 
+		top: 0px; 
+		left: 0px; 
+		background-color: rgb(10,10,10,0.5); 
+		position: fixed;
+		display: none;
+	}
+	#login-popup
+	{
+		position: absolute; 
+		width: 80%;
+		padding: 30px;
+		top: 50%; 
+		left: 50%; 
+		background-color: white; 
+		text-align: center;
+		transform: translatex(-50%) translatey(-50%);
+		
+	}
+</style>
+<script>
+	$(document).ready(function(){
+		$("#login-lightbox").click(function(e){
+			if (e.target == this)
+			{
+				$("#login-lightbox").fadeOut();
+			}
+		});
+	});
+</script>
+
+<div id="login-lightbox">
+	<div id="login-popup">
+			<h2>Track Your Progress</h2>
+			<h5>Algorithms Learnt, Execution Times and Personal Algorithm Sheets</h5>
+			
+						<a id="googlelogin" href='https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=56005720278-hgk8iclpv6jogpih0d5slqjtgmoldquo.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.speedcubedb.com%2Fsso.php&state&scope=email%20profile&approval_prompt=auto'><img src="assets/btn_google_signin_dark_normal_web.png" alt="Sign in via Google" /></a>
+	</div>
+</div>
+  </body>
+</html>

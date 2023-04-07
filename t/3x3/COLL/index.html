@@ -1,0 +1,390 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+	<base href="/"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2NP03VW57J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2NP03VW57J'); 
+</script>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="icon" type="image/png" href="/favicon.png"/>
+
+<!-- JQ, FAS -->
+<script type="text/javascript" src="includes/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<script type="text/javascript" src="includes/jcookie.js"></script>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<!-- Swiper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.js" integrity="sha512-qqdD5ZLIGB5PCqCk1OD8nFBr/ngB5w+Uw35RE/Ivt5DK35xl1PFVkuOgAbqFpvtoxX6MpRGLmIqixzdhFOJhnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.css" integrity="sha512-lfjMBfE41+3a9XCiuXCjaE4CkvpPOQ5P2qZSZclW9iHsMSvn50dh6ZuB5O8g7uDlCIKFKPqYo8JIka9Rh8HXow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<script src="includes/svg.min.js"></script>
+<script src="includes/ijsm.js?d=10"></script>
+
+<link href="template/theme.css?d=76" rel="stylesheet">
+
+
+<meta name="author" content="Gil Zussman" />
+
+<script>
+	$(document).ready(function() {
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		  return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+	});
+</script>	
+	<meta name="description" content="Free online speedcubing algorithm and reconstruction database, covers every algorithm for 2x2 - 6x6, SQ1 and Megaminx including F2L, OLL, PLL, COLL, ZBLL, WV and much more" />
+	<meta name="keywords" content="rubiks, speedcube, algdb, cubing, speedcubing, reconstruction, recons, algorithm, alg, 3x3, 4x4, 5x5, 6x6, 2x2, SQ1, Megaminx, OLL, COLL, PLL, Parity, WV, ZBLL, CLL, EG1" />
+	
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&amp;display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&amp;display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Secular+One&amp;display=swap" rel="stylesheet">
+	
+	<link href="timer1.css?d=2" rel="stylesheet">
+	<script type="text/javascript" src="timer1.js?d=15"></script>
+	<title>Practice Timer - Speed Cube Database</title>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9351693020129127"  crossorigin="anonymous"></script>
+  </head>
+  <body>
+		<div class="d-none">COLL</div>
+		<header>
+		<nav id="navbar-main" class="navbar navbar-expand-lg fixed-top navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="/"><img src="assets/logo.png" style="width: 40px; height: 40px;" /><div>SpeedCubeDB</div></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+	
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a href="/t" style="background-color: inherit;" class="nav-link active" >Practice</a>
+        </li>		
+        <li class="nav-item">
+          <a href="/r/index" style="background-color: inherit;" class="nav-link active">Reconstructions</a>
+        </li>		
+		<li style="background-color: inherit;" class="nav-item">			<a id="googlelogin" href='https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=56005720278-hgk8iclpv6jogpih0d5slqjtgmoldquo.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.speedcubedb.com%2Fsso.php&state&scope=email%20profile&approval_prompt=auto'><img src="assets/btn_google_signin_dark_normal_web.png" alt="Sign in via Google" /></a>
+			</li>
+						
+        <li>
+			<form id="searchform" method="GET" action="r/index" autocomplete="false" class="d-flex" style="flex-direction: initial; width: 100%;">
+	
+					<input type="text" name="search" placeholder="Search over 7000 reconstructions, updated daily!"  style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;" />
+					<button type="submit" class="btn btn-primary" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+		
+			</form>
+		</li>
+      </ul>
+	  <button id="darkmodebtn" class="nav-item float-right me-3 btn btn-dark border-light"><i class="fa fa-moon" aria-hidden="true"></i></button>
+	  <a class="nav-item float-right btn btn-primary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YXDSNHGD65YHU&currency_code=USD&source=url"><i class="fa fa-heart me-2"></i>Support</a>
+    
+    </div>
+  </div>
+  
+  <script>
+  
+  function setDarkmode()
+  {
+    if (getCookie("darkmode") == "true")
+	{
+		$("body").addClass("darkmode");
+		$("table.table").addClass("table-dark");
+		$(".carousel").removeClass("carousel-dark");
+	}
+	else
+	{
+		$("body").removeClass("darkmode");
+		$("table.table").removeClass("table-dark");
+		$(".carousel").addClass("carousel-dark");
+	}
+  }
+  
+  $(document).ready(function() {
+		// handle darkmode
+		setDarkmode();
+
+		$("#darkmodebtn").click(function(){	
+			let darkmodeOn = $("body").hasClass("darkmode");
+			setCookie("darkmode",darkmodeOn == false ? "true" : "false",500000,'/',  'speedcubedb.com');
+
+			setDarkmode();
+		});
+  });
+  </script>
+</nav>
+			<div id="learnt" class="d-none">
+						</div>
+		</header>
+		<div style="margin-top: 70px;"></div>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-md-4">
+					<div class="card-set-header py-2">
+						<h4 class="category-name mb-0 ms-2">Algorithm Trainer</h4>
+					</div>
+					<div class="category-description">
+					
+						<div id="algset_selector">
+							<div class="selectorgroup">
+								<label for="puzzle">Puzzle:</label>
+								<select id="puzzle">
+									<option value="3x3" >3x3</option>
+									<option value="2x2" >2x2</option>
+									<option value="SQ1" >Square1</option>
+								</select>
+							</div>
+							<div class="selectorgroup">
+								<label for="algcatcat">Algorithm Category:</label>
+								<select id="algcatcat">
+									<option data-puzzle="3x3" value="CFOP" selected>CFOP</option>
+									<option data-puzzle="3x3" value="Advanced"  >Advanced Sets</option>
+									<option data-puzzle="3x3" value="ZBLL"  >ZBLL</option>
+									<option data-puzzle="3x3" value="VLS"  >VLS</option>
+									<option data-puzzle="3x3" value="1LLL"  >1LLL</option>
+									<option data-puzzle="3x3" value="LastSlot" >LastSlot</option>
+									<option data-puzzle="3x3" value="Roux" >Roux</option>
+									<option data-puzzle="2x2" value="2x2" >2x2</option>
+									<option data-puzzle="SQ1" value="SQ1" >Square1</option>
+								</select>				
+							</div>
+							<div class="selectorgroup">
+								<label for="algset">Algorithm Set:</label>
+								<select id="algset">
+									<option value="F2L" data-puzzle="3x3" data-catcat="CFOP" >F2L</option>
+									<option value="AdvancedF2L" data-puzzle="3x3" data-catcat="CFOP" >Advanced F2L</option>
+									<option value="OLL" data-puzzle="3x3" data-catcat="CFOP" >OLL</option>
+									<option value="PLL" data-puzzle="3x3" data-catcat="CFOP" >PLL</option>
+									<option value="COLL" data-puzzle="3x3" data-catcat="Advanced" selected>COLL</option>
+									<option value="ELL" data-puzzle="3x3" data-catcat="Advanced" >ELL</option>
+									<option value="AntiPLL" data-puzzle="3x3" data-catcat="Advanced" >Anti-PLL</option>
+									<option value="CMLL" data-puzzle="3x3" data-catcat="Roux" >CMLL</option>
+									<option value="SBLS" data-puzzle="3x3" data-catcat="Roux" >SBLS</option>
+									<option value="EO4a" data-puzzle="3x3" data-catcat="Roux" >EO</option>
+									<option value="WV" data-puzzle="LastSlot" data-catcat="LastSlot" >Winter Variation</option>
+									<option value="SV" data-puzzle="LastSlot" data-catcat="LastSlot" >Summer Variation</option>
+									<option value="ZBLLU" data-puzzle="3x3" data-catcat="ZBLL" >ZBLL-U</option>
+									<option value="ZBLLT" data-puzzle="3x3" data-catcat="ZBLL" >ZBLL-T</option>
+									<option value="ZBLLL" data-puzzle="3x3" data-catcat="ZBLL" >ZBLL-L</option>
+									<option value="ZBLLS" data-puzzle="3x3" data-catcat="ZBLL" >ZBLL-S</option>
+									<option value="ZBLLAS" data-puzzle="3x3" data-catcat="ZBLL" >ZBLL-AS</option>
+									<option value="ZBLLH" data-puzzle="3x3" data-catcat="ZBLL" >ZBLL-H</option>
+									<option value="ZBLLPi" data-puzzle="3x3" data-catcat="ZBLL" >ZBLL-Pi</option>
+									<option value="VLSNE" data-puzzle="3x3" data-catcat="VLS" >VLS NE</option>
+									<option value="VLSUB" data-puzzle="3x3" data-catcat="VLS" >VLS UB</option>
+									<option value="VLSUBUL" data-puzzle="3x3" data-catcat="VLS" >VLS UB UL</option>
+									<option value="VLSUF" data-puzzle="3x3" data-catcat="VLS" >VLS UF</option>
+									<option value="VLSUFUB" data-puzzle="3x3" data-catcat="VLS" >VLS UFUB</option>
+									<option value="VLSUFUL" data-puzzle="3x3" data-catcat="VLS" >VLS UF UL</option>
+									<option value="VLSUL" data-puzzle="3x3" data-catcat="VLS" >VLS UL</option>
+									<option value="OrtegaOLL" data-puzzle="2x2" data-catcat="2x2" >Ortega OLL</option>
+									<option value="OrtegaPBL" data-puzzle="2x2" data-catcat="2x2" >Ortega PBL</option>
+									<option value="CLL" data-puzzle="2x2" data-catcat="2x2" >CLL</option>
+									<option value="EG1" data-puzzle="2x2" data-catcat="2x2" >EG1</option>
+									<option value="EG2" data-puzzle="2x2" data-catcat="2x2" >EG2</option>
+									<option value="OBL" data-puzzle="SQ1" data-catcat="SQ1" >OBL</option>
+									
+																		
+										<option value="1LLL01" data-puzzle="3x3" data-catcat="1LLL" >01</option>
+																		
+										<option value="1LLL02" data-puzzle="3x3" data-catcat="1LLL" >02</option>
+																		
+										<option value="1LLL03" data-puzzle="3x3" data-catcat="1LLL" >03</option>
+																		
+										<option value="1LLL04" data-puzzle="3x3" data-catcat="1LLL" >04</option>
+																		
+										<option value="1LLL05" data-puzzle="3x3" data-catcat="1LLL" >05</option>
+																		
+										<option value="1LLL06" data-puzzle="3x3" data-catcat="1LLL" >06</option>
+																		
+										<option value="1LLL07" data-puzzle="3x3" data-catcat="1LLL" >07</option>
+																		
+										<option value="1LLL08" data-puzzle="3x3" data-catcat="1LLL" >08</option>
+																		
+										<option value="1LLL09" data-puzzle="3x3" data-catcat="1LLL" >09</option>
+																		
+										<option value="1LLL10" data-puzzle="3x3" data-catcat="1LLL" >10</option>
+																		
+										<option value="1LLL11" data-puzzle="3x3" data-catcat="1LLL" >11</option>
+																		
+										<option value="1LLL12" data-puzzle="3x3" data-catcat="1LLL" >12</option>
+																		
+										<option value="1LLL13" data-puzzle="3x3" data-catcat="1LLL" >13</option>
+																		
+										<option value="1LLL14" data-puzzle="3x3" data-catcat="1LLL" >14</option>
+																		
+										<option value="1LLL15" data-puzzle="3x3" data-catcat="1LLL" >15</option>
+																		
+										<option value="1LLL16" data-puzzle="3x3" data-catcat="1LLL" >16</option>
+																		
+										<option value="1LLL17" data-puzzle="3x3" data-catcat="1LLL" >17</option>
+																		
+										<option value="1LLL18" data-puzzle="3x3" data-catcat="1LLL" >18</option>
+																		
+										<option value="1LLL19" data-puzzle="3x3" data-catcat="1LLL" >19</option>
+																		
+										<option value="1LLL28" data-puzzle="3x3" data-catcat="1LLL" >28</option>
+																		
+										<option value="1LLL29" data-puzzle="3x3" data-catcat="1LLL" >29</option>
+																		
+										<option value="1LLL30" data-puzzle="3x3" data-catcat="1LLL" >30</option>
+																		
+										<option value="1LLL31" data-puzzle="3x3" data-catcat="1LLL" >31</option>
+																		
+										<option value="1LLL32" data-puzzle="3x3" data-catcat="1LLL" >32</option>
+																		
+										<option value="1LLL33" data-puzzle="3x3" data-catcat="1LLL" >33</option>
+																		
+										<option value="1LLL34" data-puzzle="3x3" data-catcat="1LLL" >34</option>
+																		
+										<option value="1LLL35" data-puzzle="3x3" data-catcat="1LLL" >35</option>
+																		
+										<option value="1LLL36" data-puzzle="3x3" data-catcat="1LLL" >36</option>
+																		
+										<option value="1LLL37" data-puzzle="3x3" data-catcat="1LLL" >37</option>
+																		
+										<option value="1LLL38" data-puzzle="3x3" data-catcat="1LLL" >38</option>
+																		
+										<option value="1LLL39" data-puzzle="3x3" data-catcat="1LLL" >39</option>
+																		
+										<option value="1LLL40" data-puzzle="3x3" data-catcat="1LLL" >40</option>
+																		
+										<option value="1LLL41" data-puzzle="3x3" data-catcat="1LLL" >41</option>
+																		
+										<option value="1LLL42" data-puzzle="3x3" data-catcat="1LLL" >42</option>
+																		
+										<option value="1LLL43" data-puzzle="3x3" data-catcat="1LLL" >43</option>
+																		
+										<option value="1LLL44" data-puzzle="3x3" data-catcat="1LLL" >44</option>
+																		
+										<option value="1LLL45" data-puzzle="3x3" data-catcat="1LLL" >45</option>
+																		
+										<option value="1LLL46" data-puzzle="3x3" data-catcat="1LLL" >46</option>
+																		
+										<option value="1LLL47" data-puzzle="3x3" data-catcat="1LLL" >47</option>
+																		
+										<option value="1LLL48" data-puzzle="3x3" data-catcat="1LLL" >48</option>
+																		
+										<option value="1LLL49" data-puzzle="3x3" data-catcat="1LLL" >49</option>
+																		
+										<option value="1LLL50" data-puzzle="3x3" data-catcat="1LLL" >50</option>
+																		
+										<option value="1LLL51" data-puzzle="3x3" data-catcat="1LLL" >51</option>
+																		
+										<option value="1LLL52" data-puzzle="3x3" data-catcat="1LLL" >52</option>
+																		
+										<option value="1LLL53" data-puzzle="3x3" data-catcat="1LLL" >53</option>
+																		
+										<option value="1LLL54" data-puzzle="3x3" data-catcat="1LLL" >54</option>
+																		
+										<option value="1LLL55" data-puzzle="3x3" data-catcat="1LLL" >55</option>
+																		
+										<option value="1LLL56" data-puzzle="3x3" data-catcat="1LLL" >56</option>
+																		
+										<option value="1LLL57" data-puzzle="3x3" data-catcat="1LLL" >57</option>
+																	</select>
+							</div>
+							<div class="selectorgroup">
+								<button id="selectspecificcases" class="btn btn-dark">Select Specific Cases</button>
+							</div>
+						</div>
+						<div id="algstopractice">
+						</div>
+					</div>
+					<div class="mt-1">
+					
+					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9351693020129127"
+						 crossorigin="anonymous"></script>
+					<!-- Practice Page -->
+					<ins class="adsbygoogle"
+						 style="display:block"
+						 data-ad-client="ca-pub-9351693020129127"
+						 data-ad-slot="1495514494"
+						 data-ad-format="auto"
+						 data-full-width-responsive="true"></ins>
+					<script>
+						 (adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+					
+					
+					</div>
+				</div>
+				<div class="col col-md-8">
+					<div class="card-set-header py-2 justify-content-between">
+						<h4 class="category-name mb-0 ms-2">Scramble</h4>
+					</div>
+					<div class="category-description">
+						<div id="timerdisplay">
+			
+							<div id="practice_alg_div" class="noselect">
+								<div class="text-center">
+									<div><input id="hideimage" type="checkbox" /><label for="hideimage">Hide State</label></div>
+									<div id="practice_img"></div>
+								</div>
+								<div id="practice_alg"></div>
+							</div>
+							<div id="stopwatch_display" class="noselect">0.00</div>
+							<div class="w-100 text-center"><small>Space to start/stop</small></div>
+						</div>
+					</div>
+					
+					<div class="card-set-header py-2 justify-content-between">
+						<h4 class="category-name mb-0 ms-2">Performance History</h4>
+					</div>
+					<div class="category-description">
+						<div id="timerstats">
+							<table>
+								<thead>
+									<tr>
+										<th>
+											&nbsp;
+										</th>
+										<th>
+											Case
+										</th>
+										<th>
+											Results
+										</th>
+										<th>
+											Average
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+<div style="margin-top: 70px;"></div>
+<footer class="bg-dark text-center text-lg-start fixed-bottom text-white">
+
+
+  <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2)">
+    Created By Gil Zussman - <a href="mailto:gil@speedcubedb.com">gil@speedcubedb.com</a> | <a href="privacypolicy.php">Privacy Policy</a> | <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=YXDSNHGD65YHU&amp;currency_code=USD&amp;source=url">Donate</a>
+    
+  </div>
+</footer>  </body>
+</html>

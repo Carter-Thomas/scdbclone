@@ -1,0 +1,545 @@
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+	<base href="/"/>
+    
+	
+    
+	<base href="/"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2NP03VW57J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2NP03VW57J'); 
+</script>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="icon" type="image/png" href="/favicon.png"/>
+
+<!-- JQ, FAS -->
+<script type="text/javascript" src="includes/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<script type="text/javascript" src="includes/jcookie.js"></script>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<!-- Swiper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.js" integrity="sha512-qqdD5ZLIGB5PCqCk1OD8nFBr/ngB5w+Uw35RE/Ivt5DK35xl1PFVkuOgAbqFpvtoxX6MpRGLmIqixzdhFOJhnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.css" integrity="sha512-lfjMBfE41+3a9XCiuXCjaE4CkvpPOQ5P2qZSZclW9iHsMSvn50dh6ZuB5O8g7uDlCIKFKPqYo8JIka9Rh8HXow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<script src="includes/svg.min.js"></script>
+<script src="includes/ijsm.js?d=10"></script>
+
+<link href="template/theme.css?d=76" rel="stylesheet">
+
+
+<meta name="author" content="Gil Zussman" />
+
+<script>
+	$(document).ready(function() {
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		  return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+	});
+</script>	<meta name="description" content="Free online speedcubing algorithm and reconstruction database, covers every algorithm for 2x2 - 6x6, SQ1 and Megaminx" />
+	<meta name="keywords" content="5 2x1s, Megaminx, alg, algorithm, algsheet, cubing, speedcubing, fingertricks, rubiks, speedcube, algdb, video" />
+	    
+	<script type="text/javascript" src="category.js?d=11"></script>
+	
+	
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="SpeedCubeDB">
+    <meta property="og:url" content="https://www.speedcubedb.com/a/Megaminx/MegaminxPLLN/">
+    <meta property="og:title" content="MegaminxPLLN (Megaminx) Speed Cube Database">
+	<meta property="og:description" content="Algorithms and fingertricks execution videos for MegaminxPLLN, Megaminx">
+    
+    
+	
+    <link href="category.css?d=5" rel="stylesheet">
+	<title>5 2x1s Algorithms - Speed Cube Database</title>
+  </head>
+  <body>
+		<header>
+		<nav id="navbar-main" class="navbar navbar-expand-lg fixed-top navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="/"><img src="assets/logo.png" style="width: 40px; height: 40px;" /><div>SpeedCubeDB</div></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+	
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a href="/t" style="background-color: inherit;" class="nav-link active" >Practice</a>
+        </li>		
+        <li class="nav-item">
+          <a href="/r/index" style="background-color: inherit;" class="nav-link active">Reconstructions</a>
+        </li>		
+		<li style="background-color: inherit;" class="nav-item">			<a id="googlelogin" href='https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=56005720278-hgk8iclpv6jogpih0d5slqjtgmoldquo.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.speedcubedb.com%2Fsso.php&state&scope=email%20profile&approval_prompt=auto'><img src="assets/btn_google_signin_dark_normal_web.png" alt="Sign in via Google" /></a>
+			</li>
+						
+        
+      </ul>
+	  <button id="darkmodebtn" class="nav-item float-right me-3 btn btn-dark border-light"><i class="fa fa-moon" aria-hidden="true"></i></button>
+	  <a class="nav-item float-right btn btn-primary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=YXDSNHGD65YHU&amp;currency_code=USD&amp;source=url"><i class="fas fa-hand-holding-usd me-2"></i>Donate</a>
+    
+    </div>
+  </div>
+  
+  <script>
+  
+  function setDarkmode()
+  {
+    if (getCookie("darkmode") == "true")
+	{
+		$("body").addClass("darkmode");
+		$("table.table").addClass("table-dark");
+		$(".carousel").removeClass("carousel-dark");
+	}
+	else
+	{
+		$("body").removeClass("darkmode");
+		$("table.table").removeClass("table-dark");
+		$(".carousel").addClass("carousel-dark");
+	}
+  }
+  
+  $(document).ready(function() {
+		// handle darkmode
+		setDarkmode();
+
+		$("#darkmodebtn").click(function(){	
+			let darkmodeOn = $("body").hasClass("darkmode");
+			setCookie("darkmode",darkmodeOn == false ? "true" : "false",500000,'/',  'speedcubedb.com');
+
+			setDarkmode();
+		});
+  });
+  </script>
+</nav>
+		</header>
+		<div style="margin-top: 50px;"></div>
+		
+		
+		
+		
+		
+		<!-- Breadcrumbs -->
+		<div class="container-fluid mt-2">
+			<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<li class="breadcrumb-item active"><a href="a/Megaminx">Megaminx</a></li>
+					<li class="breadcrumb-item active" aria-current="page"><a href="a/Megaminx/MegaminxPLLN">5 2x1s</a></li>
+				</ol>
+			</nav>
+		</div>
+		<!-- /Breadcrumbs -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-md-4">
+					<div class="card-set-header py-2">
+						<img src="/template/renderers/cache/megacube/100/lllllllllll-coobccpggoppgbb----.png"/>								
+						<h1 class="category-name mb-0 ms-2">5 2x1s</h1>
+						<div class="mx-3 align-self-center">
+							<span class="d-none d-sm-inline-block badge bg-secondary">Megaminx</span>
+						</div>
+						
+						<div class="headline-feature-menu">
+														<a class="btn btn-outline-light" target="_blank" href="p/Megaminx/MegaminxPLLN">
+								<i style="color: red;" class="fas fa-file-pdf"></i>
+							</a>
+						</div>
+					</div>
+					<div class="category-description">
+						
+						
+						<h2 class="subcaption">Description</h2>
+						<div>
+													</div>
+						
+						<div class="subcaption mt-2">Number of Cases:</div>
+						<div>4</div>
+						
+											</div>
+										
+										
+					
+									</div>
+				<div class="col col-md-8">
+					<div class="card-set-header py-2 justify-content-between">
+						<h4 class="category-name mb-0 ms-2">Subsets</h4>
+						<div class="float: right;">
+							<label for="formFileMultiple">Cross Color:</label>
+							<select id="crossorientation">
+								<option value="z2" selected>White</option>
+								<option value="" >Yellow</option>
+								<option value="x'" >Green</option>
+								<option value="x" >Blue</option>
+								<option value="z" >Red</option>
+								<option value="z'" >Orange</option>
+							</select>
+						</div>
+					</div>
+					<div class="subset-select">
+													<div class="category-summary" data-filter="">
+								
+								<img src="/template/renderers/cache/megacube/100/lllllllllll-coobccpggoppgbb----.png"/>									 
+								
+									<div></div>
+								</div>
+												</div>
+					
+					
+					
+					<!-- Algorithms -->
+					<div class="">
+												
+								<div class="row singlealg g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<a style="color: inherit; text-decoration: none;" href="a/Megaminx/MegaminxPLLN/N1-"><img src="/template/renderers/cache/megacube/100/lllllllllll-coobccpggoppgbb----.png"/><h3>N1-</h3></a>										<h5></h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="N1-,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="N1-,0"><li class='list-group-item'>													
+													<span>R' U2 R' U2' R U' R' U2' R U2 R</span>
+																										
+													<div class="singlealg-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="" target='_blank'> <i class='fa fa-external-link-alt' aria-hidden='true'></i><small>CubeDB.net</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10066' data-altid='9985'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10066' data-altid='9985'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10066' data-altid='9985'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10066' data-altid='9985'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul><div class="list-group-item text-center"><a class="btn btn-outline-dark py-0 d-inline-flex" href="a/Megaminx/MegaminxPLLN/N1-/0">	<i class="fa fa-chevron-circle-down my-1" aria-hidden="true"></i><small>More Algorithms</small></a></div></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealg g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<a style="color: inherit; text-decoration: none;" href="a/Megaminx/MegaminxPLLN/N1%2B"><img src="/template/renderers/cache/megacube/100/lllllllllll-bbpggcppgoobcco----.png"/><h3>N1+</h3></a>										<h5></h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="N1+,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="N1+,0"><li class='list-group-item'>													
+													<span>R U2 R' F' R U R' U' R' F R2 U2' R'</span>
+																										
+													<div class="singlealg-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="" target='_blank'> <i class='fa fa-external-link-alt' aria-hidden='true'></i><small>CubeDB.net</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10067' data-altid='9982'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10067' data-altid='9982'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10067' data-altid='9982'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10067' data-altid='9982'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<span>y R U2 R2' F' R U R U' R' F R U2' R'</span>
+																										
+													<div class="singlealg-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="" target='_blank'> <i class='fa fa-external-link-alt' aria-hidden='true'></i><small>CubeDB.net</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10067' data-altid='9983'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10067' data-altid='9983'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10067' data-altid='9983'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10067' data-altid='9983'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<span>y2' R U2 R U2' R' U' R U2' R' U2 R'</span>
+																										
+													<div class="singlealg-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="" target='_blank'> <i class='fa fa-external-link-alt' aria-hidden='true'></i><small>CubeDB.net</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10067' data-altid='9984'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10067' data-altid='9984'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10067' data-altid='9984'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10067' data-altid='9984'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul><div class="list-group-item text-center"><a class="btn btn-outline-dark py-0 d-inline-flex" href="a/Megaminx/MegaminxPLLN/N1%2B/0">	<i class="fa fa-chevron-circle-down my-1" aria-hidden="true"></i><small>More Algorithms</small></a></div></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealg g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<a style="color: inherit; text-decoration: none;" href="a/Megaminx/MegaminxPLLN/N2-"><img src="/template/renderers/cache/megacube/100/lllllllllll-bggoppgccpbbcoo----.png"/><h3>N2-</h3></a>										<h5></h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="N2-,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="N2-,0"><li class='list-group-item'>													
+													<span>R' L' U2' R U' L R' U L' U2' R U2' L</span>
+																										
+													<div class="singlealg-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="" target='_blank'> <i class='fa fa-external-link-alt' aria-hidden='true'></i><small>CubeDB.net</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10068' data-altid='9987'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10068' data-altid='9987'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10068' data-altid='9987'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10068' data-altid='9987'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul><div class="list-group-item text-center"><a class="btn btn-outline-dark py-0 d-inline-flex" href="a/Megaminx/MegaminxPLLN/N2-/0">	<i class="fa fa-chevron-circle-down my-1" aria-hidden="true"></i><small>More Algorithms</small></a></div></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealg g-0" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<a style="color: inherit; text-decoration: none;" href="a/Megaminx/MegaminxPLLN/N2-"><img src="/template/renderers/cache/megacube/100/lllllllllll-bbgoopggcppbcco----.png"/><h3>N2-</h3></a>										<h5></h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="N2-,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="N2-,0"><li class='list-group-item'>													
+													<span>R L U2 L' U R' L U' R U2 L' U2 R'</span>
+																										
+													<div class="singlealg-status">
+														<a class="btn btn-outline-dark p-0 me-2 selectbox-menu" href="" target='_blank'> <i class='fa fa-external-link-alt' aria-hidden='true'></i><small>CubeDB.net</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-dark py-0 px-1 selectbox-menu me-2 selectbox-learnt" data-learnt="0">
+															
+															<i class="fas fa-times me-2"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='10069' data-altid='9986'><i class="fas fa-times me-2 action-notlearnt"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='10069' data-altid='9986'><i class="fab fa-leanpub me-2 action-learning"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='10069' data-altid='9986'><i class="fas fa-check me-2 action-learnt"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-dark py-0 px-1 me-2 selectbox-menu action-bookmark" data-value="0" data-vote='bookmark' data-sessid='' data-algid='10069' data-altid='9986'>
+																<i class="fas fa-folder-plus me-2"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul><div class="list-group-item text-center"><a class="btn btn-outline-dark py-0 d-inline-flex" href="a/Megaminx/MegaminxPLLN/N2-/0">	<i class="fa fa-chevron-circle-down my-1" aria-hidden="true"></i><small>More Algorithms</small></a></div></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+												
+					</div>
+					<!-- /Algorithms -->
+				</div>
+			</div>
+		</div>
+
+
+		
+
+		
+		
+<div style="margin-top: 70px;"></div>
+<footer class="bg-dark text-center text-lg-start fixed-bottom text-white">
+
+
+  <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2)">
+    Created By Gil Zussman - <a href="mailto:gil@speedcubedb.com">gil@speedcubedb.com</a> | <a href="privacypolicy.php">Privacy Policy</a> | <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=YXDSNHGD65YHU&amp;currency_code=USD&amp;source=url">Donate</a>
+    
+  </div>
+</footer>		<style>
+	#login-lightbox
+	{
+		z-index: 1000;
+		width: 100%; 
+		height: 100%; 
+		top: 0px; 
+		left: 0px; 
+		background-color: rgb(10,10,10,0.5); 
+		position: fixed;
+		display: none;
+	}
+	#login-popup
+	{
+		position: absolute; 
+		width: 80%;
+		padding: 30px;
+		top: 50%; 
+		left: 50%; 
+		background-color: white; 
+		text-align: center;
+		transform: translatex(-50%) translatey(-50%);
+		
+	}
+</style>
+<script>
+	$(document).ready(function(){
+		$("#login-lightbox").click(function(e){
+			if (e.target == this)
+			{
+				$("#login-lightbox").fadeOut();
+			}
+		});
+	});
+</script>
+
+<div id="login-lightbox">
+	<div id="login-popup">
+			<h2>Track Your Progress</h2>
+			<h5>Algorithms Learnt, Execution Times and Personal Algorithm Sheets</h5>
+			
+						<a id="googlelogin" href='https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=56005720278-hgk8iclpv6jogpih0d5slqjtgmoldquo.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.speedcubedb.com%2Fsso.php&state&scope=email%20profile&approval_prompt=auto'><img src="assets/btn_google_signin_dark_normal_web.png" alt="Sign in via Google" /></a>
+	</div>
+</div>
+  </body>
+</html>

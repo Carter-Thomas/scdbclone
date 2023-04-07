@@ -1,0 +1,1607 @@
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+	<base href="/"/>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="icon" type="image/png" href="/favicon.png"/>
+<meta name="author" content="Gil Zussman" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2NP03VW57J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2NP03VW57J'); 
+</script>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="icon" type="image/png" href="/favicon.png"/>
+
+<!-- jsDeliver -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.11/jquery.lazy.min.js" integrity="sha512-eviLb3jW7+OaVLz5N3B5F0hpluwkLb8wTXHOTy0CyNaZM5IlShxX1nEbODak/C0k9UdsrWjqIBKOFY0ELCCArw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+ $(function() {
+	$('.lazy').Lazy({
+        scrollDirection: 'vertical',
+        effect: 'fadeIn',
+        onError: function(element) {
+            console.log('error loading ' + element.data('src'));
+        }
+    });
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js" integrity="sha512-I+rKw3hArzZIHzrkdELbKqrXfkSvw/h0lW/GgB8FThaBVz2e5ZUlSW8kY8v3q6wq37eybIwyufkEZxe4qSlGcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="includes/ijsm.js?d=1" defer></script>
+<script src="includes/jcookie.js?d=1"></script>
+<script src="includes/rematrix.js?d=1"></script>
+
+<link rel="stylesheet" href="theme/theme.css?d=2">
+
+
+<meta name="author" content="Gil Zussman" />
+
+<script>
+	$(document).ready(function() {
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		  return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+	});
+</script>	<meta name="description" content="Free online speedcubing algorithm and reconstruction database, covers every algorithm for 2x2 - 6x6, SQ1 and Megaminx" />
+	<meta name="keywords" content="Edge Orientation (4a), 3x3, alg, algorithm, algsheet, cubing, speedcubing, fingertricks, rubiks, speedcube, algdb, video" />
+	    
+	<script type="text/javascript" src="category.js?d=112"></script>
+	
+	
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="SpeedCubeDB">
+    <meta property="og:url" content="https://www.speedcubedb.com/a/3x3/EO4A/">
+    <meta property="og:title" content="EO4A (3x3) Speed Cube Database">
+	<meta property="og:description" content="Algorithms and fingertricks execution videos for EO4A, 3x3">
+    
+    <link href="category.css?d=106" rel="stylesheet">
+	<title>Edge Orientation (4a) Algorithms - Speed Cube Database</title>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9351693020129127"  crossorigin="anonymous"></script>
+  </head>
+  <body>
+		<nav id="navbar-main" class="navbar navbar-expand-lg fixed-top navbar-dark py-0">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="/"><img src="assets/logo.png" id="logo-image" /><div id="website-title">SpeedCubeDB</div></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+	
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+		<li  class="nav-item dropdown menu-item-has-children">
+		  <a  class="nav-link active dropdown-toggle" href="#" id="menu1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			<i class="fa-solid fa-trowel-bricks me-2"></i>Algorithms
+		  </a>
+		  <ul class="dropdown-menu" aria-labelledby="menu1">
+						<li class="nav-item dropdown dropend menu-item-has-children">
+				
+			  <a  class="nav-link active dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false" id="menu2">
+				CFOP
+			  </a>
+			  <ul class="dropdown-menu"  aria-labelledby="menu2">
+				
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/3x3/F2L">F2L</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/3x3/OLL">OLL</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/3x3/PLL">PLL</a></li>
+			  </ul>
+			</li>
+			<li class="nav-item dropdown dropend menu-item-has-children">
+				
+			  <a  class="nav-link active dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false" id="menu3">
+				Last Layer
+			  </a>
+			  <ul class="dropdown-menu"  aria-labelledby="menu3">
+				
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/3x3/COLL">COLL</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/3x3/WV">Winter Variations</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/VLS">Valk Last Slot (VLS)</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/ZBLL">ZBLL</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/OLLCP">OLLCP</a></li>
+			  </ul>
+			</li>
+			
+			<li class="nav-item dropdown dropend menu-item-has-children">
+				
+			  <a  class="nav-link active dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false" id="menu3">
+				2x2
+			  </a>
+			  <ul class="dropdown-menu"  aria-labelledby="menu3">
+				
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/2x2/OrtegaOLL">Ortega OLL</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/2x2/OrtegaPBL">Ortega PBL</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/2x2/CLL">CLL</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/2x2/EG1">EG-1</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/2x2/EG2">EG-1</a></li>
+			  </ul>
+			</li>
+			<li class="nav-item dropdown dropend menu-item-has-children">
+				
+			  <a  class="nav-link active dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false" id="menu3">
+				4x4
+			  </a>
+			  <ul class="dropdown-menu"  aria-labelledby="menu3">
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/4x4/OLLParity">OLL Parity</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/4x4/PLLParity">PLL Parity</a></li>
+			  </ul>
+			</li>
+			<li class="nav-item dropdown dropend menu-item-has-children">
+				
+			  <a  class="nav-link active dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false" id="menu3">
+				5x5
+			  </a>
+			  <ul class="dropdown-menu"  aria-labelledby="menu3">
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/5x5/L2C">Last Two Centers</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/5x5/L2E">Last Two Corners</a></li>
+			  </ul>
+			</li>
+			
+			<li class="nav-item dropdown dropend menu-item-has-children">
+				
+			  <a  class="nav-link active dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false" id="menu3">
+				Megaminx
+			  </a>
+			  <ul class="dropdown-menu"  aria-labelledby="menu3">
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/Megaminx/MegaminxEO">4LLL: Edge Orientation</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/Megaminx/MegaminxCO">4LLL: Corner Orientation</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/Megaminx/MegaminxEP">4LLL: Edge Permutation</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/Megaminx/MegaminxCP">4LLL: Corner Permutation</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/Megaminx/OLL">2LLL: OLL</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/Megaminx/PLL">2LLL: PLL</a></li>
+			  </ul>
+			</li>
+			
+			<li class="nav-item dropdown dropend menu-item-has-children">
+				
+			  <a  class="nav-link active dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false" id="menu3">
+				Square 1
+			  </a>
+			  <ul class="dropdown-menu"  aria-labelledby="menu3">
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/SQ1/SQ1CS">Cube Shape</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/SQ1/SQ1CO">Corner Orientation</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/SQ1/SQ1EO">Edge Orientation</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/SQ1/SQ1CP">Corner Permutation</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/SQ1/SQ1EP">Edge Permutation</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-item" href="/a/SQ1/SQ1Parity">Edge Parity</a></li>
+			  </ul>
+			</li>
+		  </ul>
+		</li>
+        <li class="nav-item">
+          <a href="/r/index"  class="nav-link active"><i class="fa-solid fa-newspaper me-2"></i>Reconstructions</a>
+        </li>	
+        <li class="nav-item d-none">
+          <a href="/r/index"  class="nav-link active"><i class="fa-solid fa-chalkboard-user me-2"></i>Lessons</a>
+        </li>	
+		<li class="nav-item ">
+          <a href="/t"  class="nav-link active"><i class="fa-solid fa-stopwatch me-2"></i>Practice</a>
+        </li>	
+        <li class="nav-item">
+          <a href="/reviews" class="nav-link active"><i class="fa-solid fa-magnifying-glass me-2"></i>Reviews</a>
+        </li>		
+		<li  class="nav-item">			<a id="googlelogin" href='https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=56005720278-hgk8iclpv6jogpih0d5slqjtgmoldquo.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.speedcubedb.com%2Fsso.php&state&scope=email%20profile&approval_prompt=auto'><img src="assets/btn_google_signin_dark_normal_web.png" alt="Sign in via Google" /></a>
+			</li>
+						
+        
+      </ul>
+	  <a class="nav-item float-right btn btn-primary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YXDSNHGD65YHU&currency_code=USD&source=url"><i class="fa fa-heart me-2"></i>Support</a>
+
+    </div>
+  </div>
+  
+  <script>
+  
+  $('.menu-item-has-children .menu-item-has-children a').on("click", function(e){
+		if ($(this).next('ul').length != 0)
+		{
+			$(this).next('ul').toggle();
+			e.stopPropagation();
+			e.preventDefault();
+		}
+		
+		let thiselement = this;
+		$(this).parent().parent().find(".dropdown-toggle").each(function(){
+			if ($(this).next('ul').length != 0 && $(this).next('ul').is(":visible"))
+			{
+				if (thiselement != this)
+				{
+					$(this).removeClass("show");
+					$(this).next('ul').hide();
+					$(this).attr("aria-expanded","false");
+					$(this).prop("aria-expanded","false");
+				}
+			}
+		});
+	});
+  </script>
+</nav>
+<div style="width: 100%; height: 70px;"></div>
+		
+		
+		
+		
+		
+		<!-- Breadcrumbs -->
+		<div class="container-fluid mt-2">
+			<nav style="--bs-breadcrumb-divider: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='white'/%3E%3C/svg%3E&quot;);" aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<li class="breadcrumb-item"><a href="a/3x3">3x3</a></li>
+					<li class="breadcrumb-item active" aria-current="page"><a href="a/3x3/EO4A">Edge Orientation (4a)</a></li>
+				</ol>
+			</nav>
+		</div>
+		<!-- /Breadcrumbs -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-md-4">
+				
+					<div class="scdb-panel mt-0">
+						<div class="d-flex align-items-center pt-2 pb-3 scdb-panel-title" style="position: relative">
+							<div class="icube set-image" data-width="40" data-height="40" data-rank="3" data-fl="yoygybygygwgggggygowooooooogwgggggygowooooooo"><div class="tree-progress">0/9</div></div>									
+							<h1 class="category-name mb-0 ms-2 flex-fill" style="font-weight: 800;">Edge Orientation (4a)</h1>
+							<div class="mx-3 align-self-center">
+								<span class="d-none d-sm-inline-block badge bg-secondary">3x3</span>
+							</div>
+							
+							<div class="d-flex">
+																<a class="btn btn-outline-light" target="_blank" href="p/3x3/EO4A">
+									<i style="color: red;" class="fas fa-file-pdf"></i>
+								</a>
+							</div>
+						</div>
+						<div class="scdb-panel-content">
+							
+							
+							<h2 class="subcaption">Description</h2>
+							<div>
+															</div>
+							
+							<div class="subcaption mt-2">Number of Cases:</div>
+							<div>9</div>
+							
+													</div>
+					</div>
+										
+										
+					
+										<div>
+					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9351693020129127"
+							 crossorigin="anonymous"></script>
+						<!-- Category Page -->
+						<ins class="adsbygoogle"
+							 style="display:block"
+							 data-ad-client="ca-pub-9351693020129127"
+							 data-ad-slot="9591548824"
+							 data-ad-format="auto"
+							 data-full-width-responsive="true"></ins>
+						<script>
+							 (adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</div>
+				</div>
+				<div class="col col-md-8">
+					<div class="scdb-panel m-0">
+						<div class="scdb-panel-title py-2 justify-content-between d-flex">
+							<h4 class="category-name mb-0 ms-2 flex-fill">Subsets</h4>
+							<div class="float: right;">
+								<label for="formFileMultiple" class="me-2">Cross Color:</label>
+								<select id="crossorientation">
+									<option value="z2" selected>White</option>
+									<option value="" >Yellow</option>
+									<option value="x'" >Green</option>
+									<option value="x" >Blue</option>
+									<option value="z" >Red</option>
+									<option value="z'" >Orange</option>
+								</select>
+							</div>
+						</div>
+						<div class="subset-select scdb-panel-content">
+															<div class="category-summary" data-filter="">
+									
+									<div class="icube  set-image mb-2 me-0 mt-1 " data-width="75" data-height="75" data-rank="3" data-fl="yoygybygygwgggggygowooooooogwgggggygowooooooo"><div class="tree-progress">0/9</div></div>										 
+									
+										<div></div>
+									</div>
+														</div>
+					</div>
+					
+					
+					<!-- Algorithms -->
+					<div class="">
+												
+								<div class="row singlealgorithm g-0 py-2" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<a style="color: inherit; text-decoration: none;" href="a/3x3/EO4A/All_6"><div class="icube" data-width="100" data-height="100" data-rank="3" data-fl="yoygybygygwgggggygowooooooogwgggggygowooooooo"></div><h3>All 6</h3></a>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="All 6,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="All 6,0"><li class='list-group-item'>													
+													<div>R U' r' U' M' U r U r'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=R+U%27+r%27+U%27+M%27+U+r+U+r%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='979' data-altid='2768'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='979' data-altid='2768'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='979' data-altid='2768'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='979' data-altid='2768'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M' U M U2 M U M' U M U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U+M+U2+M+U+M%27+U+M+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='979' data-altid='3647'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='979' data-altid='3647'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='979' data-altid='3647'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='979' data-altid='3647'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M' U' M' U2 M' U' M U' M' U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U%27+M%27+U2+M%27+U%27+M+U%27+M%27+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='979' data-altid='5156'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='979' data-altid='5156'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='979' data-altid='5156'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='979' data-altid='5156'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>L U' l' U' M U l U l'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=L+U%27+l%27+U%27+M+U+l+U+l%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='979' data-altid='5373'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='979' data-altid='5373'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='979' data-altid='5373'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='979' data-altid='5373'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul><div class="text-center mt-2"><a class="btn btn-outline-light py-0 d-inline-flex align-items-center" href="a/3x3/EO4A/All_6/0">	<i class="fa fa-chevron-circle-down my-1 me-2" aria-hidden="true"></i><small>More Algorithms</small></a></div></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0 py-2" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<a style="color: inherit; text-decoration: none;" href="a/3x3/EO4A/2_Top_2_Bot"><div class="icube" data-width="100" data-height="100" data-rank="3" data-fl="ywybwbyyyogogbggygbwbooooooogogbggygbwboooooo"></div><h3>2 Top 2 Bot</h3></a>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="2 Top 2 Bot,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="2 Top 2 Bot,0"><li class='list-group-item'>													
+													<div>M' U2 M' U2 M U M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U2+M%27+U2+M+U+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='980' data-altid='20049'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='980' data-altid='20049'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='980' data-altid='20049'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='980' data-altid='20049'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M U2 M' U2 M' U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M+U2+M%27+U2+M%27+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='980' data-altid='7374'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='980' data-altid='7374'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='980' data-altid='7374'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='980' data-altid='7374'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M' U2 M' U2 M U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U2+M%27+U2+M+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='980' data-altid='2767'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='980' data-altid='2767'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='980' data-altid='2767'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='980' data-altid='2767'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M' U2 M U2 M U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U2+M+U2+M+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='980' data-altid='7874'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='980' data-altid='7874'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='980' data-altid='7874'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='980' data-altid='7874'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul><div class="text-center mt-2"><a class="btn btn-outline-light py-0 d-inline-flex align-items-center" href="a/3x3/EO4A/2_Top_2_Bot/0">	<i class="fa fa-chevron-circle-down my-1 me-2" aria-hidden="true"></i><small>More Algorithms</small></a></div></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0 py-2" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<a style="color: inherit; text-decoration: none;" href="a/3x3/EO4A/Bottom_2"><div class="icube" data-width="100" data-height="100" data-rank="3" data-fl="ywyywyyyyooogbggygbbbooooooooogbggygbbboooooo"></div><h3>Bottom 2</h3></a>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Bottom 2,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Bottom 2,0"><li class='list-group-item'>													
+													<div>M' U' M' U M U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U%27+M%27+U+M+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='981' data-altid='7875'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='981' data-altid='7875'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='981' data-altid='7875'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='981' data-altid='7875'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M' U M' U' M U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U+M%27+U%27+M+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='981' data-altid='2766'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='981' data-altid='2766'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='981' data-altid='2766'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='981' data-altid='2766'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M U' M U M' U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M+U%27+M+U+M%27+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='981' data-altid='6866'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='981' data-altid='6866'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='981' data-altid='6866'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='981' data-altid='6866'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M' U' M' U M U M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U%27+M%27+U+M+U+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='981' data-altid='20044'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='981' data-altid='20044'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='981' data-altid='20044'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='981' data-altid='20044'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul><div class="text-center mt-2"><a class="btn btn-outline-light py-0 d-inline-flex align-items-center" href="a/3x3/EO4A/Bottom_2/0">	<i class="fa fa-chevron-circle-down my-1 me-2" aria-hidden="true"></i><small>More Algorithms</small></a></div></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0 py-2" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<a style="color: inherit; text-decoration: none;" href="a/3x3/EO4A/Top_2_Front_2"><div class="icube" data-width="100" data-height="100" data-rank="3" data-fl="ywybwbyryoyogbggygbwboooooooyogbggygbwboooooo"></div><h3>Top 2 Front 2</h3></a>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="Top 2 Front 2,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="Top 2 Front 2,0"><li class='list-group-item'>													
+													<div>M' U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='982' data-altid='2765'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='982' data-altid='2765'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='982' data-altid='2765'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='982' data-altid='2765'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>y2 M U M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=y2+M+U+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='982' data-altid='5327'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='982' data-altid='5327'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='982' data-altid='5327'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='982' data-altid='5327'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M' U M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='982' data-altid='5322'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='982' data-altid='5322'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='982' data-altid='5322'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='982' data-altid='5322'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>y2 M U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=y2+M+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='982' data-altid='2764'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='982' data-altid='2764'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='982' data-altid='2764'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='982' data-altid='2764'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul><div class="text-center mt-2"><a class="btn btn-outline-light py-0 d-inline-flex align-items-center" href="a/3x3/EO4A/Top_2_Front_2/0">	<i class="fa fa-chevron-circle-down my-1 me-2" aria-hidden="true"></i><small>More Algorithms</small></a></div></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0 py-2" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<a style="color: inherit; text-decoration: none;" href="a/3x3/EO4A/4_Top"><div class="icube" data-width="100" data-height="100" data-rank="3" data-fl="yoybybyryoyoggggggbwboooooooyoggggggbwboooooo"></div><h3>4 Top</h3></a>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="4 Top,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="4 Top,0"><li class='list-group-item'>													
+													<div>M' U2 M' U2 M' U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U2+M%27+U2+M%27+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='983' data-altid='2763'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='983' data-altid='2763'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='983' data-altid='2763'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='983' data-altid='2763'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M' U2 M U2 M' U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U2+M+U2+M%27+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='983' data-altid='7876'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='983' data-altid='7876'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='983' data-altid='7876'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='983' data-altid='7876'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M' U2 M U2 M' U M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U2+M+U2+M%27+U+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='983' data-altid='20035'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='983' data-altid='20035'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='983' data-altid='20035'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='983' data-altid='20035'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M' U2 M' U2 M' U M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U2+M%27+U2+M%27+U+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='983' data-altid='20038'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='983' data-altid='20038'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='983' data-altid='20038'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='983' data-altid='20038'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul><div class="text-center mt-2"><a class="btn btn-outline-light py-0 d-inline-flex align-items-center" href="a/3x3/EO4A/4_Top/0">	<i class="fa fa-chevron-circle-down my-1 me-2" aria-hidden="true"></i><small>More Algorithms</small></a></div></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0 py-2" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<a style="color: inherit; text-decoration: none;" href="a/3x3/EO4A/2_Top_Opp"><div class="icube" data-width="100" data-height="100" data-rank="3" data-fl="ybywwyygyowogbggrgbobooooooowogbggrgboboooooo"></div><h3>2 Top Opp</h3></a>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="2 Top Opp,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="2 Top Opp,0"><li class='list-group-item'>													
+													<div>M' U' M U M' U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U%27+M+U+M%27+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='984' data-altid='6865'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='984' data-altid='6865'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='984' data-altid='6865'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='984' data-altid='6865'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M' U M U' M' U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U+M+U%27+M%27+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='984' data-altid='2762'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='984' data-altid='2762'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='984' data-altid='2762'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='984' data-altid='2762'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>R U R' U' M' U R U' r'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=R+U+R%27+U%27+M%27+U+R+U%27+r%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='984' data-altid='3700'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='984' data-altid='3700'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='984' data-altid='3700'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='984' data-altid='3700'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>R U r' U r' U' r2 U' r' U r' U R</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=R+U+r%27+U+r%27+U%27+r2+U%27+r%27+U+r%27+U+R" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='984' data-altid='19037'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='984' data-altid='19037'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='984' data-altid='19037'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='984' data-altid='19037'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul><div class="text-center mt-2"><a class="btn btn-outline-light py-0 d-inline-flex align-items-center" href="a/3x3/EO4A/2_Top_Opp/0">	<i class="fa fa-chevron-circle-down my-1 me-2" aria-hidden="true"></i><small>More Algorithms</small></a></div></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0 py-2" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<a style="color: inherit; text-decoration: none;" href="a/3x3/EO4A/2_Top_Adj"><div class="icube" data-width="100" data-height="100" data-rank="3" data-fl="yoygyyyyybbbggggbgrrroooooobbbggggbgrrroooooo"></div><h3>2 Top Adj</h3></a>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="2 Top Adj,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="2 Top Adj,0"><li class='list-group-item'>													
+													<div>M' U M' U2 M' U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U+M%27+U2+M%27+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='985' data-altid='2761'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='985' data-altid='2761'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='985' data-altid='2761'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='985' data-altid='2761'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>U M' U' M' U2 M' U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=U+M%27+U%27+M%27+U2+M%27+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='985' data-altid='3701'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='985' data-altid='3701'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='985' data-altid='3701'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='985' data-altid='3701'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M' U M' U2 M' U M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U+M%27+U2+M%27+U+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='985' data-altid='20040'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='985' data-altid='20040'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='985' data-altid='20040'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='985' data-altid='20040'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>U M' U' M U2 M' U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=U+M%27+U%27+M+U2+M%27+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='985' data-altid='22139'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='985' data-altid='22139'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='985' data-altid='22139'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='985' data-altid='22139'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul><div class="text-center mt-2"><a class="btn btn-outline-light py-0 d-inline-flex align-items-center" href="a/3x3/EO4A/2_Top_Adj/0">	<i class="fa fa-chevron-circle-down my-1 me-2" aria-hidden="true"></i><small>More Algorithms</small></a></div></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0 py-2" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<a style="color: inherit; text-decoration: none;" href="a/3x3/EO4A/1_Top_1_Bot"><div class="icube" data-width="100" data-height="100" data-rank="3" data-fl="ywyywyygyryrgbggoggrgooooooryrgbggoggrgoooooo"></div><h3>1 Top 1 Bot</h3></a>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="1 Top 1 Bot,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="1 Top 1 Bot,0"><li class='list-group-item'>													
+													<div>M' U' M' U' M U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U%27+M%27+U%27+M+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='986' data-altid='2760'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='986' data-altid='2760'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='986' data-altid='2760'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='986' data-altid='2760'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M U M' U M U M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M+U+M%27+U+M+U+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='986' data-altid='5323'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='986' data-altid='5323'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='986' data-altid='5323'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='986' data-altid='5323'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>U' M' U M' U2 M U M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=U%27+M%27+U+M%27+U2+M+U+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='986' data-altid='17858'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='986' data-altid='17858'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='986' data-altid='17858'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='986' data-altid='17858'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>U M2 U2 M' U' M U2 M' U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=U+M2+U2+M%27+U%27+M+U2+M%27+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='986' data-altid='22165'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='986' data-altid='22165'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='986' data-altid='22165'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='986' data-altid='22165'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul><div class="text-center mt-2"><a class="btn btn-outline-light py-0 d-inline-flex align-items-center" href="a/3x3/EO4A/1_Top_1_Bot/0">	<i class="fa fa-chevron-circle-down my-1 me-2" aria-hidden="true"></i><small>More Algorithms</small></a></div></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+														
+								<div class="row singlealgorithm g-0 py-2" data-subgroup="" >
+									
+									<!-- Algorithm info -->
+									<div class="col-md-3 col-sm-3 text-center pt-3">
+										
+										
+										<!-- Image -->
+										<a style="color: inherit; text-decoration: none;" href="a/3x3/EO4A/2_Top_Adj_2_Bot"><div class="icube" data-width="100" data-height="100" data-rank="3" data-fl="yoyrywyyybgbggggygrgroooooobgbggggygrgroooooo"></div><h3>2 Top Adj 2 Bot</h3></a>										<h5>
+																				
+										</h5>
+									</div>
+									<!-- /Algorithm info -->
+									
+									
+									<!-- Algorithm Alternatives -->
+									<div class="col">
+										<!-- orientations/slots -->
+																				<!-- orientations/slots -->
+										
+										
+										<!-- Alternatives -->
+										<div data-ori='0'><ul class='list-group alg-list-group pro-algs unloaded' data-t="2 Top Adj 2 Bot,0" style='display: none;'><div class='text-center'><i class="fas fa-2x fa-spinner fa-spin me-2"></i>Loading...</div></ul><ul class='list-group alg-list-group community-algs' data-t="2 Top Adj 2 Bot,0"><li class='list-group-item'>													
+													<div>M2 U' M' U' M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M2+U%27+M%27+U%27+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='987' data-altid='2758'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='987' data-altid='2758'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='987' data-altid='2758'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='987' data-altid='2758'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>M' U M' U M' U M' U</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=M%27+U+M%27+U+M%27+U+M%27+U" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='987' data-altid='5324'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='987' data-altid='5324'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='987' data-altid='5324'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='987' data-altid='5324'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													<li class='list-group-item'>													
+													<div>U M2 U M' U M'</div>
+																										
+													<div class="singlealgorithm-status">
+														<a class="btn btn-outline-light p-0 me-2 selectbox-menu justify-content-center" href="https://cubedb.net/?stage=EO4A&type=alg&rank=3&scramble=z2&crosscolor=White&alg=U+M2+U+M%27+U+M%27" target='_blank'> <img src="assets/visualizer-icon.png" style="width: 20px; align-self:center"/><small>visualize</small></a>
+													
+														
+														
+																												<div class="btn btn-outline-light py-0 px-1 selectbox-menu me-2 selectbox-learnt justify-content-center" data-learnt="0">
+															
+															<i class="fas fa-times"></i>															
+															<small>
+																Not Learnt															</small>
+															<ul class="selectbox-dropdown">
+																<li class="action-learnt" data-value="0" data-vote='learnt' data-sessid='' data-algid='987' data-altid='20042'><i class="fas fa-times action-notlearnt me-2"></i>Not Learnt</li>
+																<li class="action-learnt" data-value="1" data-vote='learnt' data-sessid='' data-algid='987' data-altid='20042'><i class="fab fa-leanpub action-learning me-2"></i>Learning</li>
+																<li class="action-learnt" data-value="2" data-vote='learnt' data-sessid='' data-algid='987' data-altid='20042'><i class="fas fa-check action-learnt me-2"></i>Learnt</li>
+															</ul>
+														</div>
+														
+																												
+																													<div class="btn btn-outline-light py-0 px-1 me-2 selectbox-menu action-bookmark justify-content-center" data-value="0" data-vote='bookmark' data-sessid='' data-algid='987' data-altid='20042'>
+																<i class="fas fa-folder-plus"></i><small>Bookmark</small>
+															</div>
+																											</div>
+													
+													</li>
+													</ul><div class="text-center mt-2"><a class="btn btn-outline-light py-0 d-inline-flex align-items-center" href="a/3x3/EO4A/2_Top_Adj_2_Bot/0">	<i class="fa fa-chevron-circle-down my-1 me-2" aria-hidden="true"></i><small>More Algorithms</small></a></div></div>							
+									</div>
+									<!-- /Algorithm Alternatives -->
+									
+									
+								</div>
+							
+												
+					</div>
+					<!-- /Algorithms -->
+				</div>
+			</div>
+		</div>
+
+
+		
+
+		
+		
+<div style="margin-top: 70px;"></div>
+<footer class="bg-dark text-center text-lg-start fixed-bottom text-white">
+
+
+  <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2)">
+    Created By Gil Zussman - <a href="mailto:gil@speedcubedb.com">gil@speedcubedb.com</a> | <a href="privacypolicy.php">Privacy Policy</a> | <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=YXDSNHGD65YHU&amp;currency_code=USD&amp;source=url">Donate</a>
+    
+  </div>
+</footer>		<style>
+	#login-lightbox
+	{
+		z-index: 1000;
+		width: 100%; 
+		height: 100%; 
+		top: 0px; 
+		left: 0px; 
+		background-color: rgb(10,10,10,0.5); 
+		position: fixed;
+		display: none;
+	}
+	#login-popup
+	{
+		position: absolute; 
+		width: 80%;
+		padding: 30px;
+		top: 50%; 
+		left: 50%; 
+		background-color: white; 
+		text-align: center;
+		transform: translatex(-50%) translatey(-50%);
+		
+	}
+</style>
+<script>
+	$(document).ready(function(){
+		$("#login-lightbox").click(function(e){
+			if (e.target == this)
+			{
+				$("#login-lightbox").fadeOut();
+			}
+		});
+	});
+</script>
+
+<div id="login-lightbox">
+	<div id="login-popup">
+			<h2>Track Your Progress</h2>
+			<h5>Algorithms Learnt, Execution Times and Personal Algorithm Sheets</h5>
+			
+						<a id="googlelogin" href='https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=56005720278-hgk8iclpv6jogpih0d5slqjtgmoldquo.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.speedcubedb.com%2Fsso.php&state&scope=email%20profile&approval_prompt=auto'><img src="assets/btn_google_signin_dark_normal_web.png" alt="Sign in via Google" /></a>
+	</div>
+</div>
+  </body>
+</html>

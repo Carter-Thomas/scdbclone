@@ -1,0 +1,30 @@
+#pubpriv {
+	cursor: pointer;
+	color: green;
+    border: 1px solid green;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 2px 5px;
+    border-radius: 0.5rem;
+	font-weight: bold;
+	transition: 0.5s all;
+}
+
+#pubpriv:hover
+{
+	color: black;
+	background-color: green;
+    border: 1px solid black;
+}
+
+#pubpriv.privatebookmark {
+    color: red;
+    border: 1px solid red;
+}
+
+#pubpriv.privatebookmark:hover
+{
+	color: black;
+	background-color: red;
+    border: 1px solid black;
+}

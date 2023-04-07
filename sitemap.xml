@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://speedcubedb.com/</loc>
+  <changefreq>daily</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/OLL</loc>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/2LookOLL</loc>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/PLL</loc>
+  <lastmod>2021-12-14T13:06:43+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/2LookPLL</loc>
+  <lastmod>2021-12-14T13:06:43+00:00</lastmod>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/t</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/r/index</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/F2L</loc>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/AdvancedF2L</loc>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/COLL</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/OLLCP</loc>
+  <lastmod>2021-12-14T13:06:43+00:00</lastmod>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/WV</loc>
+  <lastmod>2021-12-14T13:06:43+00:00</lastmod>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/VLS</loc>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/SV</loc>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/features</loc>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/FRUF</loc>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/AntiPLL</loc>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/ELL</loc>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/CLS</loc>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/SBLS</loc>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/CMLL</loc>
+  <lastmod>2021-12-14T13:06:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/EO4A</loc>
+  <lastmod>2021-12-14T13:06:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/TDR</loc>
+  <lastmod>2021-12-14T13:06:43+00:00</lastmod>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/a/3x3/APDR</loc>
+  <lastmod>2021-12-14T13:06:43+00:00</lastmod>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://speedcubedb.com/t/pllrecog</loc>
+  <lastmod>2021-12-14T13:06:43+00:00</lastmod>
+  <priority>0.7</priority>
+</url>
+
+</urlset>

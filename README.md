@@ -1,2 +1,2 @@
-# scdbclone
-eoi
+# speedcubedb
+ eoi

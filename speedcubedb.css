@@ -1,0 +1,236 @@
+body {
+	font-family: Tahoma, Helvetica;
+	background-color: #E8E8E8;
+	margin: 0px;
+    margin-bottom: 100px;
+	width: 100%;
+}
+
+.logo {
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.logotext {
+	vertical-align: middle;
+	display: inline-block;
+	line-height: 40px;
+}
+
+.logocontainer {
+	float: left;
+	margin-right: 1rem;
+}
+
+.logocontainer a {
+	text-decoration: none;
+	color: white !important;
+}
+
+body.darkmode {
+	background-color: black;
+	color: white;
+}
+
+body.darkmode a {
+	color: white !important;
+}
+
+#darkmodebutton {
+	float: right;
+	margin: 5px;
+	line-height: 30px;
+	width: 30px;
+	height: 30px;
+}
+
+.cube3dillustration {
+	width: 100px;
+	height: 100px;
+}
+
+.algorithmnotation {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+h1 {
+	margin: 0;
+}
+
+h1 a {
+	text-decoration: none;
+}
+input[type=submit],
+input[type=password],
+input[type=text] {
+	font-size: 20px;
+	border-radius: 5px;
+	padding: 0.5rem;
+}
+
+ul.breadcrumbs {
+  list-style: none;
+  float: left;
+  margin: 0px;
+  line-height: 40px;
+}
+
+ul.breadcrumbs li {
+	display: inline-block;
+}
+
+ul.breadcrumbs li + li:before {
+	content: "/ ";
+}
+
+ul.breadcrumbs li a {
+	color: white;
+}
+
+/**/
+
+ul.newbreadcrumbs {
+	display: inline-block;
+	float: none;
+	width: 100%;
+	text-align: center;
+	margin: -0.5rem;
+    padding: 0px;
+}
+
+ul.newbreadcrumbs li {
+	display: inline-block;
+}
+
+ul.newbreadcrumbs li + li:before {
+	content: "/ ";
+}
+
+ul.newbreadcrumbs li a {
+	color: black;
+}
+.darkmode ul.newbreadcrumbs li a {
+	color: white;
+}
+
+
+
+.donatebutton {
+	line-height: 40px;
+	float: right;
+}
+
+.donatebutton a {
+	color: white;
+	text-decoration: none;
+    margin: 0px 15px;
+}
+
+#usercontrols {
+	float: right;
+	line-height: 40px;
+}
+
+#usercontrols a {
+	color: white;
+}
+
+body.darkmode #usercontrols a {
+	color: white;
+}
+
+#pageheader {
+	width: 100%;
+	background-color: black;
+	color: white;
+	z-index: 1000;
+}
+
+body.darkmode #pageheader {
+	width: 100%;
+	background-color: #555;
+	color: white;
+}
+#pageheadercontainer {
+	margin: 0 auto;
+	width: 80%;
+    padding: 5px 5px;
+}
+
+@media screen and (max-width: 734px) {
+	#pageheadercontainer {
+		margin: 0 auto;
+		width: 100%;
+		padding: 5px 5px;
+	}
+}
+
+.footer
+{
+	margin-top: 1rem; 
+	display: inline-block;
+	width: 100%;
+	color: white;
+	background-color: black;
+	bottom: 0;
+	position: fixed;
+}
+
+.footer p {
+	text-align: center;
+	margin: 2px;
+}
+.footer a
+{
+	color: white !important;
+}
+
+body.annonated .triggerannonated {
+	position: relative;
+    border: 1px solid black;
+    padding: 2px;
+}
+	
+.annonation {
+	display: none;
+}
+
+body.annonated .annonation {
+	display: block;
+	position: absolute;
+    bottom: -13px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 11px;
+    text-align: center;
+}
+
+.btntag
+{
+	text-decoration: none;
+	cursor: pointer;
+	border: 1px outset black;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+}
+
+.darkmode .btntag
+{
+	text-decoration: none;
+	cursor: pointer;
+	border: 1px outset white;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+}
+
+.newtag
+{
+	font-size: smaller;
+    font-variant: all-petite-caps;
+    font-weight: bold;
+	color: red;
+}

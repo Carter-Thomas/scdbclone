@@ -1,0 +1,674 @@
+.card
+{
+	flex: 1;
+}
+
+.carousel-button {
+	background-color: white;
+	border-radius: 10px;
+	width: 50px;
+	height: 50px;
+	top: inherit;
+	bottom: 0;
+	border: 1px solid #333;
+}
+
+
+h1,h2,h3,h4,h5
+{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.darkmode .carousel-button {
+	background-color: #181818;
+}
+
+a.nav-link
+{
+	cursor: pointer;
+}
+
+
+/* text-expand */
+div.text-expand
+{
+	transition: all 0.5s;
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+	display: inline;
+	vertical-align: bottom;
+	letter-spacing: -15px;
+	overflow: hidden;
+}
+
+.trigger-text-expand:hover div.text-expand
+{
+	letter-spacing: 0px;
+	opacity: 1;
+	width: auto;
+	height: auto;
+}
+
+.text-hide
+{
+	display: inline-block;
+}
+
+.trigger-text-expand:hover div.text-hide
+{
+	opacity: 0;
+	width: 0px;
+    overflow: hidden;
+}
+
+/* sections */
+.section-header
+{
+	display: inline-block;
+	font-size: 24px;
+    width: 75px;
+}
+
+
+@media (max-width: 575.98px) {
+	.section-header 
+	{
+		width: 0px;
+	}
+}
+
+.section-content-carousel
+{
+	overflow: hidden;
+	padding: 30px;
+	position: relative;
+}
+
+@media (max-width: 575.98px) {
+	.section-content-carousel
+	{
+		padding: 30px 5px;
+	}
+}
+
+.section-content-carousel .left
+{
+	display: flex;
+	position: absolute;
+	height: 50px;
+	top: 200px;
+	left: 0px;
+	width: 50px;
+	z-index: 10;
+	background-color: #777;
+	opacity: 0.6;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.section-content-carousel .right .fas,
+.section-content-carousel .left .fas
+{
+	align-self: center;
+}
+
+
+.section-content-carousel .right
+{
+	display: flex;
+	position: absolute;
+	height: 50px;
+	top: 200px;
+	right: 0px;
+	width: 50px;
+	z-index: 10;
+	background-color: #777;
+	opacity: 0.6;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.section-squares
+{
+    padding-top: 25px;
+    display: flex;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 575.98px) {
+	.swiper-container
+	{		
+		margin-top: 45px;
+	}
+}
+
+.section-side-title
+{
+	position: relative;
+	left: 0;
+	top: 50%;
+	transform: rotate(-90deg) translateX(-100%);
+    font-size: 32px; 
+	text-align: center;
+    white-space: pre;
+	font-weight: bold;
+}
+
+@media (max-width: 575.98px) {
+	.section-side-title
+	{
+		top: 80%;
+	}
+}
+
+.more-reconstructions .fas,
+.section-side-title .fas
+{
+	color: red;
+}
+
+.section-squares .section-side-title
+{
+	position: relative;
+    left: 0;
+    top: 75px;
+    transform: rotate(-90deg) translateX(-100%);
+    font-size: 32px;
+    text-align: center;
+    white-space: pre;
+}
+
+@media (max-width: 575.98px) {
+	.section-squares .section-side-title
+	{
+		position: relative;
+		left: 0;
+		top: -22px;
+		transform: none;
+		font-size: 32px; 
+		text-align: center;
+		white-space: pre;
+	}
+}
+
+
+.section-cardbox
+{
+	width: max-content;
+	display: inline-flex;
+	left: 0;
+	position: relative;
+	transition: all 1s ease;
+}
+
+/* recons */
+
+.more-reconstructions
+{
+	background: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    margin-top: 2px;
+}
+
+.darkmode .more-reconstructions
+{
+	background: #222;
+}
+
+.recons-sub-list
+{
+	height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feature-list-item
+{
+	width: 100%;
+	display: inline-flex;
+	background-color: #fff;
+	overflow: hidden;
+	margin-bottom: 10px;
+	box-shadow: 0px 20px 30px -10px rgb(56 24 26 / 40%);
+	position: relative;
+	
+    border-bottom: 1px solid #777;
+    border-top: 1px solid #777;
+}
+
+.featuresSwiper .feature-list-item
+{
+	width: 95%;
+}
+
+.darkmode .feature-list-item
+{
+	background-color: #000;
+}
+
+
+.feature-list-item img,
+.feature-list-item iframe
+{
+	transition: all 0.5s;
+}
+
+.feature-list-item:hover img,
+.feature-list-item:hover iframe
+{
+	transform: scale(1.05);
+}
+
+
+.darkmode .feature-list-item .feature-list-item-info:before
+{
+	background-color: #000;
+}
+
+.feature-list-item .feature-list-item-info small
+{
+	font-weight: normal;
+	color: #888;
+	font-size: 12px;
+}
+
+.darkmode .feature-list-item .feature-list-item-info small
+{
+	color: #eee;
+}
+
+.feature-list-item .header
+{
+	font-size: 32px;
+	margin-bottom: 10px;
+	margin: 0px;
+}
+
+.feature-list-item .feature-list-item-info
+{
+    z-index: 1;
+    flex-direction: column;
+    padding: 0px 10px;
+    text-align: left;
+	background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.feature-list-item .feature-list-item-info .etmdisplay:before
+{
+	content: url(assets/icons/tps-icons_ETM-White-med.png);
+}
+.darkmode .feature-list-item .feature-list-item-info .etmdisplay:before
+{
+	content: url(assets/icons/tps-icons_ETM-White-med.png);
+}
+
+.feature-list-item .feature-list-item-info .etmdisplay
+{
+	display: flex;
+    align-items: center;
+	margin-right: 10px;
+}
+
+
+
+.darkmode .feature-list-item .feature-list-item-info .tpsdisplay:before
+{
+	content: url(assets/icons/tps-icons_TPS-White-med.png);
+}
+.feature-list-item .feature-list-item-info .tpsdisplay:before
+{
+	content: url(assets/icons/tps-icons_TPS-White-med.png);
+}
+.feature-list-item .feature-list-item-info .tpsdisplay
+{
+	display: flex;
+    align-items: center;
+	margin-right: 10px;
+}
+
+
+
+.darkmode .feature-list-item .feature-list-item-info
+{
+	background-color: #000;
+}
+
+.recon-list-item
+{
+	display: flex;
+	flex: 1;
+	overflow: hidden;
+	box-shadow: 0px 20px 30px -10px rgb(56 24 26 / 40%);
+	align-items: stretch;
+	position: relative;
+}
+
+.recon-list-item + .recon-list-item
+{
+	margin-top: 5px;
+}
+.recon-list-item img
+{
+	max-height: 165px;
+	align-self: center;
+}
+
+.recon-list-item iframe,
+.recon-list-item img
+{
+	transition: all 0.5s;
+}
+.recon-list-item:hover img,
+.recon-list-item:hover iframe
+{
+	transform: scale(1.05);
+}
+
+.feature-list-item .content
+{
+	max-height: 40px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.feature-list-item .solver
+{
+	color: #ddd;
+}
+
+/*
+.recon-list-item .recon-list-item-info:before
+{
+	position: absolute;
+	z-index: -1;
+	content: '';
+	transform: translateX(2%) skew(-10deg);
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	border-radius: 0.25rem;
+}
+*/
+
+.darkmode .recon-list-item .recon-list-item-info:before
+{
+	background-color: #000;
+}
+
+
+.recon-list-item .recon-list-item-info
+{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	z-index: 1;
+	padding: 0px 10px;
+	text-align: left;
+    background-color: rgb(0,0,0,0.8);
+    font-weight: bold;
+	border-radius: 0.25rem;
+}
+.darkmode .recon-list-item .recon-list-item-info
+{
+	background-color: #000
+}
+
+.recondate,
+.recon-list-item .recon-list-item-info small
+{
+	font-weight: normal;
+	color: #888;
+	font-size: 12px;
+}
+
+.darkmode .recondate,
+.darkmode .recon-list-item .recon-list-item-info small
+
+.recon-list-item .recon-list-item-info .solver
+{
+	color: #ddd;
+}
+
+.recon-list-item .recon-list-item-info .etmdisplay:before
+{
+	content: url(assets/icons/tps-icons_ETM-White.png);
+}
+.darkmode .recon-list-item .recon-list-item-info .etmdisplay:before
+{
+	content: url(assets/icons/tps-icons_ETM-White.png);
+}
+
+.recon-list-item .recon-list-item-info .etmdisplay
+{
+	display: flex;
+	font-size: 12px;
+	margin-right: 10px;
+}
+
+
+.darkmode .recon-list-item .recon-list-item-info .tpsdisplay:before
+{
+	content: url(assets/icons/tps-icons_TPS-White.png);
+}
+.recon-list-item .recon-list-item-info .tpsdisplay:before
+{
+	content: url(assets/icons/tps-icons_TPS-Black.png);
+}
+.recon-list-item .recon-list-item-info .tpsdisplay
+{
+	display: flex;
+	font-size: 12px;
+}
+
+.readmore
+{
+	font-size: 12px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.darkmode .morereconstructions
+{
+	background-color: #000;
+}
+
+.readmore .fas
+{
+	color: red;
+	align-self: center;
+}
+
+
+/* algset */
+
+.card-set
+{
+	display: inline-flex;
+	width: 275px;	
+    margin-right: 20px;	
+	box-shadow: 0px 20px 30px -10px rgb(56 24 26 / 40%);
+}
+
+.card-set-image
+{
+	text-align: center;
+	transition: 1s all;
+}
+
+.card-set:hover .card-set-image
+{
+	transform: scale(1.2);
+}
+
+.algset-line 
+{
+    border-top: 1px solid #ddd;
+    position: relative;
+    text-align: left;
+    min-height: 70px;
+    padding: 10px 10px;
+	margin-bottom: 10px;
+}
+
+.algset-line .subcat
+{
+	font-size: 18px;
+}
+
+.algset-line .subcat .fas
+{
+	color: red;
+}
+
+.set-image
+{
+	display: inline-block;
+	margin-right: 15px;
+    padding: 3px;
+    border: 3px inset #999;
+    border-radius: 5px;
+	position: relative;
+}
+
+.tree-substage
+{
+	margin-left: 45px;
+	margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.tree-substage a
+{
+	margin-left: 20px;
+}
+
+/* search */
+
+.searchbox-feature-count
+{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 25px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 5px;
+	transition: all 0.5s;
+}
+
+.searchbox-feature-count:hover
+{
+	color: white;
+    border: 1px solid white;
+	background-color: black;
+}
+
+.darkmode .searchbox-feature-count
+{
+	color: white;
+    border: 1px solid white;
+	background-color: black;
+}
+
+.darkmode .searchbox-feature-count:hover
+{
+	color: black;
+	border: 1px solid black;
+	background-color: white;
+}
+
+#searchform
+{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 90%;
+}
+
+#searchform input[type="text"] {
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px outset #777;
+	width: 100%;
+}
+
+#searchform button
+{
+ 
+}
+
+.readmore-btn {
+	color: white;
+	padding: 10px;
+	line-height: 70px;
+	border: 2px solid white;
+	border-radius: 12px;
+	margin-right: 10px;
+	transition: background-color 0.5s;
+}
+
+.readmore-btn:hover
+{
+	background-color: #111;
+}
+
+.swiper-pagination-bullet {
+width: 10px;
+height: 10px;
+text-align: center;
+line-height: 20px;
+font-size: 12px;
+color: #000;
+opacity: 1;
+background: rgba(0, 0, 0, 0.2);
+border: 1px solid #ddd;
+}
+
+.swiper-pagination-bullet-active {
+color: #fff;
+background: #007aff;
+}
+  
+.swiper-container-vertical > .swiper-pagination-bullets
+{
+  right: 0px;
+}
+
+.morerecons-link
+{
+	float: right;
+	color: white !important;
+}
+
+a.morerecons-link:hover
+{
+	text-decoration: underline;
+}
+
+a.list-group-item
+{
+	transition: 0.5s all;
+}
+
+a.list-group-item:hover
+{
+	background-color: #ddd;
+}
+
+.darkmode a.list-group-item
+{
+	background-color: #333;
+}

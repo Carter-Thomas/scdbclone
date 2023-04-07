@@ -1,0 +1,450 @@
+<html>
+	<head>
+		<base href="/"/>
+		<title>PLL+1 - SQ1 - Speed Cube Database</title>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="Free online speedcubing algorithm and reconstruction database, covers every algorithm for 2x2 - 6x6 including F2L, OLL, PLL, COLL, ZBLL, WV and much more" />
+<meta name="keywords" content="rubiks, speedcube, algdb, cubing, speedcubing, algorithm, alg, 3x3, 4x4, 5x5, 6x6, 2x2, OLL, COLL, PLL, Parity, WV, ZBLL, CLL, EG1" />
+<meta name="author" content="Gil Zussman" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
+<script type="text/javascript" src="includes/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="includes/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="includes/jquery-ui-1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="speedcubedb.css?d=3">
+<link rel="stylesheet" href="includes/fontawesome-free-5.14.0-web/css/all.min.css">
+<link rel="shortcut icon" type="image/jpg" href="/favicon.png" />
+<script type="text/javascript" src="includes/jcookie.js"></script>
+
+<script>
+	$(document).ready(function() {
+		if (getCookie("darkmode") == "true")
+		{
+			$("body").addClass("darkmode");
+		}
+		else
+		{
+			$("body").removeClass("darkmode");
+		}
+		
+		$("#darkmodebutton").click(function(){		
+			$("body, div, table, td, th").css("transition","background-color 2s");
+			if ($("body").hasClass("darkmode"))
+			{
+				setCookie("darkmode","false",500000,'/',  'speedcubedb.com');
+			}
+			else
+			{
+				setCookie("darkmode","true",500000,'/',  'speedcubedb.com');
+			}
+			
+			$("body").toggleClass("darkmode");
+		});
+		
+		$("#crossorientation").change(function(){			
+			setCookie("crossorientation",$(this).val(),500000,'/',  'speedcubedb.com');
+			location.reload();
+		});
+	});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175803107-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175803107-1');
+</script>		<link rel="stylesheet" href="index.css?d=2">
+		<script type="text/javascript" src="index.js"></script>
+		<style>
+			ul.puzzleselector > li {
+				min-height: auto !important;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+					
+	$("#googlelogin").on("hover mousehover focus", function(){
+		if (typeof(Storage) !== "undefined") {	
+				window.localStorage.setItem("comeback",location.href);
+		}
+	});
+</script>
+
+<script>
+	$(document).ready(function() {
+		if (getCookie("darkmode") == "true")
+		{
+			$("body").addClass("darkmode");
+		}
+		else
+		{
+			$("body").removeClass("darkmode");
+		}
+		
+		$("#darkmodelink").click(function(){	
+			$("body, div, table, td, th").css("transition","background-color 2s");
+			if ($("body").hasClass("darkmode"))
+			{
+				setCookie("darkmode","false",500000,'/',  'speedcubedb.com');
+			}
+			else
+			{
+				setCookie("darkmode","true",500000,'/',  'speedcubedb.com');
+			}
+			
+			$("body").toggleClass("darkmode");
+		});
+		
+		$("#crossorientation").change(function(){			
+			setCookie("crossorientation",$(this).val(),500000,'/',  'speedcubedb.com');
+			location.reload();
+		});
+	});
+</script>
+
+
+		<style>
+			#googlelogin {
+				padding: 0px;
+			}
+			#googlelogin img {
+				vertical-align: middle;
+			}
+			
+			#darkmodelink {
+				float: inherit;
+				margin: 0px; 
+				height: 40px; 
+				cursor: pointer;
+			}
+		
+			#topnavcontainer {
+				text-align: center;
+			}
+			
+			.topnav {
+			  background-color: #000;
+			  overflow: hidden;
+			  list-decoration: none;
+			  padding: 0px;
+			}
+			
+			.darkmode .topnav {
+			  background-color: #555;
+			}
+			
+			.topnav > li {
+				display: inline-block;
+				padding: 0px;
+				margin: 0px;
+				color: #f2f2f2;
+			}
+			.darkmode .topnav > li {
+				color: #f2f2f2;
+			}
+
+			.topnav a {
+			  display: block;
+			  color: #fff;
+			  text-align: center;
+			  padding: 14px 16px;
+			  line-height: 40px;
+			  height: 40px;
+			  text-decoration: none;
+			  font-size: 17px;
+			}
+
+			.topnav .fa,
+			.topnav .darkmodeicon
+			.topnav .icon {
+				line-height: 40px;
+			}
+
+			.topnav a:hover {
+			  background-color: #ddd;
+			  color: black;
+			}
+
+			.topnav .icon {
+			  display: none;
+			}
+			
+			.topnav > li ul {
+				list-style: none;
+				padding-left: 0px;
+				position: absolute;
+				min-width: 150px;
+			}
+			
+			.topnav > li  ul > li {
+				display: none;
+				background-color: #555;
+				color: #f2f2f2;
+			}
+			
+			
+			.topnav > li.selected  ul,
+			.topnav > li:hover  ul {
+				border: 1px solid black;
+			}
+			
+			.topnav > li.selected  ul > li,
+			.topnav > li:hover  ul > li {
+				display: block;
+			}
+			
+			.topnav > li > ul > li > a {
+				height: 20px;
+				line-height: 20px;
+				text-align: left;
+			}
+			
+			.topnav > li .fa-caret-square-right {
+				display: none;
+			}
+			
+			/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+			@media screen and (max-width: 600px) {
+				.topnav {
+					position: fixed;
+					top: 0px;
+					margin: 0px;
+				}
+				
+				.topnav > li .fa-caret-square-right {
+					display: inline-block;
+					margin-right: 0.5rem;
+				}
+				
+				body {
+					margin-top: 100px;
+				}
+				
+				.topnav li.stack {
+					display: none;
+				}
+				
+				
+				.topnav li.darkmodeicon,
+				.topnav li.icon {
+					float: right;
+					display: block !important;
+				}
+				.topnav {
+					width: 100%;
+				}
+				.topnav li.title {
+					float: left;
+				}
+			}
+
+			/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+			@media screen and (max-width: 600px) {
+				.topnav.responsive {
+					position: fixed;
+					padding-left: 0;
+				}
+				
+				.topnav.responsive li.title {
+					float: none;
+					display: table-cell;
+				}
+				
+				.topnav.responsive a {
+					text-align: left;
+				}
+				
+				.topnav.responsive a#darkmodelink {
+					position: absolute;
+					right: 40px;
+					top: 0;
+				}
+				
+				.topnav.responsive a.icon {
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+				
+				.topnav.responsive li {
+					display: block;
+					text-align: left;
+				}
+				
+
+
+				.topnav.responsive > li ul {
+					position: relative;
+					list-style: none;
+					padding-left: 0px;
+					min-width: 150px;
+				}
+
+				.topnav.responsive > li  ul > li {
+					display: none;
+					background-color: #555;
+					color: #f2f2f2;
+					text-align: left;
+					padding-left: 30px;
+				}
+
+				.topnav.responsive > li.selected  ul > li {
+					display: block;
+				}
+
+				.topnav.responsive > li > ul > li > a {
+					height: 20px;
+					line-height: 20px;
+					text-align: left;
+				}
+			}
+		
+		</style>
+				
+		<div id="pageheader">
+			<div id="topnavcontainer">
+				
+				<ul class="topnav">
+					<li class="icon icontoggletopnav">
+						<a href="javascript:void(0);">
+						<i class="fa fa-bars"></i>
+						</a>
+					</li>
+					
+					<li class="title">
+						<a href="/">
+							<img src="logo.png" class="logo" />
+							<div style="display: inline-block;">Speed Cube DB</div>
+						</a>
+					</li>
+					
+					<li class="stack">
+						<a href="#"><i class="far fa-caret-square-right"></i>Algorithms</a>
+						<ul>
+							<li><a href="/a/2x2">2x2</a></li>
+							<li><a href="/a/3x3">3x3</a></li>
+							<li><a href="/a/4x4">4x4</a></li>
+							<li><a href="/a/5x5">5x5</a></li>
+							<li><a href="/a/6x6">6x6</a></li>
+							<li><a href="/b/SQ1">Square1</a></li>
+						</ul>
+					</li>
+					
+					<li class="stack">
+						<a href="/t">Practice</a>
+					</li>
+					
+					<li class="stack">
+						<a href="/r/index">Reconstructions</a>
+					</li>
+					
+					<li class="stack">
+				  
+										<a id="googlelogin" href='https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=56005720278-hgk8iclpv6jogpih0d5slqjtgmoldquo.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fwww.speedcubedb.com%2Fsso.php&state&scope=email%20profile&approval_prompt=auto'><img src="btn_google_signin_dark_normal_web.png" alt="Sign in via Google" /></a>
+					
+						
+					</li>
+					
+					<li class="darkmodeicon">
+						<a id="darkmodelink"><i class="fa fa-moon" aria-hidden="true"></i></a>			
+					</li>
+					
+					<li class="stack">
+						<a style="font-size: bold;" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YXDSNHGD65YHU&currency_code=USD&source=url">Donate</a>
+					</li>
+					
+					
+				
+				  
+				</ul>
+				<script>
+				/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+				
+				
+				$(document).ready(function() {
+					$(".icontoggletopnav").click(function() {
+						$(".topnav").toggleClass("responsive");
+					});
+					$(".topnav li a:not(.icontoggletopnav)").click(function(e) {
+						if ($(this).parent().children("ul").length > 0)
+						{
+							console.log($(this).children("ul"));
+							e.preventDefault();
+						}
+						
+						var isactive = $(this).parent().hasClass("selected");
+						$(this).parent().parent().find("li").removeClass("selected");
+						if (!isactive){
+							$(this).parent().addClass("selected");
+						}
+					});
+				});
+				</script>
+				
+				<div style="clear: both;"></div>
+			</div>
+		</div>				
+		<ul class="newbreadcrumbs">
+			<li><a href="/"><i class="fas fa-home"></i></a></li>
+			<li><a href="b/SQ1/">Square 1</a></li>
+			<li><a href="b/SQ1/Lin/PLL1">Lin PLL + 1</a></li>
+		</ul>
+		
+		
+		<h1>Select PLL + 1 Shape Set:</h1>
+		<div class="sitecontainer ">
+			<div class="categoryset">
+				<ul class="puzzleselector">
+					<li>
+						<a href="b/SQ1/Lin/PLL1/LinPLL1L5E">
+						<img src="isquan.php?d=1&size=120&tr=OGGGRRRBOBOr&br=Brgggooobbbr&t=CECECECe&b=Ecececec">
+						<h3>Last Five Edges (L5E)</h3>
+						</a>
+					</li>
+					<li>
+						<a href="b/SQ1/Lin/PLL1/LinPLL1HeadlightsBack">
+						<img src="isquan.php?d=1&size=120&tr=OGORBBGRRBOr&br=Grgggooobbbr&t=CECECECe&b=Ecececec">
+						<h3>Headlights In The Back</h3>
+						</a>
+					</li>
+					<li>
+						<a href="b/SQ1/Lin/PLL1/LinPLL1HeadlightsRight">
+						<img src="isquan.php?d=1&size=120&tr=OGGGRRBOBRBr&br=Orgggooobbbr&t=CECECECe&b=Ecececec">
+						<h3>Headlights On The Right</h3>
+						</a>
+					</li>
+					<li>
+						<a href="b/SQ1/Lin/PLL1/LinPLL1HeadlightsFront">
+						<img src="isquan.php?d=1&size=120&tr=BOGGRRRBBOGr&br=Orgggooobbbr&t=CECECECe&b=Ecececec">
+						<h3>Headlights In The Front</h3>
+						</a>
+					</li>
+					<li>
+						<a href="b/SQ1/Lin/PLL1/LinPLL1HeadlightsLeft">
+						<img src="isquan.php?d=1&size=120&tr=GRGOGRRBBBOr&br=Orgggooobbbr&t=CECECECe&b=Ecececec">
+						<h3>Headlights on the left</h3>
+						</a>
+					</li>
+					<li>
+						<a href="b/SQ1/Lin/PLL1DiagSwap">
+						<img src="isquan.php?d=1&size=120&tr=BOORBGGRROGr&br=Brgggooobbbr&t=CECECECe&b=Ecececec">
+						<h3>Diagonal Swap</h3>
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		
+<div style="height: 200px; width: 100%;">&nbsp;</div>
+<div class="footer">
+<p>Created by Gil Zussman, for any feedback: <a href="mailto:gil@speedcubedb.com">gil@speedcubedb.com</a></p>
+<p><a href="privacypolicy.php">Privacy Policy</a></p>
+</div>	</body>
+</html>

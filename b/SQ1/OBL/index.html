@@ -1,0 +1,2502 @@
+
+<html>
+	<head>
+		<base href="/"/>
+		
+				<title>Orient Both Layers (OBL) - Speed Cube Database</title>
+				
+		
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="Free online speedcubing algorithm and reconstruction database, covers every algorithm for 2x2 - 6x6 including F2L, OLL, PLL, COLL, ZBLL, WV and much more" />
+<meta name="keywords" content="rubiks, speedcube, algdb, cubing, speedcubing, algorithm, alg, 3x3, 4x4, 5x5, 6x6, 2x2, OLL, COLL, PLL, Parity, WV, ZBLL, CLL, EG1" />
+<meta name="author" content="Gil Zussman" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
+<script type="text/javascript" src="includes/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="includes/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="includes/jquery-ui-1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="speedcubedb.css?d=3">
+<link rel="stylesheet" href="includes/fontawesome-free-5.14.0-web/css/all.min.css">
+<link rel="shortcut icon" type="image/jpg" href="/favicon.png" />
+<script type="text/javascript" src="includes/jcookie.js"></script>
+<script src="includes/tilt.jquery.js"></script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175803107-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175803107-1');
+</script>		<link rel="stylesheet" href="speedcubedb.css">
+		<link rel="stylesheet" href="squancategory.css?d=2">
+		<script type="text/javascript" src="squancategory.js?d=1"></script>
+	</head>
+	<body class="preload">
+		<script>
+					
+	$("#googlelogin").on("hover mousehover focus", function(){
+		if (typeof(Storage) !== "undefined") {	
+				window.localStorage.setItem("comeback",location.href);
+		}
+	});
+</script>
+
+<script>
+	$(document).ready(function() {
+		if (getCookie("darkmode") == "true")
+		{
+			$("body").addClass("darkmode");
+		}
+		else
+		{
+			$("body").removeClass("darkmode");
+		}
+		
+		$("#darkmodelink").click(function(){	
+			if ($("body").hasClass("darkmode"))
+			{
+				setCookie("darkmode","false",500000,'/',  'speedcubedb.com');
+			}
+			else
+			{
+				setCookie("darkmode","true",500000,'/',  'speedcubedb.com');
+			}
+			
+			$("body").toggleClass("darkmode");
+		});
+		
+		$("#crossorientation").change(function(){			
+			setCookie("crossorientation",$(this).val(),500000,'/',  'speedcubedb.com');
+			location.reload();
+		});
+	});
+</script>
+
+
+		<style>
+			#pageheader {				
+				z-index: 99999999;
+			}
+			#googlelogin {
+				padding: 0px;
+			}
+			#googlelogin img {
+				vertical-align: middle;
+			}
+			
+			#darkmodelink {
+				float: inherit;
+				margin: 0px; 
+				height: 40px; 
+				cursor: pointer;
+			}
+		
+			#topnavcontainer {
+				text-align: center;
+				z-index: 999999999;				
+			}
+			
+			.topnav {
+			  background-color: #000;
+			  overflow: hidden;
+			  list-decoration: none;
+			  padding: 0px;
+			}
+			
+			.darkmode .topnav {
+			  background-color: #555;
+			}
+			
+			.topnav > li {
+				display: inline-block;
+				padding: 0px;
+				margin: 0px;
+				color: #f2f2f2;
+			}
+			.darkmode .topnav > li {
+				color: #f2f2f2;
+			}
+
+			.topnav a {
+			  display: block;
+			  color: #fff;
+			  text-align: center;
+			  padding: 14px 16px;
+			  line-height: 40px;
+			  height: 40px;
+			  text-decoration: none;
+			  font-size: 17px;
+			}
+
+			.topnav .fa,
+			.topnav .darkmodeicon
+			.topnav .icon {
+				line-height: 40px;
+			}
+
+			.topnav a:hover {
+			  background-color: #ddd;
+			  color: black;
+			}
+
+			.topnav .icon {
+			  display: none;
+			}
+			
+			.topnav > li ul {
+				list-style: none;
+				padding-left: 0px;
+				position: absolute;
+				min-width: 150px;
+			}
+			
+			.topnav > li  ul > li {
+				display: none;
+				background-color: #555;
+				color: #f2f2f2;
+			}
+			
+			
+			.topnav > li.selected  ul,
+			.topnav > li:hover  ul {
+				border: 1px solid black;
+				z-index: 100;
+			}
+			
+			.topnav > li.selected  ul > li,
+			.topnav > li:hover  ul > li {
+				display: block;
+				z-index: 100;
+			}
+			
+			.topnav > li > ul > li > a {
+				height: 20px;
+				line-height: 20px;
+				text-align: left;
+			}
+			
+			.topnav > li .fa-caret-square-right {
+				display: none;
+			}
+			
+			/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+			@media screen and (max-width: 600px) {
+				.topnav {
+					position: fixed;
+					top: 0px;
+					margin: 0px;
+					z-index: 99999999;
+				}
+				
+				.topnav > li .fa-caret-square-right {
+					display: inline-block;
+					margin-right: 0.5rem;
+				}
+				
+				body {
+					margin-top: 100px;
+				}
+				
+				.topnav li.stack {
+					display: none;
+				}
+				
+				
+				.topnav li.darkmodeicon,
+				.topnav li.icon {
+					float: right;
+					display: block !important;
+				}
+				.topnav {
+					width: 100%;
+				}
+				.topnav li.title {
+					float: left;
+				}
+			}
+
+			/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+			@media screen and (max-width: 600px) {
+				.topnav.responsive {
+					position: fixed;
+					padding-left: 0;
+				}
+				
+				.topnav.responsive li.title {
+					float: none;
+					display: table-cell;
+				}
+				
+				.topnav.responsive a {
+					text-align: left;
+				}
+				
+				.topnav.responsive a#darkmodelink {
+					position: absolute;
+					right: 40px;
+					top: 0;
+				}
+				
+				.topnav.responsive a.icon {
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+				
+				.topnav.responsive li {
+					display: block;
+					text-align: left;
+				}
+				
+
+
+				.topnav.responsive > li ul {
+					position: relative;
+					list-style: none;
+					padding-left: 0px;
+					min-width: 150px;
+				}
+
+				.topnav.responsive > li  ul > li {
+					display: none;
+					background-color: #555;
+					color: #f2f2f2;
+					text-align: left;
+					padding-left: 30px;
+				}
+
+				.topnav.responsive > li.selected  ul > li {
+					display: block;
+				}
+
+				.topnav.responsive > li > ul > li > a {
+					height: 20px;
+					line-height: 20px;
+					text-align: left;
+				}
+			}
+		
+		</style>
+				
+		<div id="pageheader">
+			<div id="topnavcontainer">
+				
+				<ul class="topnav">
+					<li class="icon icontoggletopnav">
+						<a href="javascript:void(0);">
+						<i class="fa fa-bars"></i>
+						</a>
+					</li>
+					
+					<li class="title">
+						<a href="/">
+							<img src="logo.png" class="logo" />
+							<div style="display: inline-block;">Speed Cube DB</div>
+						</a>
+					</li>
+					
+					<li class="stack">
+						<a href="#"><i class="far fa-caret-square-right"></i>Algorithms</a>
+						<ul>
+							<li><a href="/a/2x2">2x2</a></li>
+							<li><a href="/a/3x3">3x3</a></li>
+							<li><a href="/a/4x4">4x4</a></li>
+							<li><a href="/a/5x5">5x5</a></li>
+							<li><a href="/a/6x6">6x6</a></li>
+							<li><a href="/b/SQ1">Square1</a></li>
+						</ul>
+					</li>
+					
+					<li class="stack">
+						<a href="/t">Practice</a>
+					</li>
+					
+					<li class="stack">
+						<a href="/r/index">Reconstructions</a>
+					</li>
+					
+					<li class="stack">
+				  
+										<a id="googlelogin" href='https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=56005720278-hgk8iclpv6jogpih0d5slqjtgmoldquo.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fwww.speedcubedb.com%2Fsso.php&state&scope=email%20profile&approval_prompt=auto'><img src="btn_google_signin_dark_normal_web.png" alt="Sign in via Google" /></a>
+					
+						
+					</li>
+					
+					<li class="darkmodeicon">
+						<a id="darkmodelink"><i class="fa fa-moon" aria-hidden="true"></i></a>			
+					</li>
+					
+					<li class="stack">
+						<a style="font-size: bold;" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YXDSNHGD65YHU&currency_code=USD&source=url">Donate</a>
+					</li>
+					
+					
+				
+				  
+				</ul>
+				<script>
+				/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+				
+				
+				$(document).ready(function() {
+					$(".icontoggletopnav").click(function() {
+						$(".topnav").toggleClass("responsive");
+					});
+					$(".topnav li a:not(.icontoggletopnav)").click(function(e) {
+						if ($(this).parent().children("ul").length > 0)
+						{
+							console.log($(this).children("ul"));
+							e.preventDefault();
+						}
+						
+						var isactive = $(this).parent().hasClass("selected");
+						$(this).parent().parent().find("li").removeClass("selected");
+						if (!isactive){
+							$(this).parent().addClass("selected");
+						}
+					});
+				});
+				</script>
+				
+				<div style="clear: both;"></div>
+			</div>
+		</div>				
+		<ul class="newbreadcrumbs">
+			<li><a href="b/SQ1/">Square 1</a></li>
+						<li><a href="b/SQ1/OBL">Orient Both Layers (OBL)</a></li>
+					</ul>
+
+		
+		<div class="categorytable">
+				<div>
+					<h2>
+										Orient Both Layers (OBL)										
+					</h2>
+				</div>
+												<div class="singlealg">
+									<div class="algdesc" data-algid="563">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=rgggooRBBBOO&br=bbrrOGGGRRob&t=ceceCECE&b=eceCECEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													0-4 01													</span>
+													<a href="squanalgshow.php?id=132" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="564">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=brrOGggooRBb&br=BBOOrgGGRRob&t=ceCeceCe&b=ECEcECEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-4,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													10 -4-4 01													</span>
+													<a href="squanalgshow.php?id=133" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="565">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=brrOGGRBBBOO&br=ggooGRRobbrg&t=ceCECECE&b=eceCEcec" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													02 D' 01													</span>
+													<a href="squanalgshow.php?id=134" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="566">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=brrOGoRBBBOb&br=OrgggoGGRRob&t=ceCeCECe&b=EcecECEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													10 -1-4 01													</span>
+													<a href="squanalgshow.php?id=135" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="567">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=brrOGGgooRBB&br=OrggGRRobbBO&t=ceCEceCE&b=EceCEceC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (-3,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													02 e' 01													</span>
+													<a href="squanalgshow.php?id=136" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="568">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=goobrrRBBBOO&br=gGRRobbOGGrg&t=ceceCECE&b=eCEceCEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,-1) / (0,3) / (0,3) / (0,1)													</span>
+													<span class="Karnotation">
+													0-1 D D 01													</span>
+													<a href="squanalgshow.php?id=137" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="569">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=goRRBBobbBOr&br=gGRobrOOGGrg&t=cECEceCe&b=eCecECEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (-3,0) / (4,4) / (-1,0)													</span>
+													<span class="Karnotation">
+													02 U' 44 -10													</span>
+													<a href="squanalgshow.php?id=138" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="570">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=brBBOoRBrOGb&br=GGRggoOrgRob&t=cECeCeCe&b=ECecEcEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (3,-3) / (-4,-1) / (0,1)													</span>
+													<span class="Karnotation">
+													10 E -4-1 01													</span>
+													<a href="squanalgshow.php?id=139" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="571">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=brggoGGRBBOb&br=rOGoRBRobOrg&t=cecECECe&b=eCeCEcEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(-2,0) / (3,3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													-20 e -1-4 01													</span>
+													<a href="squanalgshow.php?id=140" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="572">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=goGGRRRBBBOb&br=rOGoobOrggbr&t=cECECECe&b=eCecEcec" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (1,4) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													02 14 -1-4 01													</span>
+													<a href="squanalgshow.php?id=141" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="573">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=obbrgGRBBBOR&br=ObrrOGggooGR&t=cecECECE&b=EceCeceC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-1,-4) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													10 -1-4 D' 01													</span>
+													<a href="squanalgshow.php?id=142" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="574">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=gooGRGRBBBOg&br=ObrrOGRobbrg&t=ceCECECe&b=EceCEcec" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-1,2) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													10 d D' 01													</span>
+													<a href="squanalgshow.php?id=143" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="575">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=goGGRoRBBBOg&br=bbrrOGRobOrg&t=cECeCECe&b=eceCEcEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (0,3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													10 D -1-4 01													</span>
+													<a href="squanalgshow.php?id=144" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="576">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=obOrgoRBBBOR&br=bbrrOGggoGGR&t=cEceCECE&b=eceCecEC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (0,-3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													10 D' -1-4 01													</span>
+													<a href="squanalgshow.php?id=145" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="577">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=obOrggRBBBOb&br=rOGogoGGRRbr&t=cEceCECe&b=eCecECEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (1,-2) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													02 d' -1-4 01													</span>
+													<a href="squanalgshow.php?id=146" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="578">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=GRRobGRBBBOo&br=rOGbrgggoObr&t=CEcECECe&b=eCececEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,3) / (-1,5) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													13 -15 D' 01													</span>
+													<a href="squanalgshow.php?id=147" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="579">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=goRobbRBBBOr&br=GGRobrOrggOG&t=cEceCECe&b=ECecEceC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (0,3) / (1,1) / (-1,0)													</span>
+													<span class="Karnotation">
+													02 D 11 -10													</span>
+													<a href="squanalgshow.php?id=148" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="580">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=goRobbBOrOGG&br=oRBBbrOrggGR&t=cEceCeCE&b=eCEcEceC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (3,3) / (1,1) / (-1,0)													</span>
+													<span class="Karnotation">
+													02 e 11 -10													</span>
+													<a href="squanalgshow.php?id=149" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="581">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=obOrgGGRBBOR&br=bbrggorOGoRB&t=cEcECECE&b=ececeCeC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-3,6) / (3,3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													10 -36 e -1-4 01													</span>
+													<a href="squanalgshow.php?id=150" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="582">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=goOrgRRBrOGb&br=BBOoobGGRgbr&t=cEcECeCe&b=ECecECec" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (1,4) / (3,-3) / (-4,-1) / (0,1)													</span>
+													<span class="Karnotation">
+													02 14 E -4-1 01													</span>
+													<a href="squanalgshow.php?id=151" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="583">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=obOrgrGRBBOb&br=ggoGOGoRBRbr&t=cEceCECe&b=ecECeCEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (-2,-5) / (3,3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													02 -2-5 e -1-4 01													</span>
+													<a href="squanalgshow.php?id=152" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="584">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=OGggooRBBBOR&br=brgGGRObrrob&t=CeceCECE&b=ecECEcec" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (1,4) / (-1,-4) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													02 14 -1-4 D' 01													</span>
+													<a href="squanalgshow.php?id=153" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="585">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=OGRobGRBBBOr&br=ggooGRbrgObr&t=CEcECECe&b=eceCecEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (0,3) / (-1,2) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													10 D d D' 01													</span>
+													<a href="squanalgshow.php?id=154" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="586">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=rggOGGRBBBOr&br=RobbGRobrOgo&t=ceCECECe&b=EceCecEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (0,-3) / (0,3) / (1,1) / (-1,0)													</span>
+													<span class="Karnotation">
+													02 D' D 11 -10													</span>
+													<a href="squanalgshow.php?id=155" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="587">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=rgObrGRBBBOb&br=ggooGRrOGRob&t=cEcECECe&b=eceCeCEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (0,-3) / (-1,2) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													10 D' d D' 01													</span>
+													<a href="squanalgshow.php?id=156" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="588">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=rgObroGRGRBb&br=BBOggorOGRob&t=cEceCECe&b=ECeceCEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-3,-3) / (-1,2) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													10 e' d D' 01													</span>
+													<a href="squanalgshow.php?id=157" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="589">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=OGbrggRBBBOo&br=RobGgoObrrGR&t=CeceCECe&b=EcEcEceC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (1,4) / (-1,5) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													02 14 -15 D' 01													</span>
+													<a href="squanalgshow.php?id=158" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="590">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=OGggooRBBBOr&br=RobOrgGGRbbr&t=CeceCECe&b=EcEcECec" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (0,3) / (0,-3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													10 D D' -1-4 01													</span>
+													<a href="squanalgshow.php?id=159" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="591">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=obOrggGRRRBB&br=bgoGbrrOGoBO&t=cEceCECE&b=ecEceCeC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (-3,6) / (1,4) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													02 -36 14 -1-4 01													</span>
+													<a href="squanalgshow.php?id=160" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="592">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=brrOGoGRRRBB&br=bgoGobOrggBO&t=ceCeCECE&b=ecEcEceC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (-3,0) / (1,4) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													02 U' 14 -1-4 01													</span>
+													<a href="squanalgshow.php?id=161" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="593">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=goOrgoRBrOGg&br=bbrBBORobGGR&t=cEceCeCe&b=ecECEcEC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (0,3) / (3,-3) / (-4,-1) / (0,1)													</span>
+													<span class="Karnotation">
+													10 D E -4-1 01													</span>
+													<a href="squanalgshow.php?id=162" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="594">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=goGGROrgoRBg&br=BBORobbbrrOG&t=cECEceCe&b=ECEceceC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-3,6) / (0,-3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													10 -36 D' -1-4 01													</span>
+													<a href="squanalgshow.php?id=163" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="595">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=obOrgbGRoRBB&br=ggoGbrrOGRBO&t=cEceCeCE&b=ecEceCEC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (-2,-5) / (0,3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													02 -2-5 D -1-4 01													</span>
+													<a href="squanalgshow.php?id=164" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="596">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=goGGRbrgoRBB&br=RobObrrOGgBO&t=cECeceCE&b=EcEceCeC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (-2,-5) / (0,-3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													02 -2-5 D' -1-4 01													</span>
+													<a href="squanalgshow.php?id=165" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="597">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=rgObrrRBBBOg&br=oGRGOGRobbgo&t=cEceCECe&b=eCECEcec" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (1,-2) / (-1,2) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													02 d' d D' 01													</span>
+													<a href="squanalgshow.php?id=166" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="598">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=obGGRoRBrOGR&br=bbrBBOggoOrg&t=cECeCeCE&b=ecECecEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (0,-3) / (3,-3) / (-4,-1) / (0,1)													</span>
+													<span class="Karnotation">
+													10 D' E -4-1 01													</span>
+													<a href="squanalgshow.php?id=167" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="599">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=rggbrrRBBBOb&br=GGRROGoobOgo&t=ceceCECe&b=ECECecEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (0,-3) / (1,4) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													02 D' 14 -1-4 01													</span>
+													<a href="squanalgshow.php?id=168" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="600">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=OGoobRRBBBOr&br=GGROrggbrbgo&t=CecECECe&b=ECEcecec" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,3) / (-1,2) / (1,4) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													13 d 14 -1-4 01													</span>
+													<a href="squanalgshow.php?id=169" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="601">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=OGggoGRBBBOR&br=OrgoGRbbrrob&t=CecECECE&b=EceCecec" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (1,4) / (0,-3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													02 14 D' -1-4 01													</span>
+													<a href="squanalgshow.php?id=170" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="602">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=GRRobobrrRBg&br=BBOOgobOGGrg&t=CEceceCe&b=ECEceCEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-4,-1) / (0,3) / (0,3) / (0,1)													</span>
+													<span class="Karnotation">
+													10 -4-1 D D 01													</span>
+													<a href="squanalgshow.php?id=171" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="603">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=GRobrORBBBOr&br=RobbrggOGGgo&t=CecECECe&b=EceceCEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (0,3) / (0,3) / (1,1) / (-1,0)													</span>
+													<span class="Karnotation">
+													02 D D 11 -10													</span>
+													<a href="squanalgshow.php?id=172" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="604">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=GRRobrRBBBOg&br=OgoobrbOGGrg&t=CEceCECe&b=EceceCEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-1,-1) / (0,3) / (0,3) / (0,1)													</span>
+													<span class="Karnotation">
+													10 -1-1 D D 01													</span>
+													<a href="squanalgshow.php?id=173" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="605">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=GRobrOobbBOr&br=RRBBOGGrgggo&t=CecEceCe&b=ECECEcec" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (0,3) / (-3,0) / (4,4) / (-1,0)													</span>
+													<span class="Karnotation">
+													02 D U' 44 -10													</span>
+													<a href="squanalgshow.php?id=174" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="606">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=brrRBBBORGRO&br=ggooobbrgGOG&t=ceCECECE&b=ecececEC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(3,-4) / (1,-2) / (-1,-4) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													3-4 d' -1-4 D' 01													</span>
+													<a href="squanalgshow.php?id=175" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="607">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=obbrgOGRGRBB&br=ggoobrrOGRBO&t=cecECECE&b=ececeCEC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (-2,-5) / (-1,2) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													02 -2-5 d D' 01													</span>
+													<a href="squanalgshow.php?id=176" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="608">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=oboRBbbrBBOR&br=ggorOGOrgGGR&t=ceCecECE&b=eceCEcEC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(-5,-3) / (-3,6) / (3,3) / (-4,-1) / (0,1)													</span>
+													<span class="Karnotation">
+													-5-3 -36 e -4-1 01													</span>
+													<a href="squanalgshow.php?id=177" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="609">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=rggGRBobbBOG&br=rgoRRBobrOOG&t=ceCEceCE&b=ecECecEC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-1,-1) / (-3,0) / (4,4) / (-1,0)													</span>
+													<span class="Karnotation">
+													10 -1-1 U' 44 -10													</span>
+													<a href="squanalgshow.php?id=178" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="610">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=brrobbRBBBOR&br=ggoorgGGROOG&t=ceceCECE&b=ececECEC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (0,-3) / (1,4) / (-1,-4) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													02 D' 14 -1-4 D' 01													</span>
+													<a href="squanalgshow.php?id=179" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="611">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=goOrgbGRoRBr&br=RobGbrBBOgOG&t=cEceCeCe&b=EcEcECeC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (-2,-5) / (0,-3) / (3,-3) / (-4,-1) / (0,1)													</span>
+													<span class="Karnotation">
+													02 -2-5 D' E -4-1 01													</span>
+													<a href="squanalgshow.php?id=180" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="612">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=obbrgggooRBr&br=BBOROGGGRObr&t=cececeCe&b=ECECECEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-4,-1) / (1,4) / (-1,-4) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													10 -4-1 14 -1-4 D' 01													</span>
+													<a href="squanalgshow.php?id=181" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="613">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=goGGRgbrrRBO&br=BBObrgROGoob&t=cECeceCE&b=ECecECec" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-4,-1) / (0,-3) / (1,4) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													10 -4-1 D' 14 -1-4 01													</span>
+													<a href="squanalgshow.php?id=182" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="614">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=goGGRRbrrRBB&br=brggOGoobOBO&t=cECEceCE&b=eceCecEC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (-3,0) / (0,-3) / (1,4) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													02 U' D' 14 -1-4 01													</span>
+													<a href="squanalgshow.php?id=183" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="615">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=brrOGbGRoRBG&br=BobOrgRBOggo&t=ceCeCeCE&b=EcEcECec" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-1,5) / (-2,-5) / (0,3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													10 -15 -2-5 D -1-4 01													</span>
+													<a href="squanalgshow.php?id=184" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="616">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=rgOgorRBBBOG&br=gGRRobobrbOG&t=cEceCECE&b=eCEceceC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (0,-3) / (-1,-1) / (0,3) / (0,3) / (0,1)													</span>
+													<span class="Karnotation">
+													10 D' -1-1 D D 01													</span>
+													<a href="squanalgshow.php?id=185" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="617">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=brrOGRrgOGRG&br=BobbBOggooRB&t=ceCEcECE&b=EceCeceC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (-3,6) / (-2,-5) / (-1,2) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													02 -36 -2-5 d D' 01													</span>
+													<a href="squanalgshow.php?id=186" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="618">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=rgGGRoRBBBOb&br=ROGggoObrrob&t=cECeCECe&b=ECecEcec" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-1,2) / (1,4) / (-1,-4) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													10 d 14 -1-4 D' 01													</span>
+													<a href="squanalgshow.php?id=187" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="619">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=GRbbrRRBBBOr&br=ggooobOrgGOG&t=CecECECe&b=ececEcEC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (1,-5) / (0,3) / (0,-3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													02 1-5 D D' -1-4 01													</span>
+													<a href="squanalgshow.php?id=188" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="620">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=goRobbbrORBB&br=rGRorggOGGBO&t=cEcecECE&b=eCeceCEC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (-3,0) / (0,3) / (0,3) / (1,1) / (-1,0)													</span>
+													<span class="Karnotation">
+													02 U' D D 11 -10													</span>
+													<a href="squanalgshow.php?id=189" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="621">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=BORobbGROrgo&br=ggoGbrrOGBRB&t=CEceCEce&b=ecEceCEC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (-2,1) / (-3,6) / (0,-3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													02 u' -36 D' -1-4 01													</span>
+													<a href="squanalgshow.php?id=190" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="622">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=obbbrOrgoRBR&br=ggoGGRrOGBBO&t=cecEceCE&b=ecECeCEC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (0,3) / (-3,6) / (0,-3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													10 D -36 D' -1-4 01													</span>
+													<a href="squanalgshow.php?id=191" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="623">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=BObgorOGoGRg&br=RRBBbrGobOrg&t=CeceCeCe&b=ECEcEcEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-4,-1) / (-3,0) / (1,4) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													10 -4-1 U' 14 -1-4 01													</span>
+													<a href="squanalgshow.php?id=192" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="624">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=BORobGRBrOGg&br=OrgoGRbbrBgo&t=CEcECeCe&b=EceCecEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (1,4) / (0,3) / (3,-3) / (-4,-1) / (0,1)													</span>
+													<span class="Karnotation">
+													02 14 D E -4-1 01													</span>
+													<a href="squanalgshow.php?id=193" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="625">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=BORobGGROrgB&br=oRBggobbrrOG&t=CEcECEcE&b=eCececeC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (-3,0) / (-3,6) / (0,-3) / (-1,-4) / (0,1)													</span>
+													<span class="Karnotation">
+													10 U' -36 D' -1-4 01													</span>
+													<a href="squanalgshow.php?id=194" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="626">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=gorOGRbroGRG&br=brgOobBBOgRB&t=ceCEceCE&b=ecEcECeC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(0,2) / (-2,4) / (-3,-3) / (-1,2) / (0,-3) / (0,1)													</span>
+													<span class="Karnotation">
+													02 -24 e' d D' 01													</span>
+													<a href="squanalgshow.php?id=195" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="627">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=brrgoOOGBBOb&br=RRBoGRgrgGob&t=cecECECe&b=ECeCecEc" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,0) / (0,-3) / (-3,0) / (2,-1) / (-2,1) / (3,0) / (-1,0)													</span>
+													<span class="Karnotation">
+													10 D' U' u u' U -10													</span>
+													<a href="squanalgshow.php?id=196" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+															<div class="singlealg">
+									<div class="algdesc" data-algid="628">
+																				
+										
+										<img style="float: left;" src="isquan.php?d=2&size=120&tr=brBgoGRBrOGb&br=RobOrgoGRgBO&t=cEcECeCe&b=EcEceCeC" />
+										<h3>OBL</h3>
+										
+									</div>
+									<div class="alglist">
+																		
+									<ul>
+																				
+													<li class="algorithmnotation">
+													<span class="notation">
+													(1,3) / (-1,-4) / (1,4) / (0,3) / (3,-3) / (-4,-1) / (0,1)													</span>
+													<span class="Karnotation">
+													13 -1-4 14 D E -4-1 01													</span>
+													<a href="squanalgshow.php?id=197" ?>
+													<i class="fa fa-link" aria-hidden="true"></i></a>
+													
+													<span class="KarnotationToggle">K</span>
+													
+													</li>
+													
+									</ul>
+									
+								</div>
+									
+								</div>
+								
+								
+								
+										
+		</div>
+				
+		
+<div style="height: 200px; width: 100%;">&nbsp;</div>
+<div class="footer">
+<p>Created by Gil Zussman, for any feedback: <a href="mailto:gil@speedcubedb.com">gil@speedcubedb.com</a></p>
+<p><a href="privacypolicy.php">Privacy Policy</a></p>
+</div>	</body>
+</html>

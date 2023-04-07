@@ -1,0 +1,1200 @@
+<html>
+	<head>
+		<base href="/"/>
+		<script src="rematrix.js"></script>
+		<title>Square 1 - Speed Cube Database</title>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="Free online speedcubing algorithm and reconstruction database, covers every algorithm for 2x2 - 6x6 including F2L, OLL, PLL, COLL, ZBLL, WV and much more" />
+<meta name="keywords" content="rubiks, speedcube, algdb, cubing, speedcubing, algorithm, alg, 3x3, 4x4, 5x5, 6x6, 2x2, OLL, COLL, PLL, Parity, WV, ZBLL, CLL, EG1" />
+<meta name="author" content="Gil Zussman" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
+<script type="text/javascript" src="includes/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="includes/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="includes/jquery-ui-1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="speedcubedb.css?d=3">
+<link rel="stylesheet" href="includes/fontawesome-free-5.14.0-web/css/all.min.css">
+<link rel="shortcut icon" type="image/jpg" href="/favicon.png" />
+<script type="text/javascript" src="includes/jcookie.js"></script>
+<script src="includes/tilt.jquery.js"></script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175803107-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175803107-1');
+</script>		<style>
+			body {
+				font-family: Tahoma, Helvetica;
+				background-color: #2A2A2A;
+				font-size: 22px;
+				color: white;
+			}
+			select {				
+				font-family: Tahoma, Helvetica;
+				font-size: 22px;
+			}
+			
+			.noselect {
+			  -webkit-touch-callout: none; /* iOS Safari */
+				-webkit-user-select: none; /* Safari */
+				 -khtml-user-select: none; /* Konqueror HTML */
+				   -moz-user-select: none; /* Old versions of Firefox */
+					-ms-user-select: none; /* Internet Explorer/Edge */
+						user-select: none; /* Non-prefixed version, currently
+											  supported by Chrome, Edge, Opera and Firefox */
+			}
+			
+			
+			@media only screen 
+			  and (min-device-width: 320px) 
+			  and (max-device-width: 480px)
+			  and (-webkit-min-device-pixel-ratio: 2),
+				screen and (max-width: 900px)
+			 {
+				.gilzu_detail_container,
+				.gilzu_left_container
+				{
+					float: none !important;
+					width: 100% !important;
+				}
+			}
+			
+			.gilzu_left_container
+			{
+				float: left;
+				text-align: center;
+				width: 50%;
+				height: 100%;
+				min-height: 500px; 
+				background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(42,42,42,1) 102%);
+			}
+			.gilzu_model_container {
+				display: inline-block;
+				overflow: hidden;
+				transform-style: preserve-3d; 
+				perspective: 800px;
+				height: 90%;
+				width: 100%;
+				cursor: move;
+				  -webkit-touch-callout: none; /* iOS Safari */
+					-webkit-user-select: none; /* Safari */
+					 -khtml-user-select: none; /* Konqueror HTML */
+					   -moz-user-select: none; /* Old versions of Firefox */
+						-ms-user-select: none; /* Internet Explorer/Edge */
+							user-select: none; /* Non-prefixed version, currently
+												  supported by Chrome, Edge, Opera and Firefox */
+			}		
+			.gilzu_model {
+				transform-style: preserve-3d;
+				transform-origin: center center -75px;
+				width: 500px; 
+				height: 300px; 
+				transform-origin: 150px 150px;
+				transform: rotateX(-30deg) rotateY(-45deg) rotateZ(0deg) translateX(100px) translateY(150px);
+			}
+			
+			.gilzu_brick {
+				position: absolute;
+				display: block;
+				transform-style: preserve-3d;
+				transform-origin: 0px 56px 0px;
+			}	
+			
+			.gilzu_hint.gilzu_face {
+				border: none;
+				background-color: transparent;
+				opacity: 0.7;
+				backface-visibility: hidden;
+			}
+			
+			.gilzu_face {
+				width: 75px;
+				height: 50px;
+				box-sizing: border-box;
+				position: absolute;
+				transform-style: preserve-3d;
+				background-color: transparent;
+			}
+			.stickerless .gilzu_face { 
+				border: none;
+			}
+			.gilzu_face_up {
+				transform: rotateX(90deg) translateZ(25px);
+				width: 56.25px;
+				height: 112.5px;
+				transform-origin: 50% 50% 0px;
+			}	
+
+			.gilzu_face_down {
+				transform: rotateX(90deg) translateZ(-29px);
+				width: 56.25px;
+				height: 112.5px;
+				transform-origin: 50% 50% 0px;
+			}	
+			.gilzu_face_left {				
+				transform: rotateY(-90deg) translateZ(50px);
+			}
+			.gilzu_face_right {
+				transform: rotateY(90deg) translateZ(75px);
+			}
+			
+			
+			/* ---------------- midslice ------------ */
+			.gilzu_midslice .gilzu_face_right {
+				transform: translate3d(0px,35px,0px) rotateY(90deg);
+				position: absolute;
+				width: 158px;
+				height: 40px;
+				left: 0px;
+			}
+			.gilzu_midslice .gilzu_face_left {
+				transform: translate3d(-37.5px,-35px,0px) rotateY(90deg);
+				position: absolute;
+				width: 158px;
+				height: 40px;
+				left: 0px;
+			}
+			.gilzu_midslice .gilzu_face_back {
+				transform: translate3d(20.75px,35px,-79px);
+				position: absolute;
+				width: 58.25px;
+				height: 40px;
+				left: 0px;
+			}
+			.gilzu_midslice .gilzu_face_front {
+				transform: translate3d(-21.75px,35px,79px);
+				position: absolute;
+				width: 99.75px;
+				height: 40px;
+				left: 0px;
+				
+			}
+			/* ---------------- midslice ------------ */
+			
+			
+			.gilzu_edge .gilzu_face_front {
+				transform: translate3d(78px,31px,20.75px) rotateY(90deg);
+				position: absolute;
+				left: 0px;
+				width: 41.5px;
+				height: 51px;
+				transform-origin: 0% 0% 0px;
+			}
+			
+			.gilzu_face_corner1_front {
+				transform: rotateY(-45deg) translate3d(20px,31px,-79px);
+				width: 59.25px;
+				transform-origin: 0% 0% 0px;
+			}
+			.gilzu_face_corner2_front {
+				transform: rotateY(45deg) translate3d(20px,31px,79px);
+				width: 59.25px;
+				transform-origin: 0% 0% 0px;
+			}
+			.gilzu_face_back {
+				transform: rotateX(180deg) translate3d(78px,31px,23.75px);
+				width: 50px;
+				transform-origin: 0% 0% 0px;
+			}
+			
+			
+						
+			.gilzu_face_hint_container {
+				position: absolute;
+				transform: translateX(0px) translateY(-18.75px) translateZ(0px); 
+				transform-style: preserve-3d;
+				font-size: 50px;
+				font-weight: bold;
+				font-size: 120px;
+				font-weight: bold;
+				color: white;
+				text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+			}
+			.gilzu_face_hint {
+				border: none;
+				background-color: transparent;
+				opacity: 0.7;
+				transform-style: preserve-3d;
+				/*backface-visibility: hidden;*/
+				position: absolute;
+				display:none;
+			}
+
+			
+			
+			.gilzu_sticker {
+				height: 100%;
+			}
+			.gilzu_corner.gilzu_sticker_up {
+				    /*
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 41.5px 70px 41.5px 0px;
+					border-color: transparent yellow transparent transparent;
+					position: absolute;
+					margin: 14.75px 0px;
+					*/
+					
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 39.5px 67px 39.5px 0px;
+					border-color: transparent yellow transparent transparent;
+					position: absolute;
+					margin: 16.75px 3px;
+					z-index: 100;
+			}
+			
+			.gilzu_corner.gilzu_sticker_up_shadow {
+				    width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 41px 73px 40px 0px;
+					border-color: transparent gold transparent transparent;
+					position: absolute;
+					margin: 16px -3px;
+			}
+			
+			
+			.gilzu_corner.gilzu_sticker_up_empty {
+				    width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 41px 73px 40px 0px;
+					border-color: transparent #111 transparent transparent;
+					position: absolute;
+					margin: 16px -3px;
+			}
+			
+			.gilzu_corner.gilzu_sticker_down {
+				    /*
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 41.5px 70px 41.5px 0px;
+					border-color: transparent white transparent transparent;
+					position: absolute;
+					margin: 14.75px 0px;
+					*/
+					
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 39.5px 67px 39.5px 0px;
+					border-color: transparent white transparent transparent;
+					position: absolute;
+					margin: 16.75px 3px;
+					z-index: 100;
+					
+			}
+			
+			.gilzu_corner.gilzu_sticker_down_shadow {
+				    width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 41px 73px 40px 0px;
+					border-color: transparent lightgray transparent transparent;
+					position: absolute;
+					margin: 16px -3px;
+			}
+
+			.gilzu_corner.gilzu_sticker_down_empty {
+				    width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 41px 73px 40px 0px;
+					border-color: transparent #111 transparent transparent;
+					position: absolute;
+					margin: 16px -3px;
+			}
+
+			
+			.gilzu_corner.gilzu_sticker_up_compliment {
+				    /*
+					width: 0;
+					height: 0;
+					border-style: solid;
+					
+					border-width: 41.5px 0px 41.5px 41.5px;
+					border-color: transparent transparent transparent yellow;
+					position: absolute;
+					left: 70px;
+					margin: 14.75px 0px;
+					z-index: 100;
+					*/
+					
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 38.5px 0px 38.5px 38.5px;
+					border-color: transparent transparent transparent yellow;
+					position: absolute;
+					left: 70px;
+					margin: 18px 0px;
+					z-index: 100;
+			}
+			
+			.gilzu_corner.gilzu_sticker_up_compliment_shadow {
+				    width: 0;
+					height: 0;
+					border-style: solid;
+					
+					border-width: 41.5px 0px 41.5px 41.5px;
+					border-color: transparent transparent transparent gold;
+					position: absolute;
+					left: 70px;
+					margin: 14.75px 0px;
+			}
+			
+			.gilzu_corner.gilzu_sticker_up_compliment_empty {
+				    width: 0;
+					height: 0;
+					border-style: solid;
+					
+					border-width: 41.5px 0px 41.5px 41.5px;
+					border-color: transparent transparent transparent #111;
+					position: absolute;
+					left: 70px;
+					margin: 14.75px 0px;
+			}
+			
+			.gilzu_corner.gilzu_sticker_down_compliment {
+				    /*
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 41.5px 0px 41.5px 41.5px;
+					border-color: transparent transparent transparent white;
+					position: absolute;
+					left: 70px;
+					margin: 14.75px 0px;
+					*/
+					
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 38.5px 0px 38.5px 38.5px;
+					border-color: transparent transparent transparent white;
+					position: absolute;
+					left: 70px;
+					margin: 18px 0px;
+					z-index: 100;
+			}
+			.gilzu_corner.gilzu_sticker_down_compliment_shadow {
+				    width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 41.5px 0px 41.5px 41.5px;
+					border-color: transparent transparent transparent lightgray;
+					position: absolute;
+					left: 70px;
+					margin: 14.75px 0px;
+			}
+			
+			.gilzu_corner.gilzu_sticker_down_compliment_empty {
+				    width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 41.5px 0px 41.5px 41.5px;
+					border-color: transparent transparent transparent #111;
+					position: absolute;
+					left: 70px;
+					margin: 14.75px 0px;
+			}
+			
+			.gilzu_edge.gilzu_sticker_up {
+				    width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 16.75px 75px 16.75px 0px;
+					border-color: transparent yellow transparent transparent;					
+					/*margin: 37.5px 3px;*/
+					margin: 39.5px 2px;
+					position: absolute;
+					z-index: 100;
+			}
+			.gilzu_edge.gilzu_sticker_up_shadow {
+				    width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 20.75px 75px 20.75px 0px;
+					border-color: transparent gold transparent transparent;					
+					margin: 35.5px 3px;
+					position: absolute;
+			}
+			.gilzu_edge.gilzu_sticker_up_empty {
+				    width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 20.75px 75px 20.75px 0px;
+					border-color: transparent #111 transparent transparent;					
+					margin: 35.5px 3px;
+					position: absolute;
+			}
+			.gilzu_edge.gilzu_sticker_down {
+				    width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 18.75px 75px 18.75px 0px;
+					border-color: transparent white transparent transparent;					
+					margin: 37.5px 3px;
+					position: absolute;
+					left: 0px;
+					z-index:100;
+			}
+			.gilzu_edge.gilzu_sticker_down_shadow {
+				    width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 20.75px 75px 20.75px 0px;
+					border-color: transparent lightgray transparent transparent;					
+					margin: 35.5px 3px;
+					position: absolute;
+			}
+			.gilzu_edge.gilzu_sticker_down_empty {
+				    width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 20.75px 75px 20.75px 0px;
+					border-color: transparent #111 transparent transparent;					
+					margin: 35.5px 3px;
+					position: absolute;
+			}
+			
+			
+			.gilzu_sticker_back {
+				background-color: orange;
+				border: 2px solid gold;
+			}
+			.gilzu_sticker_front {
+				background-color: red;
+				border: 2px solid darkred;
+			}
+			.gilzu_sticker_right {
+				background-color: green;
+				border: 2px solid darkgreen;
+			}
+			.gilzu_sticker_left {
+				background-color: blue;
+				border: 2px solid darkblue;
+			}
+			
+			
+			.gilzu_detail_container {
+				float: left;
+				display: inline-block;
+				border-radius: 5px;
+				padding: 0px;
+				width: 50%; 
+			}
+			
+			.section {
+				margin-top: 10px;
+			}
+			
+			.sectionheader {
+				text-align: left;
+				font-variant-caps: all-petite-caps;
+			}
+			
+			.section textarea {
+				font-family: Tahoma, Helvetica;
+				font-size: 22px;
+				overflow: hidden;
+				overflow-wrap: break-word;
+				resize: none;
+				width: 100%;
+				font-weight: bold;
+			}
+			
+			#playcontrols {
+				width: 90%;
+				margin: 0 auto;
+				text-align: center;
+			}
+			
+			#playcontrols button {
+				padding: 1rem;
+				font-size: 22px;
+				cursor: pointer;
+			}
+			.actions_section button {
+				padding: 1rem;
+				min-width: 100px;
+				font-size: 18px;
+				cursor: pointer;
+			}
+			.actions_section .fa {
+				margin-right: 0.5rem;
+			}
+			
+			#stats {
+				float: right;
+			}
+			
+			#playposition {
+				width: 100%;
+			}
+			
+			#movescontainer {
+				position: relative;
+			}
+			#moveannonation{
+				position: absolute;
+				z-index: -1;
+				height: 10rem;
+				width: 100%;
+				background-color: white;
+				white-space: pre-wrap;
+				word-wrap: break-word;
+				pointer-events: none;
+				font-size: 22px;
+				font-weight: bold;
+				padding: 4px;
+				color: transparent;
+			}
+			
+			#moves {
+				z-index: 1;
+				border: none;
+				font-size: 22px;
+				font-weight: bold;
+				height: 10rem;
+				width: 100%;
+				padding: 5px;
+				background-color: transparent;
+				overflow: hidden;
+				overflow-wrap: break-word;
+				resize: none;
+			}
+			#moves:focus{
+				outline: none;
+			}
+			.annoncurr {
+				background-color: orange;
+				border-radius: 5px;
+				padding: 3px 3px;
+				margin: -3px -3px;
+			}
+			.annonerror {
+				background-color: red;
+				border-radius: 5px;
+				padding: 3px 3px;
+				margin: -3px -3px;
+			}
+			
+			
+			.statnum {
+				font-weight: bold;
+				font-size: 24px;
+			}
+			
+		</style>
+		<script>
+			var rank = 3;
+			var thirdwidth = 37.5;
+			var center = -75;
+			
+			
+		</script>
+		<script src="squan.js?d=18"></script>
+		<link rel="stylesheet" href="squan.css?d=15">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<script>
+					
+	$("#googlelogin").on("hover mousehover focus", function(){
+		if (typeof(Storage) !== "undefined") {	
+				window.localStorage.setItem("comeback",location.href);
+		}
+	});
+</script>
+
+<script>
+	$(document).ready(function() {
+		if (getCookie("darkmode") == "true")
+		{
+			$("body").addClass("darkmode");
+		}
+		else
+		{
+			$("body").removeClass("darkmode");
+		}
+		
+		$("#darkmodelink").click(function(){	
+			if ($("body").hasClass("darkmode"))
+			{
+				setCookie("darkmode","false",500000,'/',  'speedcubedb.com');
+			}
+			else
+			{
+				setCookie("darkmode","true",500000,'/',  'speedcubedb.com');
+			}
+			
+			$("body").toggleClass("darkmode");
+		});
+		
+		$("#crossorientation").change(function(){			
+			setCookie("crossorientation",$(this).val(),500000,'/',  'speedcubedb.com');
+			location.reload();
+		});
+	});
+</script>
+
+
+		<style>
+			#pageheader {				
+				z-index: 99999999;
+			}
+			#googlelogin {
+				padding: 0px;
+			}
+			#googlelogin img {
+				vertical-align: middle;
+			}
+			
+			#darkmodelink {
+				float: inherit;
+				margin: 0px; 
+				height: 40px; 
+				cursor: pointer;
+			}
+		
+			#topnavcontainer {
+				text-align: center;
+				z-index: 999999999;				
+			}
+			
+			.topnav {
+			  background-color: #000;
+			  overflow: hidden;
+			  list-decoration: none;
+			  padding: 0px;
+			}
+			
+			.darkmode .topnav {
+			  background-color: #555;
+			}
+			
+			.topnav > li {
+				display: inline-block;
+				padding: 0px;
+				margin: 0px;
+				color: #f2f2f2;
+			}
+			.darkmode .topnav > li {
+				color: #f2f2f2;
+			}
+
+			.topnav a {
+			  display: block;
+			  color: #fff;
+			  text-align: center;
+			  padding: 14px 16px;
+			  line-height: 40px;
+			  height: 40px;
+			  text-decoration: none;
+			  font-size: 17px;
+			}
+
+			.topnav .fa,
+			.topnav .darkmodeicon
+			.topnav .icon {
+				line-height: 40px;
+			}
+
+			.topnav a:hover {
+			  background-color: #ddd;
+			  color: black;
+			}
+
+			.topnav .icon {
+			  display: none;
+			}
+			
+			.topnav > li ul {
+				list-style: none;
+				padding-left: 0px;
+				position: absolute;
+				min-width: 150px;
+			}
+			
+			.topnav > li  ul > li {
+				display: none;
+				background-color: #555;
+				color: #f2f2f2;
+			}
+			
+			
+			.topnav > li.selected  ul,
+			.topnav > li:hover  ul {
+				border: 1px solid black;
+				z-index: 100;
+			}
+			
+			.topnav > li.selected  ul > li,
+			.topnav > li:hover  ul > li {
+				display: block;
+				z-index: 100;
+			}
+			
+			.topnav > li > ul > li > a {
+				height: 20px;
+				line-height: 20px;
+				text-align: left;
+			}
+			
+			.topnav > li .fa-caret-square-right {
+				display: none;
+			}
+			
+			/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+			@media screen and (max-width: 600px) {
+				.topnav {
+					position: fixed;
+					top: 0px;
+					margin: 0px;
+					z-index: 99999999;
+				}
+				
+				.topnav > li .fa-caret-square-right {
+					display: inline-block;
+					margin-right: 0.5rem;
+				}
+				
+				body {
+					margin-top: 100px;
+				}
+				
+				.topnav li.stack {
+					display: none;
+				}
+				
+				
+				.topnav li.darkmodeicon,
+				.topnav li.icon {
+					float: right;
+					display: block !important;
+				}
+				.topnav {
+					width: 100%;
+				}
+				.topnav li.title {
+					float: left;
+				}
+			}
+
+			/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+			@media screen and (max-width: 600px) {
+				.topnav.responsive {
+					position: fixed;
+					padding-left: 0;
+				}
+				
+				.topnav.responsive li.title {
+					float: none;
+					display: table-cell;
+				}
+				
+				.topnav.responsive a {
+					text-align: left;
+				}
+				
+				.topnav.responsive a#darkmodelink {
+					position: absolute;
+					right: 40px;
+					top: 0;
+				}
+				
+				.topnav.responsive a.icon {
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+				
+				.topnav.responsive li {
+					display: block;
+					text-align: left;
+				}
+				
+
+
+				.topnav.responsive > li ul {
+					position: relative;
+					list-style: none;
+					padding-left: 0px;
+					min-width: 150px;
+				}
+
+				.topnav.responsive > li  ul > li {
+					display: none;
+					background-color: #555;
+					color: #f2f2f2;
+					text-align: left;
+					padding-left: 30px;
+				}
+
+				.topnav.responsive > li.selected  ul > li {
+					display: block;
+				}
+
+				.topnav.responsive > li > ul > li > a {
+					height: 20px;
+					line-height: 20px;
+					text-align: left;
+				}
+			}
+		
+		</style>
+				
+		<div id="pageheader">
+			<div id="topnavcontainer">
+				
+				<ul class="topnav">
+					<li class="icon icontoggletopnav">
+						<a href="javascript:void(0);">
+						<i class="fa fa-bars"></i>
+						</a>
+					</li>
+					
+					<li class="title">
+						<a href="/">
+							<img src="logo.png" class="logo" />
+							<div style="display: inline-block;">Speed Cube DB</div>
+						</a>
+					</li>
+					
+					<li class="stack">
+						<a href="#"><i class="far fa-caret-square-right"></i>Algorithms</a>
+						<ul>
+							<li><a href="/a/2x2">2x2</a></li>
+							<li><a href="/a/3x3">3x3</a></li>
+							<li><a href="/a/4x4">4x4</a></li>
+							<li><a href="/a/5x5">5x5</a></li>
+							<li><a href="/a/6x6">6x6</a></li>
+							<li><a href="/b/SQ1">Square1</a></li>
+						</ul>
+					</li>
+					
+					<li class="stack">
+						<a href="/t">Practice</a>
+					</li>
+					
+					<li class="stack">
+						<a href="/r/index">Reconstructions</a>
+					</li>
+					
+					<li class="stack">
+				  
+										<a id="googlelogin" href='https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=56005720278-hgk8iclpv6jogpih0d5slqjtgmoldquo.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fwww.speedcubedb.com%2Fsso.php&state&scope=email%20profile&approval_prompt=auto'><img src="btn_google_signin_dark_normal_web.png" alt="Sign in via Google" /></a>
+					
+						
+					</li>
+					
+					<li class="darkmodeicon">
+						<a id="darkmodelink"><i class="fa fa-moon" aria-hidden="true"></i></a>			
+					</li>
+					
+					<li class="stack">
+						<a style="font-size: bold;" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YXDSNHGD65YHU&currency_code=USD&source=url">Donate</a>
+					</li>
+					
+					
+				
+				  
+				</ul>
+				<script>
+				/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+				
+				
+				$(document).ready(function() {
+					$(".icontoggletopnav").click(function() {
+						$(".topnav").toggleClass("responsive");
+					});
+					$(".topnav li a:not(.icontoggletopnav)").click(function(e) {
+						if ($(this).parent().children("ul").length > 0)
+						{
+							console.log($(this).children("ul"));
+							e.preventDefault();
+						}
+						
+						var isactive = $(this).parent().hasClass("selected");
+						$(this).parent().parent().find("li").removeClass("selected");
+						if (!isactive){
+							$(this).parent().addClass("selected");
+						}
+					});
+				});
+				</script>
+				
+				<div style="clear: both;"></div>
+			</div>
+		</div>		<div class="gilzu_left_container">
+			<div class="gilzu_model_container">
+				<div class="gilzu_model" data-zoom="100"  data-rotx="-30" data-roty="-45" data-rotx-t="-30" data-roty-t="-45"  >
+				
+				<div class='gilzu_brick gilzu_edge' style='transform: translateY(-50px) rotatey(15deg)'  data-rrot='0' data-rot='60'><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up gilzu_edge'></div><div class='gilzu_sticker gilzu_sticker_up_shadow gilzu_edge'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div><div class='gilzu_face gilzu_face_front'><div class='gilzu_sticker gilzu_sticker_right' style='border-radius: 0px 0px 7px 7px;'></div></div></div><div class='gilzu_brick gilzu_corner' style='transform: translateY(-50px) rotatey(60deg)' data-rrot='0' data-rot='0' ><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_shadow gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment_shadow gilzu_corner'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_down_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment_empty gilzu_corner'></div></div><div class='gilzu_face gilzu_face_corner1_front'><div class='gilzu_sticker gilzu_sticker_back' style='border-radius: 0px 0px 0px 7px;'></div></div><div class='gilzu_face gilzu_face_corner2_front' style='border-radius: 0px 0px 0px 7px;'><div class='gilzu_sticker gilzu_sticker_right' style='border-radius: 0px 0px 0px 7px;'></div></div></div><div class='gilzu_brick gilzu_edge' style='transform: translateY(-50px) rotatey(-75deg)'  data-rrot='0' data-rot='150'><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up gilzu_edge'></div><div class='gilzu_sticker gilzu_sticker_up_shadow gilzu_edge'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div><div class='gilzu_face gilzu_face_front'><div class='gilzu_sticker gilzu_sticker_front' style='border-radius: 0px 0px 7px 7px;'></div></div></div><div class='gilzu_brick gilzu_corner' style='transform: translateY(-50px) rotatey(-30deg)' data-rrot='0' data-rot='90' ><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_shadow gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment_shadow gilzu_corner'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_down_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment_empty gilzu_corner'></div></div><div class='gilzu_face gilzu_face_corner1_front'><div class='gilzu_sticker gilzu_sticker_right' style='border-radius: 0px 0px 0px 7px;'></div></div><div class='gilzu_face gilzu_face_corner2_front' style='border-radius: 0px 0px 0px 7px;'><div class='gilzu_sticker gilzu_sticker_front' style='border-radius: 0px 0px 0px 7px;'></div></div></div><div class='gilzu_brick gilzu_edge' style='transform: translateY(-50px) rotatey(-165deg)'  data-rrot='0' data-rot='240'><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up gilzu_edge'></div><div class='gilzu_sticker gilzu_sticker_up_shadow gilzu_edge'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div><div class='gilzu_face gilzu_face_front'><div class='gilzu_sticker gilzu_sticker_left' style='border-radius: 0px 0px 7px 7px;'></div></div></div><div class='gilzu_brick gilzu_corner' style='transform: translateY(-50px) rotatey(-120deg)' data-rrot='0' data-rot='180' ><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_shadow gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment_shadow gilzu_corner'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_down_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment_empty gilzu_corner'></div></div><div class='gilzu_face gilzu_face_corner1_front'><div class='gilzu_sticker gilzu_sticker_front' style='border-radius: 0px 0px 0px 7px;'></div></div><div class='gilzu_face gilzu_face_corner2_front' style='border-radius: 0px 0px 0px 7px;'><div class='gilzu_sticker gilzu_sticker_left' style='border-radius: 0px 0px 0px 7px;'></div></div></div><div class='gilzu_brick gilzu_edge' style='transform: translateY(-50px) rotatey(-255deg)'  data-rrot='0' data-rot='330'><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up gilzu_edge'></div><div class='gilzu_sticker gilzu_sticker_up_shadow gilzu_edge'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div><div class='gilzu_face gilzu_face_front'><div class='gilzu_sticker gilzu_sticker_back' style='border-radius: 0px 0px 7px 7px;'></div></div></div><div class='gilzu_brick gilzu_corner' style='transform: translateY(-50px) rotatey(-210deg)' data-rrot='0' data-rot='270' ><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_shadow gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment_shadow gilzu_corner'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_down_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment_empty gilzu_corner'></div></div><div class='gilzu_face gilzu_face_corner1_front'><div class='gilzu_sticker gilzu_sticker_left' style='border-radius: 0px 0px 0px 7px;'></div></div><div class='gilzu_face gilzu_face_corner2_front' style='border-radius: 0px 0px 0px 7px;'><div class='gilzu_sticker gilzu_sticker_back' style='border-radius: 0px 0px 0px 7px;'></div></div></div><div class='gilzu_brick gilzu_midslice' style='transform: translateY(0px) rotatey(15deg)' data-rot='15' data-rrot='0'><div class='gilzu_face gilzu_face_front'><div class='gilzu_sticker gilzu_sticker_front' style='border-radius: 5px 0px 0px 5px;'></div></div><div class='gilzu_face gilzu_face_back'><div class='gilzu_sticker gilzu_sticker_back' style='border-radius: 5px 0px 0px 5px;'></div></div><div class='gilzu_face gilzu_face_right'><div class='gilzu_sticker gilzu_sticker_right'><div class='gilzu_logo_sticker'></div></div></div><div class='gilzu_brick gilzu_edge' style='transform: translateY(0px) rotatey(0deg)' ><div class='gilzu_face gilzu_face_up' style='transform: rotateX(90deg) translateZ(21px);'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div><div class='gilzu_face gilzu_face_down' style='transform: rotateX(90deg) translateZ(-22px);'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div></div><div class='gilzu_brick gilzu_corner' style='transform: rotatey(45deg)' ><div class='gilzu_face gilzu_face_up' style='transform: rotateX(90deg) translateZ(21px);'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment_empty gilzu_corner'></div></div><div class='gilzu_face gilzu_face_down' style='transform: rotateX(90deg) translateZ(-22px);'><div class='gilzu_sticker gilzu_sticker_down_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment_empty gilzu_corner'></div></div></div><div class='gilzu_brick gilzu_edge' style='transform: translateY(0px) rotatey(-90deg)' ><div class='gilzu_face gilzu_face_up' style='transform: rotateX(90deg) translateZ(21px);'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div><div class='gilzu_face gilzu_face_down' style='transform: rotateX(90deg) translateZ(-22px);'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div></div><div class='gilzu_brick gilzu_corner' style='transform: rotatey(-45deg)' ><div class='gilzu_face gilzu_face_up' style='transform: rotateX(90deg) translateZ(21px);'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment_empty gilzu_corner'></div></div><div class='gilzu_face gilzu_face_down' style='transform: rotateX(90deg) translateZ(-22px);'><div class='gilzu_sticker gilzu_sticker_down_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment_empty gilzu_corner'></div></div></div></div><div class='gilzu_brick gilzu_midslice' style='transform: translateY(0px) rotatey(195deg)' data-rot='195' data-rrot='0'><div class='gilzu_face gilzu_face_front'><div class='gilzu_sticker gilzu_sticker_back' style='border-radius: 5px 0px 0px 5px;'></div></div><div class='gilzu_face gilzu_face_back'><div class='gilzu_sticker gilzu_sticker_front' style='border-radius: 5px 0px 0px 5px;'></div></div><div class='gilzu_face gilzu_face_right'><div class='gilzu_sticker gilzu_sticker_left'></div></div><div class='gilzu_brick gilzu_edge' style='transform: translateY(0px) rotatey(0deg)' ><div class='gilzu_face gilzu_face_up' style='transform: rotateX(90deg) translateZ(21px);'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div><div class='gilzu_face gilzu_face_down' style='transform: rotateX(90deg) translateZ(-22px);'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div></div><div class='gilzu_brick gilzu_corner' style='transform: rotatey(45deg)' ><div class='gilzu_face gilzu_face_up' style='transform: rotateX(90deg) translateZ(21px);'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment_empty gilzu_corner'></div></div><div class='gilzu_face gilzu_face_down' style='transform: rotateX(90deg) translateZ(-22px);'><div class='gilzu_sticker gilzu_sticker_down_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment_empty gilzu_corner'></div></div></div><div class='gilzu_brick gilzu_edge' style='transform: translateY(0px) rotatey(-90deg)' ><div class='gilzu_face gilzu_face_up' style='transform: rotateX(90deg) translateZ(21px);'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div><div class='gilzu_face gilzu_face_down' style='transform: rotateX(90deg) translateZ(-22px);'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div></div><div class='gilzu_brick gilzu_corner' style='transform: rotatey(-45deg)' ><div class='gilzu_face gilzu_face_up' style='transform: rotateX(90deg) translateZ(21px);'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment_empty gilzu_corner'></div></div><div class='gilzu_face gilzu_face_down' style='transform: rotateX(90deg) translateZ(-22px);'><div class='gilzu_sticker gilzu_sticker_down_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment_empty gilzu_corner'></div></div></div></div><div class='gilzu_brick gilzu_edge' style='transform: translateY(46px) rotatey(-75deg)'  data-rrot='180' data-rot='0' ><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_down gilzu_edge'></div><div class='gilzu_sticker gilzu_sticker_down_shadow gilzu_edge'></div></div><div class='gilzu_face gilzu_face_front'><div class='gilzu_sticker gilzu_sticker_front' style='border-radius: 7px 7px 0px 0px;'></div></div></div><div class='gilzu_brick gilzu_corner' style='transform: translateY(47px) rotatey(-30deg)'  data-rrot='180' data-rot='30' ><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment_empty gilzu_corner'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_down gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_shadow gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment_shadow gilzu_corner'></div></div><div class='gilzu_face gilzu_face_corner1_front'><div class='gilzu_sticker gilzu_sticker_right' style='border-radius: 7px 0px 0px 0px;'></div></div><div class='gilzu_face gilzu_face_corner2_front'><div class='gilzu_sticker gilzu_sticker_front' style='border-radius: 7px 0px 0px 0px;'></div></div></div><div class='gilzu_brick gilzu_edge' style='transform: translateY(46px) rotatey(15deg)'  data-rrot='180' data-rot='90' ><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_down gilzu_edge'></div><div class='gilzu_sticker gilzu_sticker_down_shadow gilzu_edge'></div></div><div class='gilzu_face gilzu_face_front'><div class='gilzu_sticker gilzu_sticker_right' style='border-radius: 7px 7px 0px 0px;'></div></div></div><div class='gilzu_brick gilzu_corner' style='transform: translateY(47px) rotatey(60deg)'  data-rrot='180' data-rot='120' ><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment_empty gilzu_corner'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_down gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_shadow gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment_shadow gilzu_corner'></div></div><div class='gilzu_face gilzu_face_corner1_front'><div class='gilzu_sticker gilzu_sticker_back' style='border-radius: 7px 0px 0px 0px;'></div></div><div class='gilzu_face gilzu_face_corner2_front'><div class='gilzu_sticker gilzu_sticker_right' style='border-radius: 7px 0px 0px 0px;'></div></div></div><div class='gilzu_brick gilzu_edge' style='transform: translateY(46px) rotatey(105deg)'  data-rrot='180' data-rot='180' ><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_down gilzu_edge'></div><div class='gilzu_sticker gilzu_sticker_down_shadow gilzu_edge'></div></div><div class='gilzu_face gilzu_face_front'><div class='gilzu_sticker gilzu_sticker_back' style='border-radius: 7px 7px 0px 0px;'></div></div></div><div class='gilzu_brick gilzu_corner' style='transform: translateY(47px) rotatey(150deg)'  data-rrot='180' data-rot='210' ><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment_empty gilzu_corner'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_down gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_shadow gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment_shadow gilzu_corner'></div></div><div class='gilzu_face gilzu_face_corner1_front'><div class='gilzu_sticker gilzu_sticker_left' style='border-radius: 7px 0px 0px 0px;'></div></div><div class='gilzu_face gilzu_face_corner2_front'><div class='gilzu_sticker gilzu_sticker_back' style='border-radius: 7px 0px 0px 0px;'></div></div></div><div class='gilzu_brick gilzu_edge' style='transform: translateY(46px) rotatey(195deg)'  data-rrot='180' data-rot='270' ><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_edge'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_down gilzu_edge'></div><div class='gilzu_sticker gilzu_sticker_down_shadow gilzu_edge'></div></div><div class='gilzu_face gilzu_face_front'><div class='gilzu_sticker gilzu_sticker_left' style='border-radius: 7px 7px 0px 0px;'></div></div></div><div class='gilzu_brick gilzu_corner' style='transform: translateY(47px) rotatey(240deg)'  data-rrot='180' data-rot='300' ><div class='gilzu_face gilzu_face_up'><div class='gilzu_sticker gilzu_sticker_up_empty gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_up_compliment_empty gilzu_corner'></div></div><div class='gilzu_face gilzu_face_down'><div class='gilzu_sticker gilzu_sticker_down gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_shadow gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment gilzu_corner'></div><div class='gilzu_sticker gilzu_sticker_down_compliment_shadow gilzu_corner'></div></div><div class='gilzu_face gilzu_face_corner1_front'><div class='gilzu_sticker gilzu_sticker_front' style='border-radius: 7px 0px 0px 0px;'></div></div><div class='gilzu_face gilzu_face_corner2_front'><div class='gilzu_sticker gilzu_sticker_left' style='border-radius: 7px 0px 0px 0px;'></div></div></div>				</div>
+				
+					
+			</div>
+			<div id="playcontrols">
+				<input id="playposition" type="range" value="0" min="0" max="10" step="1" />
+				<button id="reset"><i class="fa fa-fast-backward" aria-hidden="true"></i></button>
+				<button id="backward"><i class="fa fa-mail-reply" aria-hidden="true"></i></button>
+				<button id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+				<button id="eraser"><i class="fa fa-eraser"></i></button>
+				<button id="forward"><i class="fa fa-mail-forward" aria-hidden="true"></i></button>
+				<button id="fastforward"><i class="fa fa-fast-forward" aria-hidden="true"></i></button>
+			</div>
+		</div>
+		<div class="gilzu_detail_container">
+									
+			<ul class="sectiontablist">
+				<li data-href="#tab-cubeshape" data-ps="cs" class='active' data-href="tab-cubeshape">Cube<br/>Shape</li>
+				<li data-href="#tab-co" data-ps="co">Corner<br/>Orientation</li>
+				<li data-href="#tab-eo" data-ps="eo">Edge<br/>Orientation</li>
+				<li data-href="#tab-cp" data-ps="cp">Corner<br/>Permutation</li>
+				<li data-href="#tab-ep" data-ps="ep">Edge<br/>Permutation</li>
+				<li data-href="#tab-other" data-ps="other">Other<br/>Sets</li>
+			</ul>
+			
+			<input type='hidden' id='paramalgset' value='cs'/><input type='hidden' id='paramalgtop' value='4-2 Left'/><input type='hidden' id='paramalgbot' value='Arrow'/>			<div style="clear: both;"></div>
+			<div class="sectiontab active" id="tab-cubeshape">
+				<div class="section">
+					<div class="shapeselector" id="topshape">
+						<div class="opencatselector" id="topshapeselected">
+							<div class="">U Layer</div>
+							<img src="isquan.php?size=50&tr=OGGGRRRBBBOO&br=rrgggooobbbr&t=CECECECE&b=ecececec">
+							<div class='selectiondesc'>Square</div>
+						</div>
+					
+						<ul class="catselector">
+							<li data-shape='Square'><img src='isquan.php?size=50&tr=OGGGRRRBBBOO&br=rrgggooobbbr&t=CECECECE&b=ecececec'/><div class='selectiondesc'>Square</div></li><li data-shape='Kite'><img src='isquan.php?size=50&tr=gobbBBBooOOG&br=bRrOGGggrrRR&t=eecECcEC&b=CCEeccEe'/><div class='selectiondesc'>Kite</div></li><li data-shape='Right Fist'><img src='isquan.php?size=50&tr=rggbbrrgoRBO&br=OGGRBoRBobOG&t=ceececEC&b=EECEeCcC'/><div class='selectiondesc'>Right Fist</div></li><li data-shape='Left Fist'><img src='isquan.php?size=50&tr=BOBOGGRBOrrg&br=RgGRgooobbbr&t=CECECEec&b=EeCcecec'/><div class='selectiondesc'>Left Fist</div></li><li data-shape='Barrel'><img src='isquan.php?size=50&tr=GRRoobBOOrrg&br=ggoRBBbbrOGG&t=CEecCEec&b=ecCEecCE'/><div class='selectiondesc'>Barrel</div></li><li data-shape='Muffin'><img src='isquan.php?size=50&tr=ObbrOGBBOobr&br=rggGRBgoGRRo&t=EecCECce&b=ceECcCEe'/><div class='selectiondesc'>Muffin</div></li><li data-shape='Shield'><img src='isquan.php?size=50&tr=BOOrrgRggoRB&br=BOGGGRoobbbr&t=CEecEecC&b=ECECecec'/><div class='selectiondesc'>Shield</div></li><li data-shape='Scallop'><img src='isquan.php?size=50&tr=OrrgGRgoRBBb&br=brOGGgRoobBO&t=EecCcCEe&b=cCEeEecC'/><div class='selectiondesc'>Scallop</div></li><li data-shape='Left Pawn'><img src='isquan.php?size=50&tr=goRBBOrrgGgR&br=oobBbObrOGGR&t=cCCecEeE&b=ecEeEcCC'/><div class='selectiondesc'>Left Pawn</div></li><li data-shape='Right Pawn'><img src='isquan.php?size=50&tr=BOrrgRgoRBBO&br=OGGGRogobbbr&t=EEecEcCC&b=CECeecec'/><div class='selectiondesc'>Right Pawn</div></li><li data-shape='Pair'><img src='isquan.php?size=50&tr=ggGGRrBOObRR&br=BBOoGgoorrbb&t=EeCcCcC&b=EcEceEeeC'/><div class='selectiondesc'>Pair</div></li><li data-shape='2-2-2'><img src='isquan.php?size=50&tr=RgOGGoobOrrg&br=bbrBOBGRgoRB&t=EeCEecEec&b=ecCECcC'/><div class='selectiondesc'>2-2-2</div></li><li data-shape='4-2 Left'><img src='isquan.php?size=50&tr=BOOrRoobbrBb&br=GgGRrggoRBOG&t=CEeEeccEe&b=EeCccCC'/><div class='selectiondesc'>4-2 Left</div></li><li data-shape='4-2 Right'><img src='isquan.php?size=50&tr=RoBbbrGggoRB&br=obBOOrOGrgGR&t=EeEecEecC&b=cCEeCcC'/><div class='selectiondesc'>4-2 Right</div></li><li data-shape='6'><img src='isquan.php?size=50&tr=GgRoobgoRBBb&br=OrrgGRBObrOG&t=EeEeccCEe&b=EecCCcC'/><div class='selectiondesc'>6</div></li><li data-shape='Star'><img src='isquan.php?size=50&br=OrBOGGoobbRg&tr=goRBrgGRbrBO&b=EeECEeceEe&t=cCcCcC'/><div class='selectiondesc'>Star</div></li><li data-shape='4-4'><img src='isquan.php?size=50&tr=RoobBbOrrgGg&br=goRBBObrOGGR&t=EecEeEecEe&b=cCCcCC'/><div class='selectiondesc'>4-4</div></li><li data-shape='Arrow'><img src='isquan.php?size=50&br=GrggrrRBBoRb&tr=OOGgbbGRooBO&b=EeccCEeEe&t=ECecCcC'/><div class='selectiondesc'>Arrow</div></li><li data-shape='3-3'><img src='isquan.php?size=50&tr=RBobrGggoBRo&br=bbrOGOBOrgGR&t=CceEecEEe&b=ecCECcC'/><div class='selectiondesc'>3-3</div></li><li data-shape='3-2-1 Left'><img src='isquan.php?size=50&tr=rgggoBOGRrRo&br=obRBBObbrOGG&t=cecEECeEe&b=cCCecCE'/><div class='selectiondesc'>3-2-1 Left</div></li><li data-shape='3-2-1 Right'><img src='isquan.php?size=50&tr=BrgggorOoOGR&br=RBBObrGGRobb&t=EceceEeCE&b=CCcECce'/><div class='selectiondesc'>3-2-1 Right</div></li><li data-shape='4-1-1'><img src='isquan.php?size=50&tr=BOGGGRoobbRg&br=goRBrgbrBOOr&t=ECECeceEe&b=cCccCEe'/><div class='selectiondesc'>4-1-1</div></li><li data-shape='5-1 Left'><img src='isquan.php?size=50&tr=rgggbbBOGoRb&br=OOGRBBrrGRoo&t=ececCEeEe&b=ECCEcCc'/><div class='selectiondesc'>5-1 Left</div></li><li data-shape='5-1 Right'><img src='isquan.php?size=50&tr=bRrOOGRBBBOG&br=ggoobrrgGRob&t=eEeECCECE&b=ececcCc'/><div class='selectiondesc'>5-1 Right</div></li><li data-shape='Crown'><img src='isquan.php?size=50&br=RgOGGoobOrrg&tr=bbrBOBGRgoRB&b=EeCEecEec&t=ecCECcC'/><div class='selectiondesc'>Crown</div></li><li data-shape='6-2'><img src='isquan.php?size=50&tr=OrBOGGoobbRg&br=goRBrgGRbrBO&t=EeECEeceEe&b=cCcCcC'/><div class='selectiondesc'>6-2</div></li><li data-shape='Observatory'><img src='isquan.php?size=50&tr=rRoobOrggGbB&br=BORBGRbrOGgo&t=eEecEceEeE&b=CCCcCc'/><div class='selectiondesc'>Observatory</div></li><li data-shape='8 Edges'><img src='isquan.php?size=50&tr=OGGgRoBbOrrg&br=GRgoRBobBObr&t=CEeEeEeEec&b=CcCcCc'/><div class='selectiondesc'>8 Edges</div></li>						</ul>
+					</div>
+					
+					<div class="shapeselector" id="bottomshape">
+						<div class="opencatselector" id="bottomshapeselected">
+							<div class="">D Layer</div>
+							<img src="isquan.php?size=50&amp;tr=OGGGRRRBBBOO&amp;br=rrgggooobbbr&amp;t=CECECECE&amp;b=ecececec">
+							<div class='selectiondesc'>Square</div>
+						</div>
+					
+						<ul class="catselector">
+							<li data-shape='Square'><img src='isquan.php?size=50&tr=OGGGRRRBBBOO&br=rrgggooobbbr&t=CECECECE&b=ecececec'/><div class='selectiondesc'>Square</div></li><li data-shape='Kite'><img src='isquan.php?size=50&tr=gobbBBBooOOG&br=bRrOGGggrrRR&t=eecECcEC&b=CCEeccEe'/><div class='selectiondesc'>Kite</div></li><li data-shape='Right Fist'><img src='isquan.php?size=50&tr=rggbbrrgoRBO&br=OGGRBoRBobOG&t=ceececEC&b=EECEeCcC'/><div class='selectiondesc'>Right Fist</div></li><li data-shape='Left Fist'><img src='isquan.php?size=50&tr=BOBOGGRBOrrg&br=RgGRgooobbbr&t=CECECEec&b=EeCcecec'/><div class='selectiondesc'>Left Fist</div></li><li data-shape='Barrel'><img src='isquan.php?size=50&tr=GRRoobBOOrrg&br=ggoRBBbbrOGG&t=CEecCEec&b=ecCEecCE'/><div class='selectiondesc'>Barrel</div></li><li data-shape='Muffin'><img src='isquan.php?size=50&tr=ObbrOGBBOobr&br=rggGRBgoGRRo&t=EecCECce&b=ceECcCEe'/><div class='selectiondesc'>Muffin</div></li><li data-shape='Shield'><img src='isquan.php?size=50&tr=BOOrrgRggoRB&br=BOGGGRoobbbr&t=CEecEecC&b=ECECecec'/><div class='selectiondesc'>Shield</div></li><li data-shape='Scallop'><img src='isquan.php?size=50&tr=OrrgGRgoRBBb&br=brOGGgRoobBO&t=EecCcCEe&b=cCEeEecC'/><div class='selectiondesc'>Scallop</div></li><li data-shape='Left Pawn'><img src='isquan.php?size=50&tr=goRBBOrrgGgR&br=oobBbObrOGGR&t=cCCecEeE&b=ecEeEcCC'/><div class='selectiondesc'>Left Pawn</div></li><li data-shape='Right Pawn'><img src='isquan.php?size=50&tr=BOrrgRgoRBBO&br=OGGGRogobbbr&t=EEecEcCC&b=CECeecec'/><div class='selectiondesc'>Right Pawn</div></li><li data-shape='Pair'><img src='isquan.php?size=50&tr=ggGGRrBOObRR&br=BBOoGgoorrbb&t=EeCcCcC&b=EcEceEeeC'/><div class='selectiondesc'>Pair</div></li><li data-shape='2-2-2'><img src='isquan.php?size=50&tr=RgOGGoobOrrg&br=bbrBOBGRgoRB&t=EeCEecEec&b=ecCECcC'/><div class='selectiondesc'>2-2-2</div></li><li data-shape='4-2 Left'><img src='isquan.php?size=50&tr=BOOrRoobbrBb&br=GgGRrggoRBOG&t=CEeEeccEe&b=EeCccCC'/><div class='selectiondesc'>4-2 Left</div></li><li data-shape='4-2 Right'><img src='isquan.php?size=50&tr=RoBbbrGggoRB&br=obBOOrOGrgGR&t=EeEecEecC&b=cCEeCcC'/><div class='selectiondesc'>4-2 Right</div></li><li data-shape='6'><img src='isquan.php?size=50&tr=GgRoobgoRBBb&br=OrrgGRBObrOG&t=EeEeccCEe&b=EecCCcC'/><div class='selectiondesc'>6</div></li><li data-shape='Star'><img src='isquan.php?size=50&br=OrBOGGoobbRg&tr=goRBrgGRbrBO&b=EeECEeceEe&t=cCcCcC'/><div class='selectiondesc'>Star</div></li><li data-shape='4-4'><img src='isquan.php?size=50&tr=RoobBbOrrgGg&br=goRBBObrOGGR&t=EecEeEecEe&b=cCCcCC'/><div class='selectiondesc'>4-4</div></li><li data-shape='Arrow'><img src='isquan.php?size=50&br=GrggrrRBBoRb&tr=OOGgbbGRooBO&b=EeccCEeEe&t=ECecCcC'/><div class='selectiondesc'>Arrow</div></li><li data-shape='3-3'><img src='isquan.php?size=50&tr=RBobrGggoBRo&br=bbrOGOBOrgGR&t=CceEecEEe&b=ecCECcC'/><div class='selectiondesc'>3-3</div></li><li data-shape='3-2-1 Left'><img src='isquan.php?size=50&tr=rgggoBOGRrRo&br=obRBBObbrOGG&t=cecEECeEe&b=cCCecCE'/><div class='selectiondesc'>3-2-1 Left</div></li><li data-shape='3-2-1 Right'><img src='isquan.php?size=50&tr=BrgggorOoOGR&br=RBBObrGGRobb&t=EceceEeCE&b=CCcECce'/><div class='selectiondesc'>3-2-1 Right</div></li><li data-shape='4-1-1'><img src='isquan.php?size=50&tr=BOGGGRoobbRg&br=goRBrgbrBOOr&t=ECECeceEe&b=cCccCEe'/><div class='selectiondesc'>4-1-1</div></li><li data-shape='5-1 Left'><img src='isquan.php?size=50&tr=rgggbbBOGoRb&br=OOGRBBrrGRoo&t=ececCEeEe&b=ECCEcCc'/><div class='selectiondesc'>5-1 Left</div></li><li data-shape='5-1 Right'><img src='isquan.php?size=50&tr=bRrOOGRBBBOG&br=ggoobrrgGRob&t=eEeECCECE&b=ececcCc'/><div class='selectiondesc'>5-1 Right</div></li><li data-shape='Crown'><img src='isquan.php?size=50&br=RgOGGoobOrrg&tr=bbrBOBGRgoRB&b=EeCEecEec&t=ecCECcC'/><div class='selectiondesc'>Crown</div></li><li data-shape='6-2'><img src='isquan.php?size=50&tr=OrBOGGoobbRg&br=goRBrgGRbrBO&t=EeECEeceEe&b=cCcCcC'/><div class='selectiondesc'>6-2</div></li><li data-shape='Observatory'><img src='isquan.php?size=50&tr=rRoobOrggGbB&br=BORBGRbrOGgo&t=eEecEceEeE&b=CCCcCc'/><div class='selectiondesc'>Observatory</div></li><li data-shape='8 Edges'><img src='isquan.php?size=50&tr=OGGgRoBbOrrg&br=GRgoRBobBObr&t=CEeEeEeEec&b=CcCcCc'/><div class='selectiondesc'>8 Edges</div></li>						</ul>
+					</div>
+					
+					<div>
+						<ul class="sq1algs" id="cubeshapealgs">
+						</ul>
+					</div>
+				</div>
+			</div>
+						
+			<div class="sectiontab" id="tab-co">
+				<ul class="sectiontabopenlist" id="cocases">
+					<li data-algid="1"><img src="isquan.php?d=2&size=50&tr=rgggoRRBBBOr&br=OOGGGRoobbbr&t=cecECECe&b=ECECecec"/></li>
+					<li data-algid="2"><img src="isquan.php?d=2&size=50&tr=OGGGRBBOrrgO&br=ggoRRBoobbbr&t=CECECecE&b=ecECecec"/></li>
+					<li data-algid="3"><img src="isquan.php?d=2&size=50&tr=GRoobBBOrrgG&br=ggoRRBbbrOOG&t=CecECecE&b=ecECecEC"/></li>
+					<li data-algid="4"><img src="isquan.php?d=2&size=50&tr=gobbrRRBBBOg&br=GGRoobOOGrrg&t=cecECECe&b=ECecECec"/></li>
+					<li data-algid="5"><img src="isquan.php?d=2&size=50&tr=goRRBrrgOOGg&br=GGRBBOoobbbr&t=cECecECe&b=ECECecec"/></li>
+					<li data-algid="6"><img src="isquan.php?d=2&size=50&tr=obbbrBBOrrgo&br=ggoRRBOOGGGR&t=cecECece&b=ecECECEC"/></li>
+					<li data-algid="7"><img src="isquan.php?d=2&size=50&tr=obbbrrrgggoo&br=RRBBBOOOGGGR&t=cececece&b=ECECECEC"/></li>					
+				</ul>
+				
+				<div>
+					<ul class="sq1algs" id="coalgs">
+					</ul>
+				</div>
+			</div>
+						
+			<div class="sectiontab" id="tab-eo">
+				<ul class="sectiontabopenlist" id="eocases">
+					<li data-algid="1"><img src="isquan.php?d=2&size=50&tr=OGoGRBRBRBOO&br=rrgggoGobbbr&t=CeCECECE&b=ececEcec"/></li>
+					<li data-algid="2"><img src="isquan.php?d=2&size=50&tr=OGGGRoRBBBOr&br=OrgggoRobbbr&t=CECeCECe&b=EcecEcec"/></li>
+					<li data-algid="3"><img src="isquan.php?d=2&size=50&tr=OGGGRRRBoBOg&br=rrgOgoBobbbr&t=CECECeCe&b=ecEcEcec"/></li>
+					<li data-algid="4"><img src="isquan.php?d=2&size=50&tr=OGRGRBRBoBOr&br=OrgggoGobbbr&t=CECECeCe&b=EcecEcec"/></li>
+					<li data-algid="5"><img src="isquan.php?d=2&size=50&tr=OGgGRrRBoBOB&br=OrgRgoGobbbr&t=CeCeCeCE&b=EcEcEcec"/></li>
+					<li data-algid="6"><img src="isquan.php?d=2&size=50&tr=GRoRBbBOrOGg&br=GgoRobBbrOrg&t=CeCeCeCe&b=EcEcEcEc"/></li>
+					<li data-algid="7"><img src="isquan.php?d=2&size=50&tr=OGBGRoRBRBOg&br=rrgOgoGobbbr&t=CECeCECe&b=ecEcEcec"/></li>					
+				</ul>
+				
+				<div>
+					<ul class="sq1algs" id="eoalgs">
+					</ul>
+				</div>
+			</div>
+						
+			<div class="sectiontab" id="tab-other">
+				<ul class="sectiontabopenlist">
+					
+					<li>
+						<a href="http://www.speedcubedb.com/b/SQ1/OBL">
+						<img src="isquan.php?size=90&tr=goGGRoRBBBOg&br=bbrrOGRobOrg&t=cECeCECe&b=eceCEcEc" />
+						<div class='catdesc'>Orient Both Layers (OBL)</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.speedcubedb.com/b/SQ1/LinPLL">
+						<img src="isquan.php?size=90&tr=BOORBGOGRGRB&br=rrgggooobbbr&t=CECECECE&b=ecececec" />
+						<div class='catdesc'>Lin PLL</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.speedcubedb.com/b/SQ1/LinParityPLL">
+						<img src="isquan.php?size=90&tr=RBBGROBOROGG&br=rrgggooobbbr&t=CECECECE&b=ecececec" />
+						<div class='catdesc'>Lin PLL</div>
+						</a>
+					</li>
+					<li>
+						<a href="b/SQ1/Lin/PLL1/">
+						<img src="isquan.php?d=1&size=90&tr=OGGGRRBOBRBr&br=Orgggooobbbr&t=CECECECe&b=Ecececec">
+						<div class='catdesc'>Lin PLL + 1</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="sectiontab" id="tab-cp">
+				<ul class="sectiontabopenlist" id="cpcases">
+					<li data-algid="1">
+						<div class="smallcap">Adj</div>
+						<img src="isquan.php?d=2&size=50&tr=GRRBOORBBOGG&br=rrgggooobbbr&t=CECECECE&b=ecececec"/>
+						<div class="smallcap">Solved</div>
+					</li>
+					<li data-algid="2">
+						<div class="smallcap">Opp</div>
+						<img src="isquan.php?d=2&size=50&tr=GRROGGBOORBB&br=oobbbrrrgggo&t=CECECECE&b=ecececec"/>
+						<div class="smallcap">Solved
+					</li>
+					<li data-algid="3">
+						<div class="smallcap">Solved</div>
+						<img src="isquan.php?d=2&size=50&tr=OGGGRRRBBBOO&br=oobrrgggobbr&t=CECECECE&b=ecececec"/>
+						<div class="smallcap">Adj</div>
+					</li>
+					<li data-algid="4">
+						<div class="smallcap">Solved</div>
+						<img src="isquan.php?d=2&size=50&tr=OGGGRRRBBBOO&br=ggorrgbbroob&t=CECECECE&b=ecececec"/>
+						<div class="smallcap">Opp</div>
+					</li>
+					<li data-algid="5">
+						<div class="smallcap">Adj</div>
+						<img src="isquan.php?d=2&size=50&tr=BOOGRRRBBOGG&br=rrgoobggobbr&t=CECECECE&b=ecececec"/>
+						<div class="smallcap">Adj</div>
+					</li>
+					<li data-algid="6">
+						<div class="smallcap">Opp</div>
+						<img src="isquan.php?d=2&size=50&tr=OGGBOORBBGRR&br=ggorrgoobbbr&t=CECECECE&b=ecececec"/>
+						<div class="smallcap">Adj</div>
+					</li>					
+					<li data-algid="7">
+						<div class="smallcap">Adj</div>
+						<img src="isquan.php?d=2&size=50&tr=GRROGGRBBBOO&br=rrgbbroobggo&t=CECECECE&b=ecececec"/>
+						<div class="smallcap">Opp</div>
+					</li>					
+					<li data-algid="8">
+						<div class="smallcap">Opp</div>
+						<img src="isquan.php?d=2&size=50&tr=OGGBOORBBGRR&br=oobggorrgbbr&t=CECECECE&b=ecececec"/>
+						<div class="smallcap">Opp</div>
+					</li>					
+				</ul>
+				
+				<div>
+					<ul class="sq1algs" id="cpalgs">
+					</ul>
+				</div>
+			</div>
+						
+			<div class="sectiontab" id="tab-ep">
+				<div class="section">
+					<div class="shapeselector" id="topep">
+						<div class="opencatselector" id="topepselected">
+							<div class="">U Layer</div>
+							<img src="isquan.php?size=50&amp;tr=OGGGRRRBBBOO&amp;t=CECECECE">
+							<div class="selectiondesc">Solved</div>
+						</div>
+					
+						<ul class="catselector">
+							<li data-shape='Solved'><img src='isquan.php?size=50&tr=OGGGRRRBBBOO&t=CECECECE'/><div class='selectiondesc'>Solved</div></li><li data-shape='Adj'><img src='isquan.php?size=50&tr=OGOGRRRBBBOG&t=CECECECE'/><div class='selectiondesc'>Adj</div></li><li data-shape='Opp'><img src='isquan.php?size=50&tr=RBBBOROGGGRO&t=CECECECE'/><div class='selectiondesc'>Opp</div></li><li data-shape='Ua'><img src='isquan.php?size=50&tr=OGBGRGRBRBOO&t=CECECECE'/><div class='selectiondesc'>Ua</div></li><li data-shape='Ub'><img src='isquan.php?size=50&tr=OGRGRBRBGBOO&t=CECECECE'/><div class='selectiondesc'>Ub</div></li><li data-shape='H'><img src='isquan.php?size=50&tr=OGBGRORBGBOR&t=CECECECE'/><div class='selectiondesc'>H</div></li><li data-shape='Z'><img src='isquan.php?size=50&tr=OGRGRGRBOBOB&t=CECECECE'/><div class='selectiondesc'>Z</div></li><li data-shape='W'><img src='isquan.php?d=1&size=50&tr=OGOGRBRBGBOR&t=CECECECE'/><div class='selectiondesc'>W</div></li><li data-shape='O+'><img src='isquan.php?d=1&size=50&tr=OGRGRBRBOBOG&t=CECECECE'/><div class='selectiondesc'>O+</div></li><li data-shape='O-'><img src='isquan.php?d=1&size=50&tr=OGOGRGRBRBOB&t=CECECECE'/><div class='selectiondesc'>O-</div></li>						</ul>
+					</div>
+					
+					<div class="shapeselector" id="bottomep">
+						<div class="opencatselector" id="bottomepselected">
+							<div class="">D Layer</div>
+							<img src="isquan.php?size=50&amp;tr=OGGGRRRBBBOO&amp;t=cececece">
+							<div class="selectiondesc">Solved</div>
+						</div>
+					
+						<ul class="catselector">
+							<li data-shape='Solved'><img src='isquan.php?size=50&tr=OGGGRRRBBBOO&t=cececece'/><div class='selectiondesc'>Solved</div></li><li data-shape='Adj'><img src='isquan.php?size=50&tr=OGOGRRRBBBOG&t=cececece'/><div class='selectiondesc'>Adj</div></li><li data-shape='Opp'><img src='isquan.php?size=50&tr=RBBBOROGGGRO&t=cececece'/><div class='selectiondesc'>Opp</div></li><li data-shape='Ua'><img src='isquan.php?size=50&tr=OGBGRGRBRBOO&t=cececece'/><div class='selectiondesc'>Ua</div></li><li data-shape='Ub'><img src='isquan.php?size=50&tr=OGRGRBRBGBOO&t=cececece'/><div class='selectiondesc'>Ub</div></li><li data-shape='H'><img src='isquan.php?size=50&tr=OGBGRORBGBOR&t=cececece'/><div class='selectiondesc'>H</div></li><li data-shape='Z'><img src='isquan.php?size=50&tr=OGRGRGRBOBOB&t=cececece'/><div class='selectiondesc'>Z</div></li><li data-shape='W'><img src='isquan.php?d=1&size=50&tr=OGOGRBRBGBOR&t=cececece'/><div class='selectiondesc'>W</div></li><li data-shape='O+'><img src='isquan.php?d=1&size=50&tr=OGRGRBRBOBOG&t=cececece'/><div class='selectiondesc'>O+</div></li><li data-shape='O-'><img src='isquan.php?d=1&size=50&tr=OGOGRGRBRBOB&t=cececece'/><div class='selectiondesc'>O-</div></li>						</ul>
+					</div>
+					
+					<div>
+						<ul class="sq1algs" id="epalgs">
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="section" style="display: none">
+				<textarea id="scramble" placeholder="Scramble"></textarea>
+			</div>
+			<div class="section">
+				<div class="sectionheader">
+					<span id="movesheader">Moves:</span><div id="stats"></div>
+					<div style="clear: both;"></div>
+				</div>
+				<div style="clear: both;"></div>
+				<div id="movescontainer" data-type="moves">
+					<div id="moveannonation"></div>
+					<textarea id="moves" placeholder="Moves" spellcheck="false"></textarea>
+				</div>
+			</div>
+							
+			<div class="section">
+				<div class="sectionheader">Playback:</div>
+				<div style="width: 100%">				
+					<div style="display:none";>
+						<label for="recontype">Playback Type:</label>
+						<select id="recontype">
+							<option value="alg" selected>Alg</option>
+						</select>
+					</div>
+					<div>
+						<label for="speed">Speed:</label><input type="range" value="1" min="0"; max="10" step="1" id="speed" />
+					</div>
+					<div>
+						<input type="checkbox" id="westernstyle" checked /><label for="westernstyle">Western Style Slice</label>
+					</div>
+					
+				</div>
+			</div>
+			<div class="section actions_section">
+				<div class="sectionheader">Appearance:</div>
+				<label for="colorscheme">Color Scheme:</label>
+				<select id="colorscheme">
+					<option value="YW" selected>Yellow/White</option>
+					<option value="YB" >Yellow/Black</option>
+					<option value="WB" >White/Black</option>
+					<option value="WY" >White/Yellow</option>
+					<option value="BW" >Black/White</option>
+					<option value="BY" >Black/Yellow</option>
+				</select>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+		
+<div style="height: 200px; width: 100%;">&nbsp;</div>
+<div class="footer">
+<p>Created by Gil Zussman, for any feedback: <a href="mailto:gil@speedcubedb.com">gil@speedcubedb.com</a></p>
+<p><a href="privacypolicy.php">Privacy Policy</a></p>
+</div>	</body>
+</html>
+

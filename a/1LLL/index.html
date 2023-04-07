@@ -1,0 +1,171 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+  
+	<base href="/"/>
+    
+    
+	<base href="/"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2NP03VW57J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2NP03VW57J'); 
+</script>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="icon" type="image/png" href="/favicon.png"/>
+
+<!-- JQ, FAS -->
+<script type="text/javascript" src="includes/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<script type="text/javascript" src="includes/jcookie.js"></script>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<!-- Swiper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.js" integrity="sha512-qqdD5ZLIGB5PCqCk1OD8nFBr/ngB5w+Uw35RE/Ivt5DK35xl1PFVkuOgAbqFpvtoxX6MpRGLmIqixzdhFOJhnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.css" integrity="sha512-lfjMBfE41+3a9XCiuXCjaE4CkvpPOQ5P2qZSZclW9iHsMSvn50dh6ZuB5O8g7uDlCIKFKPqYo8JIka9Rh8HXow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<script src="includes/svg.min.js"></script>
+<script src="includes/ijsm.js?d=10"></script>
+
+<link href="template/theme.css?d=76" rel="stylesheet">
+
+
+<meta name="author" content="Gil Zussman" />
+
+<script>
+	$(document).ready(function() {
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		  return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+	});
+</script>	
+	<meta name="description" content="Free online speedcubing algorithm and reconstruction database, covers every algorithm for 2x2 - 6x6, SQ1 and Megaminx including F2L, OLL, PLL, COLL, ZBLL, WV and much more" />
+	<meta name="keywords" content="rubiks, speedcube, algdb, cubing, speedcubing, reconstruction, recons, algorithm, alg, 3x3, 4x4, 5x5, 6x6, 2x2, SQ1, Megaminx, OLL, COLL, PLL, Parity, WV, ZBLL, CLL, EG1" />
+	
+	<script type="text/javascript" src="index.js?d=8"></script>
+    <link href="category.css?d=2" rel="stylesheet">
+	<title>Speed Cube Database</title>
+  </head>
+  <body>
+		<header>
+		<nav id="navbar-main" class="navbar navbar-expand-lg fixed-top navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="/"><img src="assets/logo.png" style="width: 40px; height: 40px;" /><div>SpeedCubeDB</div></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+	
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a href="/t" style="background-color: inherit;" class="nav-link active" >Practice</a>
+        </li>		
+        <li class="nav-item">
+          <a href="/r/index" style="background-color: inherit;" class="nav-link active">Reconstructions</a>
+        </li>		
+		<li style="background-color: inherit;" class="nav-item">			<a id="googlelogin" href='https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=56005720278-hgk8iclpv6jogpih0d5slqjtgmoldquo.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.speedcubedb.com%2Fsso.php&state&scope=email%20profile&approval_prompt=auto'><img src="assets/btn_google_signin_dark_normal_web.png" alt="Sign in via Google" /></a>
+			</li>
+						
+        <li>
+			<form id="searchform" method="GET" action="r/index" autocomplete="false" class="d-flex" style="flex-direction: initial; width: 100%;">
+	
+					<input type="text" name="search" placeholder="Search over 7000 reconstructions, updated daily!"  style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;" />
+					<button type="submit" class="btn btn-primary" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+		
+			</form>
+		</li>
+      </ul>
+	  <button id="darkmodebtn" class="nav-item float-right me-3 btn btn-dark border-light"><i class="fa fa-moon" aria-hidden="true"></i></button>
+	  <a class="nav-item float-right btn btn-primary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YXDSNHGD65YHU&currency_code=USD&source=url"><i class="fa fa-heart me-2"></i>Support</a>
+    
+    </div>
+  </div>
+  
+  <script>
+  
+  function setDarkmode()
+  {
+    if (getCookie("darkmode") == "true")
+	{
+		$("body").addClass("darkmode");
+		$("table.table").addClass("table-dark");
+		$(".carousel").removeClass("carousel-dark");
+	}
+	else
+	{
+		$("body").removeClass("darkmode");
+		$("table.table").removeClass("table-dark");
+		$(".carousel").addClass("carousel-dark");
+	}
+  }
+  
+  $(document).ready(function() {
+		// handle darkmode
+		setDarkmode();
+
+		$("#darkmodebtn").click(function(){	
+			let darkmodeOn = $("body").hasClass("darkmode");
+			setCookie("darkmode",darkmodeOn == false ? "true" : "false",500000,'/',  'speedcubedb.com');
+
+			setDarkmode();
+		});
+  });
+  </script>
+</nav>
+		</header>
+		<div style="margin-top: 70px;"></div>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-md-4">
+					<div class="card-set-header py-2">
+						<h4 class="category-name mb-0 ms-2">1LLL</h4>
+						<div class="mx-3 align-self-center">
+							<span class="d-none d-sm-inline-block badge bg-secondary">3x3</span>
+						</div>
+					</div>
+					<div class="category-description">						
+						<div class="subcaption">Description</div>
+											</div>
+					
+				</div>
+				
+				
+				
+				<div class="col col-md-8">
+					<div class="card-set-header py-2">
+						<h4 class="category-name mb-0 ms-2">Subsets</h4>
+					</div>
+					<div class="subset-select">
+		<a href='a/3x3/PLL' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="yyyyyyyyy" data-ub="lllllllll" data-uf="lllllllll" data-ul="lllllllll" data-ur="lllllllll"></div><div class="card-body mt-2"><h5 class="card-title">PLL</h5></div></a><a href='a/3x3/ZBLLU' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="lylyyyyyy" data-ub="ylyrrrrrr" data-uf="llloooooo" data-ul="lllgggggg" data-ur="lllbbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">ZBLL U</h5></div></a><a href='a/3x3/ZBLLL' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="lyyyyyyyl" data-ub="llyoooooo" data-uf="lllrrrrrr" data-ul="lllbbbbbb" data-ur="yllgggggg"></div><div class="card-body mt-2"><h5 class="card-title">ZBLL L</h5></div></a><a href='a/3x3/ZBLLT' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="lylyyyyyy" data-ub="llloooooo" data-uf="lllrrrrrr" data-ul="yllbbbbbb" data-ur="llygggggg"></div><div class="card-body mt-2"><h5 class="card-title">ZBLL T</h5></div></a><a href='a/3x3/ZBLLH' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="lylyyylyl" data-ub="llloooooo" data-uf="lllrrrrrr" data-ul="ylybbbbbb" data-ur="ylygggggg"></div><div class="card-body mt-2"><h5 class="card-title">ZBLL H</h5></div></a><a href='a/3x3/ZBLLPi' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="lylyyylyl" data-ub="yllbbbbbb" data-uf="llygggggg" data-ul="ylyrrrrrr" data-ur="llloooooo"></div><div class="card-body mt-2"><h5 class="card-title">ZBLL Pi</h5></div></a><a href='a/3x3/ZBLLS' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="lylyyyyyl" data-ub="llybbbbbb" data-uf="llygggggg" data-ul="lllrrrrrr" data-ur="llyoooooo"></div><div class="card-body mt-2"><h5 class="card-title">ZBLL S</h5></div></a><a href='a/3x3/ZBLLAS' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="yylyyylyl" data-ub="yllrrrrrr" data-uf="ylloooooo" data-ul="lllgggggg" data-ur="yllbbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">ZBLL AS</h5></div></a><a href='a/3x3/AntiPLL' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="ylylylyly" data-ub="lylllllll" data-uf="lylllllll" data-ul="lylllllll" data-ur="lylllllll"></div><div class="card-body mt-2"><h5 class="card-title">Anti PLL</h5></div></a><a href='a/3x3/1LLL01' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyllll" data-ub="lylbbbbbb" data-uf="lylgggggg" data-ul="yyyrrrrrr" data-ur="yyyoooooo"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 1</h5></div></a><a href='a/3x3/1LLL02' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyllll" data-ub="yylbbbbbb" data-uf="lyygggggg" data-ul="yyyrrrrrr" data-ur="lyloooooo"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 2</h5></div></a><a href='a/3x3/1LLL03' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llylyllll" data-ub="lyybbbbbb" data-uf="lyygggggg" data-ul="lyyrrrrrr" data-ur="lyloooooo"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 3</h5></div></a><a href='a/3x3/1LLL04' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyllly" data-ub="yylbbbbbb" data-uf="yylgggggg" data-ul="yylrrrrrr" data-ur="lyloooooo"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 4</h5></div></a><a href='a/3x3/1LLL05' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyylyy" data-ub="lyybbbbbb" data-uf="lllgggggg" data-ul="lyyrrrrrr" data-ur="llyoooooo"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 5</h5></div></a><a href='a/3x3/1LLL06' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyylyy" data-ub="yyloooooo" data-uf="yllrrrrrr" data-ul="yylgggggg" data-ur="lllbbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 6</h5></div></a><a href='a/3x3/1LLL07' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llylyylyl" data-ub="lyybbbbbb" data-uf="llygggggg" data-ul="lyyoooooo" data-ur="lllrrrrrr"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 7</h5></div></a><a href='a/3x3/1LLL08' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyyyyl" data-ub="yylrrrrrr" data-uf="llloooooo" data-ul="yylbbbbbb" data-ur="yllgggggg"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 8</h5></div></a><a href='a/3x3/1LLL09' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="ylllyylyl" data-ub="yyloooooo" data-uf="yllrrrrrr" data-ul="lylgggggg" data-ur="yllbbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 9</h5></div></a><a href='a/3x3/1LLL10' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="ylllyylyl" data-ub="lylrrrrrr" data-uf="llyoooooo" data-ul="lyybbbbbb" data-ur="llygggggg"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 10</h5></div></a><a href='a/3x3/1LLL11' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyyyyl" data-ub="lyygggggg" data-uf="llybbbbbb" data-ul="lylrrrrrr" data-ur="llyoooooo"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 11</h5></div></a><a href='a/3x3/1LLL12' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llylyylyl" data-ub="lylrrrrrr" data-uf="ylloooooo" data-ul="yylbbbbbb" data-ur="yllgggggg"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 12</h5></div></a><a href='a/3x3/1LLL13' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llyyyylll" data-ub="lyybbbbbb" data-uf="lyygggggg" data-ul="llyoooooo" data-ur="lllrrrrrr"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 13</h5></div></a><a href='a/3x3/1LLL14' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="lllyyylly" data-ub="yylrrrrrr" data-uf="yyloooooo" data-ul="yllbbbbbb" data-ur="lllgggggg"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 14</h5></div></a><a href='a/3x3/1LLL15' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="lllyyylly" data-ub="lyybbbbbb" data-uf="lylgggggg" data-ul="llyoooooo" data-ur="llyrrrrrr"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 15</h5></div></a><a href='a/3x3/1LLL16' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llyyyylll" data-ub="lylgggggg" data-uf="yylbbbbbb" data-ul="yllrrrrrr" data-ur="ylloooooo"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 16</h5></div></a><a href='a/3x3/1LLL17' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="ylllyllly" data-ub="yyloooooo" data-uf="lylrrrrrr" data-ul="lyygggggg" data-ur="lylbbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 17</h5></div></a><a href='a/3x3/1LLL18' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllylyly" data-ub="yyyoooooo" data-uf="lylrrrrrr" data-ul="lylgggggg" data-ur="lylbbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 18</h5></div></a><a href='a/3x3/1LLL19' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllylyly" data-ub="lylbbbbbb" data-uf="lylgggggg" data-ul="yyloooooo" data-ur="lyyrrrrrr"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 19</h5></div></a><a href='a/3x3/1LLL28' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="ylylyyyyy" data-ub="lylgggggg" data-uf="lllbbbbbb" data-ul="lylrrrrrr" data-ur="llloooooo"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 28</h5></div></a><a href='a/3x3/1LLL29' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="ylllyyyyl" data-ub="yyloooooo" data-uf="llyrrrrrr" data-ul="lylgggggg" data-ur="lllbbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 29</h5></div></a><a href='a/3x3/1LLL30' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="ylylyylyl" data-ub="lylgggggg" data-uf="lllbbbbbb" data-ul="lyyrrrrrr" data-ur="ylloooooo"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 30</h5></div></a><a href='a/3x3/1LLL31' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyyyyy" data-ub="lyloooooo" data-uf="lllrrrrrr" data-ul="yylgggggg" data-ur="llybbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 31</h5></div></a><a href='a/3x3/1LLL32' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llylyylyy" data-ub="lyybbbbbb" data-uf="yllgggggg" data-ul="lyloooooo" data-ur="lllrrrrrr"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 32</h5></div></a><a href='a/3x3/1LLL33' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llyyyylly" data-ub="lyyoooooo" data-uf="yylrrrrrr" data-ul="lllgggggg" data-ur="lllbbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 33</h5></div></a><a href='a/3x3/1LLL34' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="lllyyyyly" data-ub="lylbbbbbb" data-uf="lylgggggg" data-ul="ylloooooo" data-ur="llyrrrrrr"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 34</h5></div></a><a href='a/3x3/1LLL35' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="ylllyylyy" data-ub="lyloooooo" data-uf="yllrrrrrr" data-ul="lylgggggg" data-ur="llybbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 35</h5></div></a><a href='a/3x3/1LLL36' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llylyyyyl" data-ub="lyyrrrrrr" data-uf="llloooooo" data-ul="lylbbbbbb" data-ur="yllgggggg"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 36</h5></div></a><a href='a/3x3/1LLL37' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="ylllyylyy" data-ub="yyloooooo" data-uf="lllrrrrrr" data-ul="lyygggggg" data-ur="lllbbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 37</h5></div></a><a href='a/3x3/1LLL38' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llylyyyyl" data-ub="lylrrrrrr" data-uf="llyoooooo" data-ul="yylbbbbbb" data-ur="lllgggggg"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 38</h5></div></a><a href='a/3x3/1LLL39' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llyyyyyll" data-ub="lylrrrrrr" data-uf="lyyoooooo" data-ul="yllbbbbbb" data-ur="lllgggggg"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 39</h5></div></a><a href='a/3x3/1LLL40' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="yllyyylly" data-ub="yylrrrrrr" data-uf="lyloooooo" data-ul="llybbbbbb" data-ur="lllgggggg"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 40</h5></div></a><a href='a/3x3/1LLL41' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="ylylyylyl" data-ub="lyloooooo" data-uf="ylyrrrrrr" data-ul="lylgggggg" data-ur="lllbbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 41</h5></div></a><a href='a/3x3/1LLL42' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="ylllyyyyl" data-ub="lylgggggg" data-uf="lllbbbbbb" data-ul="lylrrrrrr" data-ur="ylyoooooo"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 42</h5></div></a><a href='a/3x3/1LLL43' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyyyyy" data-ub="yyyrrrrrr" data-uf="llloooooo" data-ul="lylbbbbbb" data-ur="lllgggggg"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 43</h5></div></a><a href='a/3x3/1LLL44' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llylyylyy" data-ub="lyloooooo" data-uf="lllrrrrrr" data-ul="yyygggggg" data-ur="lllbbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 44</h5></div></a><a href='a/3x3/1LLL45' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llyyyylly" data-ub="lylgggggg" data-uf="lylbbbbbb" data-ul="ylyrrrrrr" data-ur="llloooooo"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 45</h5></div></a><a href='a/3x3/1LLL46' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="lllyyyyly" data-ub="yyyrrrrrr" data-uf="lyloooooo" data-ul="lllbbbbbb" data-ur="lllgggggg"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 46</h5></div></a><a href='a/3x3/1LLL47' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyylyl" data-ub="lyloooooo" data-uf="ylyrrrrrr" data-ul="yylgggggg" data-ur="llybbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 47</h5></div></a><a href='a/3x3/1LLL48' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyylyl" data-ub="lyybbbbbb" data-uf="yllgggggg" data-ul="lyloooooo" data-ur="ylyrrrrrr"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 48</h5></div></a><a href='a/3x3/1LLL49' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyylyl" data-ub="yyybbbbbb" data-uf="lllgggggg" data-ul="lyyoooooo" data-ur="yllrrrrrr"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 49</h5></div></a><a href='a/3x3/1LLL50' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyylyl" data-ub="yylbbbbbb" data-uf="llygggggg" data-ul="yyyoooooo" data-ur="lllrrrrrr"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 50</h5></div></a><a href='a/3x3/1LLL51' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="lllyyylll" data-ub="yyloooooo" data-uf="lyyrrrrrr" data-ul="ylygggggg" data-ur="lllbbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 51</h5></div></a><a href='a/3x3/1LLL52' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="lllyyylll" data-ub="yyybbbbbb" data-uf="lylgggggg" data-ul="llyoooooo" data-ur="yllrrrrrr"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 52</h5></div></a><a href='a/3x3/1LLL53' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyylyl" data-ub="lylbbbbbb" data-uf="lllgggggg" data-ul="yyyoooooo" data-ur="ylyrrrrrr"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 53</h5></div></a><a href='a/3x3/1LLL54' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="llllyylyl" data-ub="yyyoooooo" data-uf="ylyrrrrrr" data-ul="lylgggggg" data-ur="lllbbbbbb"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 54</h5></div></a><a href='a/3x3/1LLL55' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="lllyyylll" data-ub="yyybbbbbb" data-uf="yyygggggg" data-ul="llloooooo" data-ur="lllrrrrrr"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 55</h5></div></a><a href='a/3x3/1LLL56' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="lllyyylll" data-ub="lylgggggg" data-uf="lylbbbbbb" data-ul="ylyrrrrrr" data-ur="ylyoooooo"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 56</h5></div></a><a href='a/3x3/1LLL57' class='card d-inline-block text-center m-1 p-3'><div class="jcube" data-width="100" data-height="100" data-rank="3" data-us="ylyyyyyly" data-ub="lylgggggg" data-uf="lylbbbbbb" data-ul="lllrrrrrr" data-ur="llloooooo"></div><div class="card-body mt-2"><h5 class="card-title">1LLL 57</h5></div></a>					</div>
+				</div>
+			</div>
+		</div>
+		
+<div style="margin-top: 70px;"></div>
+<footer class="bg-dark text-center text-lg-start fixed-bottom text-white">
+
+
+  <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2)">
+    Created By Gil Zussman - <a href="mailto:gil@speedcubedb.com">gil@speedcubedb.com</a> | <a href="privacypolicy.php">Privacy Policy</a> | <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=YXDSNHGD65YHU&amp;currency_code=USD&amp;source=url">Donate</a>
+    
+  </div>
+</footer>  </body>
+</html>

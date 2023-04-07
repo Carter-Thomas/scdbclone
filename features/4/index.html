@@ -1,0 +1,365 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&amp;family=Merriweather:ital,wght@1,300&amp;family=Roboto:wght@100;900&amp;display=swap" rel="stylesheet">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+     
+	<base href="/"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2NP03VW57J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2NP03VW57J'); 
+</script>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="icon" type="image/png" href="/favicon.png"/>
+
+<!-- JQ, FAS -->
+<script type="text/javascript" src="includes/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<script type="text/javascript" src="includes/jcookie.js"></script>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<!-- Swiper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.js" integrity="sha512-qqdD5ZLIGB5PCqCk1OD8nFBr/ngB5w+Uw35RE/Ivt5DK35xl1PFVkuOgAbqFpvtoxX6MpRGLmIqixzdhFOJhnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.css" integrity="sha512-lfjMBfE41+3a9XCiuXCjaE4CkvpPOQ5P2qZSZclW9iHsMSvn50dh6ZuB5O8g7uDlCIKFKPqYo8JIka9Rh8HXow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<script src="includes/svg.min.js"></script>
+<script src="includes/ijsm.js?d=10"></script>
+
+<link href="template/theme.css?d=76" rel="stylesheet">
+
+
+<meta name="author" content="Gil Zussman" />
+
+<script>
+	$(document).ready(function() {
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		  return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+	});
+</script>	<meta name="description" content="Free online speedcubing algorithm and reconstruction database, covers every algorithm for 2x2 - 6x6 including F2L, OLL, PLL, COLL, ZBLL, WV and much more" />
+	<meta name="keywords" content="rubiks, speedcube, algdb, cubing, speedcubing, algorithm, alg, 3x3, 4x4, 5x5, 6x6, 2x2, OLL, COLL, PLL, Parity, WV, ZBLL, CLL, EG1" />
+	
+	
+	<title>ReconStats - Learning from the pros, part 1</title>
+    <style>
+		.documentcontainer h1 { font-family: 'Roboto', sans-serif; font-size: 270%; font-weight: bold; text-transform: uppercase;}
+		.documentcontainer h2 { font-family: 'Merriweather', sans-serif; font-size: 200%;}
+		.documentcontainer h3 { font-family: 'Roboto', sans-serif; font-weight: normal; font-size: 200%}
+		.documentcontainer { font-family: 'Lato', sans-serif;}
+		.documentcontainer p { font-family: 'Lato', sans-serif; font-weight: 300; font-style: italic;}
+		.documentcontainer a { color: #a0a0a0; text-decoration: none; font-weight: bold;}
+		#page {
+		margin-left:auto;
+		margin-right:auto;
+		width:600px;
+		}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</style><!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YK0P6VYH0M"></script>
+		<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-YK0P6VYH0M');
+	</script>
+  </head>
+  <body>
+  
+		<header>
+		<nav id="navbar-main" class="navbar navbar-expand-lg fixed-top navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="/"><img src="assets/logo.png" style="width: 40px; height: 40px;" /><div>SpeedCubeDB</div></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+	
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a href="/t" style="background-color: inherit;" class="nav-link active" >Practice</a>
+        </li>		
+        <li class="nav-item">
+          <a href="/r/index" style="background-color: inherit;" class="nav-link active">Reconstructions</a>
+        </li>		
+		<li style="background-color: inherit;" class="nav-item">			<a id="googlelogin" href='https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=56005720278-hgk8iclpv6jogpih0d5slqjtgmoldquo.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.speedcubedb.com%2Fsso.php&state&scope=email%20profile&approval_prompt=auto'><img src="assets/btn_google_signin_dark_normal_web.png" alt="Sign in via Google" /></a>
+			</li>
+						
+        <li>
+			<form id="searchform" method="GET" action="r/index" autocomplete="false" class="d-flex" style="flex-direction: initial; width: 100%;">
+	
+					<input type="text" name="search" placeholder="Search over 7000 reconstructions, updated daily!"  style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;" />
+					<button type="submit" class="btn btn-primary" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+		
+			</form>
+		</li>
+      </ul>
+	  <button id="darkmodebtn" class="nav-item float-right me-3 btn btn-dark border-light"><i class="fa fa-moon" aria-hidden="true"></i></button>
+	  <a class="nav-item float-right btn btn-primary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YXDSNHGD65YHU&currency_code=USD&source=url"><i class="fa fa-heart me-2"></i>Support</a>
+    
+    </div>
+  </div>
+  
+  <script>
+  
+  function setDarkmode()
+  {
+    if (getCookie("darkmode") == "true")
+	{
+		$("body").addClass("darkmode");
+		$("table.table").addClass("table-dark");
+		$(".carousel").removeClass("carousel-dark");
+	}
+	else
+	{
+		$("body").removeClass("darkmode");
+		$("table.table").removeClass("table-dark");
+		$(".carousel").addClass("carousel-dark");
+	}
+  }
+  
+  $(document).ready(function() {
+		// handle darkmode
+		setDarkmode();
+
+		$("#darkmodebtn").click(function(){	
+			let darkmodeOn = $("body").hasClass("darkmode");
+			setCookie("darkmode",darkmodeOn == false ? "true" : "false",500000,'/',  'speedcubedb.com');
+
+			setDarkmode();
+		});
+  });
+  </script>
+</nav>
+		</header>
+		<div style="margin-top: 70px;"></div>
+		<div class="container documentcontainer">
+      <h1 align="left">Learning from the Pros</h1>
+	  <h2><a href="https://basilio.dev/cubing/" target="_blank">Basilio Noris</a></h2>
+      <h3> What data can tell us about solving the cube efficiently and
+        fast</h3>
+      <p align="justify"> Solving the cube as a craft&nbsp; has evolved
+        over the past 40 years and as people have studied and trained to
+        solve it ever faster, a body of knowledge has started to take
+        shape. The past 10 years have seen the time necessary to solve
+        the cube plunge to a handful of seconds, while the amount of
+        know-how has skyrocketed. A body of data has started to form, as
+        databases of algorithms, but also reconstructions of eminent
+        solves have been gathered into repositories for the cubing
+        community. Foremost among these, www.speedcubedb.com now
+        comprises thousands of algorithms for many puzzles and events,
+        and several thousands of solves by the fastest cubers in the
+        world.</p>
+      <h3> It is hard to overstate the amount of work behind this data<br>
+      </h3>
+      <p> This work, and this article would not have seen light were it
+        not for the herculean work of a number of people in the cubing
+        community, it is worth mentioning 3 of them. Heading the solve
+        reconstruction effort, <b><b>Stuart Clark</b> </b>not only
+        reconstructs the vast majority of all new solves, to the tune of
+        hundreds of solves per month,&nbsp; but he manages and nudges
+        the main efforts of the reconstruction community. The
+        torchbearer mantle was passed onto him by the original
+        reconstruction god, <b><b>Brest</b>,</b> who single-handedly
+        reconned half of the four thousands solves available at the time
+        of this writing. Closing this holy triumvirate is <b><b>Gil
+            Zussman</b>,</b> who not only created, designed and coded <a
+          moz-do-not-send="true" href="http://speedcubedb.com/">speedcubedb.com</a>
+        and <a moz-do-not-send="true" href="https://cubedb.net/">cubedb.net</a>
+        (both formidable feats of technological craftiness) but
+        developed a plethora of tools for solve reconstruction, alg
+        discovery and management, that make the life of speedcubers the
+        world over so much easier and better.<br>
+        And finally thanks to Anto, Ben, Feliks and Phillip for going
+        over a pre-read of this and for their insightful feedback.<br>
+      </p>
+      <br>
+      <b>And with that out of the way, let's see what we found out in
+        the data</b><br>
+      <br>
+      <img moz-do-not-send="true" src="/features/4/th-scdb-stats.jpg" alt="scdb-stats"
+        width="600" height="367"><br>
+      <br>
+      <font size="+1"><i>In this multi-part series of articles we will
+          dig into this data to see what we can learn from the fastest
+          solvers and their fastest solves.</i></font>
+		  
+		  <br>
+		  <br>
+		  <br>
+      <h2>You can't be super-fast AND super-efficient<br>
+      </h2>
+      <h3>At some point, higher TPS is only possible at the cost of
+        efficiency<br>
+      </h3>
+      <img moz-do-not-send="true" src="/features/4/times-vs-tps.jpg" alt="times vs tps" width="600" height="365"> <br>
+		<p>When we combine the solve time
+      with the turns per second (TPS) of the solver, and the number of
+      moves to solve the cube, we're struck by two things: While there
+      is a relatively linear relationship between times and TPS until we
+      hit about 8 seconds, the times hit a wall even though very-high
+      TPS can still happen. Conversely, while the average number of
+      moves per solve decreases slowly until about the same time, it
+      takes a sharp downward turn for the faster solves. So far so good.
+      However, when we look at solve moves vs TPS we realise that there
+      are very few solves that have both very low moves and very high
+      tps, whereas there are many more that have only one of them. This
+      suggests that – for the time being – it is not really possible to
+      find efficient solutions while going very fast.</p>
+      <br>
+      <h2>Roteto rotato, more complex move-set or more rotations?<br>
+      </h2>
+      <h3>Fueling the fire of the high-gen vs rotate debate<br>
+      </h3>
+      <div align="center"><img moz-do-not-send="true"  src="/features/4/rotate-vs-gen.png" alt="th-rotate-vs-gen" width="600"  height="328"><br>
+        <br>
+        <br>
+      </div>
+      <p>It is rare to have clear-cut answers, for once this looks like
+      one. Solves with cross rotations are 5.5x slower than crosses with
+      equivalent move-count that increase the complexity of the movement
+      set (n-gen). This is likely due to the fact that inspection allows
+      to prepare and adjust to the more complex fingertricks necessary
+      to operate on several cube axes.</p>
+      <p>The opposite is true for f2l, where the much higher tps (2/3
+      faster than cross tps on average) means that spamming low-gen
+      moves whilst incurring rotations is a successful strategy,
+      regardless of whether we move from 2-gen to 3 or from 3 to 4.</p>
+      <p>The desire for no-rotation methods (which made sense when
+      fingetricks were vastly more limited by cube hardware, and TPS was
+      by necessity much lower) might not be that relevant anymore.
+      </p>
+      <h2>Solve pairs in the back first, and don't get too fancy with
+        your inserts<br>
+      </h2>
+      <h3>BR slot for first pair is the most frequent go-to option for
+        the fastest solves<br>
+      </h3>
+      <div align="center"><img moz-do-not-send="true" src="/features/4/f2lPairs.png"  alt="F2l Pair slot by solve time" width="600" height="506"><br><br><br>
+      </div>
+      <p>The Back-Right slot is the most used for the first f2l pair, and
+      it's usage is more frequent the faster the solve. Last slot tends
+      to end on Front-Right more than half of the time, but Back-Right
+      is also an option that gets some usage. That is not to say that
+      the other slots aren't used at all, they still account for between
+      1/6 and 1/4 of slot usages. But the habit of slotting things in
+      the back still comes out as a winning one.</p>
+      <h3>The vast majority of inserts are very vanilla<br>
+      </h3>
+      <img moz-do-not-send="true" src="/features/4/f2l-insertions.jpg" alt="F2l
+        Insertions" width="600" height="295"><br><br><br>
+		<p>
+      95% of pair insertions use standard RU/LU insertions, foregoing
+      the more complex FRUF or wide-move insertions (slice-move inserts
+      didn't even make the graph, but you can find them below). This has
+      some validity – wide-move insertions are slower than the others –
+      but not only, as F-based ones are just as fast if not slightly
+      faster, than vanilla. They're just not used much.<br>
+      Keyhole (the fastest insert on average) is very rare, and appears
+      mostly for the first couple of pairs, while edge-controlling F
+      inserts (e.g. sledge) appear mostly (and unsurprisingly) for last
+      pair.</p>
+      <h2>S pls, or actually don't. Save it for OLL</h2>
+      <h3>The zoomer excitement for S moves everywhere might be a bit
+        premature</h3>
+      <img moz-do-not-send="true" src="/features/4/step-execution-by-move.jpg"
+        alt="step-execution-by-move" width="600" height="301"> <br><br><br>
+		<p>The
+      relatively recent improvements in cube hardware technology, have
+      made the execution of non-M slice viable during solves, and their
+      usage has gain some traction, especially in the younger community.
+      Whilst we know that M slices have their place in a solve (the
+      fastest OLL and PLL algs demonstrate this easily), the same is not
+      clear for S and E slices. When solvers utilise them in any step
+      except OLL, those steps will be significantly slower than when
+      using their outer-layer variant.</p>
+	  <p>With that being said, our data reflects the performance of current
+      top-level solvers, who have learned their ropes in an earlier less
+      slice-heavy era. It might be that with time the advantages given
+      by these "new" moves (previously less viable due to hardware
+      limitations) might come to the fore. However, the fact that S
+      moves have quickly found their place in OLL but not in others
+      indicates that if they presented a stark improvement on
+      alternative moves those might have come to light already. The
+      prominence of "simple works better" instances especially in f2l
+      would suggest slices might not be the way to go for at least some
+      of the cfop phases.</p>
+      <h2>Nope, dot-OLLs are just fine<br>
+      </h2>
+      <h3>While the exec time of dot OLLs is slightly longer, any
+        attempt to avoid them is worse<br>
+      </h3>
+      <img moz-do-not-send="true" src="/features/4/th-oll-exec.jpg" alt="oll exec"
+        width="600" height="269"> <br><br><br>
+		
+		<p>Oll executions require a rather wide
+      range of time in general, but it true that the median execution
+      for Dot OLLs is slightly slower than other OLLs (by about
+      0.16sec). This doesn't seem to affect solves overall: the median
+      solve containing a Dot OLL sits evenly in-between solves with OCLL
+      and those with other cases. What's more, any attempt to influence
+      EO through last slot will lose you more time than the expected
+      gain in time. So just learn good algs, and don't worry about dot
+      OLLs.</p>
+      <br>
+      <h2>What about XCrosses, AUFs, PLLs, Skips?<br>
+      </h2>
+      There's plenty more, too much to put onto a single article. If
+      you're looking for more, check out the whole analysis. <font
+        color="#666666"><a moz-do-not-send="true"
+href="https://www.basilio.dev/cubing/recons/ReconStats-v0.pdf">You
+          can find it here.</a></font><br>
+      <br>
+      Understandably most of our efforts have been dedicated to
+      analyzing CFOP solves for now. However Stewy and his minions have
+      been churning out reconstructions for other methods (Roux chief
+      among them, but others as well!) which will be the focus of our
+      coming work.<br>
+      <h3>Some caveats on the data:</h3>
+      By construction this data is selecting mainly great solves from
+      top-level cubers. This means that luck plays a role (especially in
+      the fastest solves), otherwise the solve would simply not be part
+      of this data. A better approach would be to conduct
+      solver-specific analysis and normalize by the solver median times,
+      but this will require much more data on individual solvers (right
+      now we have only a handful of people with more than 50 solves
+      each). We're working towards this ; ).<br>
+      <br>
+      <br>
+      <font size="-2">Basilio Noris is an expert in machine learning
+        with a passion for cubing, data visualization and
+        astrophotography. He did his academic research on the early
+        diagnosis of Autism, bridging psychology, neurology and data
+        science. He now runs a company doing analysis of human behavior
+        in retail and manufacturing environments.</font><br>
+    </div>
+		
+		
+<div style="margin-top: 70px;"></div>
+<footer class="bg-dark text-center text-lg-start fixed-bottom text-white">
+
+
+  <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2)">
+    Created By Gil Zussman - <a href="mailto:gil@speedcubedb.com">gil@speedcubedb.com</a> | <a href="privacypolicy.php">Privacy Policy</a> | <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=YXDSNHGD65YHU&amp;currency_code=USD&amp;source=url">Donate</a>
+    
+  </div>
+</footer>  </body>
+</html>
